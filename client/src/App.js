@@ -1,13 +1,15 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import logo from './logo.svg'
-import './App.scss'
+import './global.scss'
 
 import { StateProvider } from './components/lib/StateProvider'
 import { initialState, reducer } from './lib/state/state'
 import LocalStorageManager from './components/lib/LocalStorageManager'
 
 import AppWrapper from './components/AppWrapper'
+import ProductDisplay from './components/ProductDisplay'
+import HorizontalSlider from './components/HorizontalSlider'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -15,8 +17,10 @@ const App = () => {
       <StateProvider initialState={initialState} reducer={reducer}>
         <AppWrapper>
           <LocalStorageManager />
-          Hello, world.
-    </AppWrapper>
+          <ProductDisplay model={"logo"} />
+          <HorizontalSlider />
+          <Footer sticky />
+        </AppWrapper>
       </StateProvider>
     </Router >
   )

@@ -1,7 +1,10 @@
+@import '../../styles/_variables.scss';
+
 .app-wrapper {
     position: relative;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
+    background-color: $gray;
 }
 
 .theme-light {

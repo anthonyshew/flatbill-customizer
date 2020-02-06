@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import './_AppWrapper.scss'
-import useStateValue from '../../lib/hooks/useStateValue'
+// import useStateValue from '../../lib/hooks/useStateValue'
 
 const AppWrapper = ({ children }) => {
 
     const [viewportHeight, setViewportHeight] = useState(window.innerHeight)
 
+    // const [{ product }] = useStateValue()
+
     useEffect(() => {
         window.addEventListener("resize", () => setViewportHeight(window.innerHeight))
     }, [])
 
-    const [{ activeTheme }] = useStateValue()
-
     return (
-        <div className={`app-wrapper theme-${activeTheme}`} style={{ minHeight: viewportHeight }}>
+        <div className={`app-wrapper`} style={{ minHeight: viewportHeight }}>
             {children}
         </div>
     )

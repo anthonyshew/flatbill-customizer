@@ -1,0 +1,7 @@
+@import './styles/_reset.scss';
+@import './styles/_variables.scss';
+
+html,
+body {
+    background-color: $gray
+}

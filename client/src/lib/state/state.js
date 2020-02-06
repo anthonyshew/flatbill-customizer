@@ -1,4 +1,6 @@
-export const initialState = { activeTheme: "light" }
+export const initialState = {
+    product: '',
+}
 
 export const reducer = (state, action) => {
     switch (action.type) {
