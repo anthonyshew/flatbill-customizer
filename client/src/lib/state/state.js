@@ -3,7 +3,7 @@ export const initialState = {
     view: 'front',
     model: 'solid',
     primaryColor: '#66b500',
-    secondaryColor: '#4D4D4D',
+    secondaryColor: '#4d4d4d',
     tertiaryColor: '#000000',
     chestLogo: 'logo',
     leftArmLogo: 'logo',
@@ -24,6 +24,30 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 editorCurrentlyOpen: action.menu
+            }
+        case 'MODEL_SELECT':
+            return {
+                ...state,
+                editorCurrentlyOpen: action.menu,
+                model: action.model
+            }
+        case 'PRIMARY_COLOR_SELECT':
+            return {
+                ...state,
+                editorCurrentlyOpen: action.menu,
+                primaryColor: action.primaryColor
+            }
+        case 'SECONDARY_COLOR_SELECT':
+            return {
+                ...state,
+                editorCurrentlyOpen: action.menu,
+                secondaryColor: action.secondaryColor
+            }
+        case 'TERTIARY_COLOR_SELECT':
+            return {
+                ...state,
+                editorCurrentlyOpen: action.menu,
+                tertiaryColor: action.tertiaryColor
             }
         default:
             return state

@@ -17,29 +17,5 @@ $height: 25vh;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 
-    .horizontal-slider-button {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: calc(100% / 6);
-        min-width: 250px;
-        background-color: $white;
-        border: 1px solid $black;
 
-        &:hover {
-            cursor: pointer;
-        }
-
-        .avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 100%;
-        }
-
-        .avatar-text {
-            font-family: $fira-sans;
-            font-size: 20px;
-        }
-    }
 }
