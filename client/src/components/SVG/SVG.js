@@ -27,7 +27,7 @@ const getPath = (name,
                         <defs>
                             <radialGradient id="logo0_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(278.14) rotate(131.201) scale(248.031 321.553)">
                                 <stop stopColor="#BC6E6E" stopOpacity="0.46" />
-                                <stop offset="1" stopColor="white" stopOpacity="0" />
+                                <stop offset="1" stopColor={tertiaryColor} stopOpacity="0" />
                             </radialGradient>
                             <radialGradient id="logo1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135.081 112.959) rotate(89.0695) scale(245.652 250.332)">
                                 <stop stopColor="#6B6B88" />
@@ -40,9 +40,9 @@ const getPath = (name,
         case "striper-front":
             return (
                 <>
-                    <svg className={className} viewBox="0 0 500 558" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt={alt}>
-                        <title>{title}</title>
-                        <desc>{desc}</desc>
+                    <svg className={className} viewBox="0 0 500 558" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="Stripe Jersey Model">
+                        <title>Stripe Jersey Model</title>
+                        <desc>This jersey model is made of a body that has gradient stripes to create an interesting striping effect.</desc>
                         <path d="M185 8.5C238.416 18.9334 267.002 18.1871 317.5 8L318 7L394 47C424.373 110.91 424.656 140.843 397.5 184.5L400.5 272.5V386H100.5V274L103.5 184.5C86.2226 141.193 85.3612 111.833 105.5 47L183 6.5L185 8.5Z" fill={primaryColor} />
                         <path d="M185 15C235.768 25.6024 264.232 24.1827 315 15C295.801 44.4437 281.46 57.6105 251.5 77C219.664 59.0484 204.983 45.6025 185 15Z" fill="#505050" stroke="black" />
                         <path fillRule="evenodd" clipRule="evenodd" d="M194 0.5L183.5 6.5L180 9C197 42.5 232.5 74 251 80.5C273.5 69.5 302.772 42.6312 321 9L317.5 6.5L305.5 0.5C285.001 5.05657 222.001 4.08559 194 0.5ZM317.5 6.5C293.682 40.5404 268.043 63.5235 251 71C218.452 52.9789 204.055 38.4113 183.5 6.5C191 17.7419 297.5 21.5 317.5 6.5Z" fill={secondaryColor} />
@@ -62,7 +62,70 @@ const getPath = (name,
                         <path d="M499.5 229.5C451.603 101.711 428.336 58.902 394 47.0001C401.016 68.908 402.384 84.0853 400.75 115.75C403.098 141.813 402.076 156.934 397.5 184.5L433 259.948L499.5 229.5Z" fill={tertiaryColor} />
                         <path d="M250.5 84C215.567 62.2368 199.4 46.4579 178.5 10L176 12C194.791 47.0909 212.183 62.9048 250.5 87C290.12 63.5422 305.029 46.188 326 12L323.5 10.5C301.025 46.5305 285.208 62.824 250.5 84Z" fill={tertiaryColor} />
                     </svg>
-
+                </>
+            )
+        case "striper-back":
+            return (
+                <>
+                    <svg viewBox="0 0 500 557" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="Stripe Jersey Model">
+                        <title>Stripe Jersey Model</title>
+                        <desc>This jersey model is made of a body that has gradient stripes to create an interesting striping effect.</desc>
+                        <path d="M185 8C238.416 18.4334 267.002 17.6871 317.5 7.5L318 6.5L394 46.5C407.448 77.9221 409.85 130.816 397.5 184L400.5 272V385.5H100.5V273.5L103.5 184C89.9446 127.424 95.7331 79.2921 105.5 46.5L183 6L185 8Z" fill={primaryColor} />
+                        <path d="M100.5 273.5L68 259.5L103.5 184L101.891 232L101.807 234.5L101.338 248.5L101.187 253L100.768 265.5L100.601 270.5L100.5 273.5Z" fill={secondaryColor} />
+                        <path d="M433 259.5L397.5 184L399.136 232L399.222 234.5L399.699 248.5L399.852 253L400.278 265.5L400.449 270.5L400.5 272L433 259.5Z" fill={secondaryColor} />
+                        <path d="M100.5 385.5V512.5C141.5 562 153 556.5 251 556.5C359 556.5 356 562 400.5 512.5V385.5H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 380.5V367.5H400.5V380.5H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 362V350.5H400.5V362H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 343.5V333.5H400.5V343.5H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 325.5V316.5H400.5V325.5H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 307V300.5H400.5V307H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 289V283H400.5V289H100.5Z" fill={secondaryColor} />
+                        <path d="M100.601 270.5H400.449L400.278 265.5H100.768L100.601 270.5Z" fill={secondaryColor} />
+                        <path d="M101.187 253H399.852L399.699 248.5H101.338L101.187 253Z" fill={secondaryColor} />
+                        <path d="M101.807 234.5H399.222L399.136 232H101.891L101.807 234.5Z" fill={secondaryColor} />
+                        <path d="M183.5 6L194 0C222.001 3.58559 285.001 4.55657 305.5 0L317.5 6C297.5 21 191 17.2419 183.5 6Z" fill={secondaryColor} />
+                        <path d="M187.5 12.5C241.133 24.641 268.131 23.3803 313 12.5L314.5 15.5C262.087 26.9852 233.895 26.8561 185.5 15.5L187.5 12.5Z" fill={tertiaryColor} />
+                        <path d="M105.5 46.5001C65.8876 65.422 41.4007 133.148 0 229L68 259.448L103.5 184C100.516 174.944 99.6026 123.372 100.171 115.647C99.2462 111.156 100.513 49.9425 105.5 46.5001Z" fill={tertiaryColor} />
+                        <path d="M394 46.5001C428.336 58.402 451.603 101.211 499.5 229L433 259.448L397.5 184C402.076 156.434 403.098 141.313 400.75 115.25C402.384 83.5853 401.016 68.408 394 46.5001Z" fill={tertiaryColor} />
+                    </svg>
+                </>
+            )
+        case "solid-front":
+            return (
+                <>
+                    <svg className={className} onClick={handleClick} viewBox="0 0 396 442" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt={alt}>
+                        <path d="M144.224 6.3231C186.444 14.5696 209.038 13.9798 248.951 5.92791L249.346 5.13751L309.417 36.7534C346.693 57.1961 364.277 98.2022 394.5 181.5L314.554 214.988L316.926 403.5C286.5 439.5 280.5 441 195 441C111.5 439.5 109 441 79.8062 403.5L77.4351 216.174L1 181.5C34.559 92.5928 51.7431 53.7199 81.387 36.7534L142.643 4.74231L144.224 6.3231Z" fill={primaryColor} />
+                        <path d="M144.224 6.3231C145.017 8.78703 145.684 10.0938 147.385 12.2511C185.336 18.9083 206.702 19.0076 244.999 12.2511C246.984 9.6197 247.955 8.19605 248.951 5.92791M144.224 6.3231C186.444 14.5696 209.038 13.9798 248.951 5.92791M144.224 6.3231L142.643 4.74231L81.387 36.7534M248.951 5.92791L249.346 5.13751L309.417 36.7534M81.387 36.7534C51.7431 53.7199 34.559 92.5928 1 181.5L77.4351 216.174M81.387 36.7534C76.1886 71.7431 76.5565 91.394 79.411 126.464C84.4657 168.557 81.7274 185.406 77.4351 216.174M77.4351 216.174L79.8062 403.5C109 441 111.5 439.5 195 441C280.5 441 286.5 439.5 316.926 403.5L314.554 214.988M314.554 214.988L394.5 181.5C364.277 98.2022 346.693 57.1961 309.417 36.7534M314.554 214.988C310.755 185.743 308.388 169.819 311.986 125.871C314.274 89.0479 312.35 70.3715 309.417 36.7534" stroke="black" />
+                        <path d="M144.224 11.4608C184.351 19.841 206.848 18.7188 246.975 11.4608C231.8 34.733 220.466 45.1401 196.785 60.4655C171.622 46.2765 160.018 35.649 144.224 11.4608Z" fill="#505050" stroke="black" />
+                        <path fillRule="evenodd" clipRule="evenodd" d="M151.337 0L142.766 4.02401L140 5.5C153.437 31.9783 181.767 58.0942 196.39 63.2318C214.174 54.5374 237.593 32.582 252 6L249 4.3L239.466 0C223.264 3.6015 173.469 2.83404 151.337 0ZM249 4.3C230.174 31.2054 209.86 49.8136 196.39 55.723C170.664 41.4792 159.013 29.2466 142.766 4.02401C146.797 15.5948 246.803 13.0702 249 4.3Z" fill={secondaryColor} />
+                        <path d="M8.5 162L80.5 193.5L80 196.5L7.5 164.5L8.5 162Z" fill={secondaryColor} />
+                        <path d="M3 176.5L78 210L77.5 213L2 179L3 176.5Z" fill={secondaryColor} />
+                        <path d="M386.5 161.5L312.5 194L313 197L387.5 164L386.5 161.5Z" fill={secondaryColor} />
+                        <path d="M392 176L314.5 210.5L315 213.5L393 178.5L392 176Z" fill={secondaryColor} />
+                        <path d="M79 206L4.5 173.5L3.5 176.5L78 210L79 206Z" fill={tertiaryColor} />
+                        <path d="M7.5 164.5L80 196.5L79 200.5L6.5 167.5L7.5 164.5Z" fill={tertiaryColor} />
+                        <path d="M313.5 206.5L391 173L392 176L314.5 210.5L313.5 206.5Z" fill={tertiaryColor} />
+                        <path d="M387.5 163.866L312.5 197L313 201.5L388.5 167L387.5 163.866Z" fill={tertiaryColor} />
+                    </svg>
+                </>
+            )
+        case "solid-back":
+            return (
+                <>
+                    <svg className={className} onClick={handleClick} viewBox="0 0 396 442" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt={alt}>
+                        <path d="M81.387 36.7534L142.643 4.74231L249.346 5.13751L309.417 36.7534C346.693 57.1961 364.277 98.2022 394.5 181.5L314.554 214.988L316.926 403.5C286.5 439.5 280.5 441 195 441C111.5 439.5 109 441 79.8062 403.5L77.4351 216.174L1 181.5C34.559 92.5928 51.7431 53.7199 81.387 36.7534Z" fill={primaryColor} />
+                        <path d="M81.387 36.7534L142.643 4.74231L249.346 5.13751L309.417 36.7534M81.387 36.7534C51.7431 53.7199 34.559 92.5928 1 181.5L77.4351 216.174M81.387 36.7534C76.1886 71.7431 76.5565 91.394 79.411 126.464C84.4657 168.557 81.7274 185.406 77.4351 216.174M77.4351 216.174L79.8062 403.5C109 441 111.5 439.5 195 441C280.5 441 286.5 439.5 316.926 403.5L314.554 214.988M314.554 214.988L394.5 181.5C364.277 98.2022 346.693 57.1961 309.417 36.7534M314.554 214.988C310.755 185.743 308.388 169.819 311.986 125.871C314.274 89.0479 312.35 70.3715 309.417 36.7534" stroke="black" />
+                        <path d="M8.49997 162L80.5 193.5L80 196.5L7.49997 164.5L8.49997 162Z" fill={secondaryColor} />
+                        <path d="M2.99997 176.5L78 210L77.5 213L1.99997 179L2.99997 176.5Z" fill={secondaryColor} />
+                        <path d="M386.5 161.5L312.5 194L313 197L387.5 164L386.5 161.5Z" fill={secondaryColor} />
+                        <path d="M392 176L314.5 210.5L315 213.5L393 178.5L392 176Z" fill={secondaryColor} />
+                        <path d="M142.766 4.02401L151.337 0C173.469 2.83404 223.264 3.6015 239.466 0L249 4.3C246.803 13.0702 146.797 15.5948 142.766 4.02401Z" fill={secondaryColor} />
+                        <path d="M79 206L4.5 173.5L3.5 176.5L78 210L79 206Z" fill={tertiaryColor} />
+                        <path d="M7.5 164.5L80 196.5L79 200.5L6.5 167.5L7.5 164.5Z" fill={tertiaryColor} />
+                        <path d="M313.5 206.5L391 173L392 176L314.5 210.5L313.5 206.5Z" fill={tertiaryColor} />
+                        <path d="M387.5 163.866L312.5 197L313 201.5L388.5 167L387.5 163.866Z" fill={tertiaryColor} />
+                        <path d="M144 5.5C185.438 13.574 208.168 13.1615 248 5.5L243 12.5C205.505 18.982 184.794 19.3182 148.5 13L148.39 12.8404C145.348 8.43117 143.609 5.90987 144 5.5Z" fill={tertiaryColor} />
+                    </svg>
                 </>
             )
         case "hamburger":

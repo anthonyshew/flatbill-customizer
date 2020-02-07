@@ -24,6 +24,8 @@ $height: 25vh;
         align-items: center;
         width: calc(100% / 6);
         min-width: 250px;
+        background-color: $white;
+        border: 1px solid $black;
 
         &:hover {
             cursor: pointer;
