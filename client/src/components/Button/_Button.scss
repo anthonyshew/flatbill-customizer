@@ -1,5 +1,16 @@
+@import '../../styles/_variables.scss';
+
 .button {
+    width: 150px;
     border: none;
-    background-color: transparent;
+    background-color: $bright-green;
+    font-size: 24px;
+    font-family: $fira-sans-condensed;
+    font-weight: 900;
     cursor: pointer;
+    transition: .2s all;
+
+    &:hover {
+        background-color: $gold;
+    }
 }

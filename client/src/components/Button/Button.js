@@ -1,7 +1,9 @@
 import React from 'react'
 import './_Button.scss'
 
-const Button = ({ text,
+const Button = ({
+    className,
+    text,
     backgroundColor,
     border,
     borderRadius,
@@ -11,7 +13,8 @@ const Button = ({ text,
     return (
         <>
             <button
-                className="button"
+                onClick={onClick}
+                className={`button${className ? " " + className : ""}`}
                 style={{
                     backgroundColor: backgroundColor,
                     border: border,

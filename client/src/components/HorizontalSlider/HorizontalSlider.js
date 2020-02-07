@@ -1,19 +1,59 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import './_HorizontalSlider.scss'
 
-const HorizontalSlider = ({ }) => {
+import useStateValue from '../../lib/hooks/useStateValue'
 
-    const [stuff] = useState(['thing', 'another thing', 'anotherrrrr thing', 'butt', 'butt stuff'])
+import SVG from '../SVG/SVG'
+
+const HorizontalSlider = ({ ...props }) => {
+
+    const [{ model,
+        primaryColor,
+        secondaryColor,
+        chestLogo,
+        leftArmLogo,
+        rightArmLogo }] = useStateValue()
+
+    const [newStuff] = useState([{
+        image: <SVG className="avatar" name={model} title={'shut'} alt={'up'} desc={'thanks'} />,
+        text: 'Model'
+    },
+    {
+        image: <div className=" avatar color primary-color" style={{ backgroundColor: primaryColor }}></div>,
+        text: 'Primary Color'
+    },
+    {
+        image: <div className=" avatar color primary-color" style={{ backgroundColor: secondaryColor }}></div>,
+        text: 'Secondary Color'
+    },
+    {
+        image: <SVG className="avatar" name={chestLogo} title={'shut'} alt={'up'} desc={'thanks'} />,
+        text: 'Logo'
+    },
+    {
+        image: <SVG className="avatar " name={leftArmLogo} title={'shut'} alt={'up'} desc={'thanks'} />,
+        text: 'Left Arm Logo'
+    },
+    {
+        image: <SVG className="avatar" name={rightArmLogo} title={'shut'} alt={'up'} desc={'thanks'} />,
+        text: 'Right Arm Logo'
+    }
+    ])
+
+    const handleClick = () => console.log('so handled right now')
 
     return (
-        <ul className="product-slider">
+        <ul className="horizontal-slider">
+
             {
-                stuff.map(elem => {
+                newStuff.map(elem => {
                     return (
-                        <li className="container-product" key={elem} title={`Head to the ${elem} product page.`}>
-                            {elem}
-                        </li>
+                        <SliderItem
+                            key={elem.text}
+                            image={elem.image}
+                            text={elem.text}
+                            handleClick={handleClick}
+                        />
                     )
                 })
             }
@@ -22,3 +62,12 @@ const HorizontalSlider = ({ }) => {
 }
 
 export default HorizontalSlider
+
+const SliderItem = ({ image, text, handleClick, ...props }) => (
+    <>
+        <button className="horizontal-slider-button" onClick={handleClick}>
+            {image}
+            <p className="avatar-text">{text}</p>
+        </button>
+    </>
+)

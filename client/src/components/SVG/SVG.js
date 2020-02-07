@@ -1,8 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './_SVG.scss'
+import useStateValue from '../../lib/hooks/useStateValue'
 
-const getPath = (name, className, handleClick, title, desc, alt) => {
+const getPath = (name,
+    primaryColor,
+    secondaryColor,
+    tertiaryColor,
+    className,
+    handleClick,
+    title,
+    desc,
+    alt) => {
     switch (name) {
         case "logo":
             return (
@@ -26,6 +35,34 @@ const getPath = (name, className, handleClick, title, desc, alt) => {
                             </radialGradient>
                         </defs>
                     </svg>
+                </>
+            )
+        case "striper-front":
+            return (
+                <>
+                    <svg className={className} viewBox="0 0 500 558" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt={alt}>
+                        <title>{title}</title>
+                        <desc>{desc}</desc>
+                        <path d="M185 8.5C238.416 18.9334 267.002 18.1871 317.5 8L318 7L394 47C424.373 110.91 424.656 140.843 397.5 184.5L400.5 272.5V386H100.5V274L103.5 184.5C86.2226 141.193 85.3612 111.833 105.5 47L183 6.5L185 8.5Z" fill={primaryColor} />
+                        <path d="M185 15C235.768 25.6024 264.232 24.1827 315 15C295.801 44.4437 281.46 57.6105 251.5 77C219.664 59.0484 204.983 45.6025 185 15Z" fill="#505050" stroke="black" />
+                        <path fillRule="evenodd" clipRule="evenodd" d="M194 0.5L183.5 6.5L180 9C197 42.5 232.5 74 251 80.5C273.5 69.5 302.772 42.6312 321 9L317.5 6.5L305.5 0.5C285.001 5.05657 222.001 4.08559 194 0.5ZM317.5 6.5C293.682 40.5404 268.043 63.5235 251 71C218.452 52.9789 204.055 38.4113 183.5 6.5C191 17.7419 297.5 21.5 317.5 6.5Z" fill={secondaryColor} />
+                        <path d="M100.5 274L68 260L103.5 184.5L101.891 232.5L101.807 235L101.338 249L101.187 253.5L100.768 266L100.601 271L100.5 274Z" fill={secondaryColor} />
+                        <path d="M433 260L397.5 184.5L399.136 232.5L399.222 235L399.699 249L399.852 253.5L400.278 266L400.449 271L400.5 272.5L433 260Z" fill={secondaryColor} />
+                        <path d="M100.5 386V513C141.5 562.5 153 557 251 557C359 557 356 562.5 400.5 513V386H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 381V368H400.5V381H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 362.5V351H400.5V362.5H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 344V334H400.5V344H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 326V317H400.5V326H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 307.5V301H400.5V307.5H100.5Z" fill={secondaryColor} />
+                        <path d="M100.5 289.5V283.5H400.5V289.5H100.5Z" fill={secondaryColor} />
+                        <path d="M100.601 271H400.449L400.278 266H100.768L100.601 271Z" fill={secondaryColor} />
+                        <path d="M101.187 253.5H399.852L399.699 249H101.338L101.187 253.5Z" fill={secondaryColor} />
+                        <path d="M101.807 235H399.222L399.136 232.5H101.891L101.807 235Z" fill={secondaryColor} />
+                        <path d="M0 229.5C41.4007 133.648 65.8876 65.922 105.5 47.0001C100.513 50.4425 99.2462 111.656 100.171 116.147C100.251 115.052 100.362 114.838 100.5 115.75C100.371 116.485 100.26 116.582 100.171 116.147C99.6026 123.872 100.516 175.444 103.5 184.5L68 259.948L0 229.5Z" fill={tertiaryColor} />
+                        <path d="M499.5 229.5C451.603 101.711 428.336 58.902 394 47.0001C401.016 68.908 402.384 84.0853 400.75 115.75C403.098 141.813 402.076 156.934 397.5 184.5L433 259.948L499.5 229.5Z" fill={tertiaryColor} />
+                        <path d="M250.5 84C215.567 62.2368 199.4 46.4579 178.5 10L176 12C194.791 47.0909 212.183 62.9048 250.5 87C290.12 63.5422 305.029 46.188 326 12L323.5 10.5C301.025 46.5305 285.208 62.824 250.5 84Z" fill={tertiaryColor} />
+                    </svg>
+
                 </>
             )
         case "hamburger":
@@ -52,16 +89,25 @@ const getPath = (name, className, handleClick, title, desc, alt) => {
 }
 
 const SVG = ({ name, className, handleClick, title, desc, alt }) => {
+
+    const [{ primaryColor, secondaryColor, tertiaryColor }] = useStateValue()
+
     return (
-        getPath(name, className, handleClick, title, desc, alt)
+        getPath(
+            name,
+            primaryColor,
+            secondaryColor,
+            tertiaryColor,
+            className,
+            handleClick,
+            title,
+            desc,
+            alt)
     )
 }
 
 SVG.propTypes = {
     name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
 }
 
 export default SVG
