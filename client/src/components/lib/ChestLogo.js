@@ -3,7 +3,7 @@ import useStateValue from '../../lib/hooks/useStateValue'
 
 const ChestLogo = ({ className, avatarImage, fontSize, ...props }) => {
 
-    const [{ chestLogo, secondaryColor, tertiaryColor }] = useStateValue()
+    const [{ chestLogo, primaryColor, secondaryColor, tertiaryColor }] = useStateValue()
 
     return (
         <>
@@ -13,6 +13,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, ...props }) => {
                         fill: secondaryColor,
                         stroke: chestLogo.fontFamily === "Ewert" ? "" : tertiaryColor,
                         strokeWidth: chestLogo.outline ? .2 : chestLogo.fontFamily === "Ewert" ? 0 : 0,
+                        textShadow: chestLogo.shadow ? `5px 5px black` : null,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
                         fontWeight: "900",

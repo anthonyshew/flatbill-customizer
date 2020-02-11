@@ -39,6 +39,11 @@ const LogoEditor = ({ logoLocation, ...props }) => {
                 text="Toggle Outline"
                 handleClick={() => dispatch({ type: "TOGGLE_CHEST_OUTLINE" })}
             />
+            <SliderItem
+                image={chestLogo.shadow ? <SVG name="check-mark" className="avatar" /> : <SVG name="prohibit" className="avatar" />}
+                text="Toggle Shadow"
+                handleClick={() => dispatch({ type: "TOGGLE_CHEST_SHADOW" })}
+            />
         </>
     )
 }

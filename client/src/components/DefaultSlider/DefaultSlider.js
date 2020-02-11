@@ -40,6 +40,11 @@ const DefaultSlider = ({ ...props }) => {
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'chestLogo' })
     },
     {
+        image: <p>Numbers Options</p>,
+        text: 'Numbers',
+        clickHandler: () => console.log('default menu click')
+    },
+    {
         image: <SVG className="avatar " name={leftArmLogo} title={'shut'} alt={'up'} desc={'thanks'} />,
         text: 'Left Arm Logo',
         clickHandler: () => console.log('default menu click')
