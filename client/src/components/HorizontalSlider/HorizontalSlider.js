@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './_HorizontalSlider.scss'
 import FontPicker from 'font-picker-react'
 import useStateValue from '../../lib/hooks/useStateValue'
@@ -12,8 +12,12 @@ const HorizontalSlider = ({ ...props }) => {
 
     const [{ editorCurrentlyOpen, chestLogo }, dispatch] = useStateValue()
 
+    useEffect(() => {
+        document.getElementById("horizontalSlider").scrollLeft = 0
+    }, [editorCurrentlyOpen])
+
     return (
-        <ul className="horizontal-slider">
+        <ul id="horizontalSlider" className="horizontal-slider">
             {editorCurrentlyOpen === "defaultMenu" ? <DefaultSlider /> :
                 editorCurrentlyOpen === "models" ? <ModelSlider /> :
                     editorCurrentlyOpen === "primaryColor" ? <ColorSlider colorType="primary" /> :

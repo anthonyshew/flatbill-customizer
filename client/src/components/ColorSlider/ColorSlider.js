@@ -3,6 +3,8 @@ import SliderItem from '../SliderItem/SliderItem'
 
 import useStateValue from '../../lib/hooks/useStateValue'
 
+import SVG from '../SVG'
+
 const ColorSlider = ({ colorType, ...props }) => {
 
     const [, dispatch] = useStateValue()
@@ -118,6 +120,13 @@ const ColorSlider = ({ colorType, ...props }) => {
 
     return (
         <>
+            <SliderItem
+                image={
+                    <SVG name="arrow-left" className="avatar" alt="Back to top menu." />
+                }
+                text="Back"
+                handleClick={() => dispatch({ type: "EDITOR_CHANGE", menu: "defaultMenu" })}
+            />
             {colorOptions.map(elem => {
                 return (
                     <SliderItem

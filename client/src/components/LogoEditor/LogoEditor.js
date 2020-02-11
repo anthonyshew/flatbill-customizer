@@ -14,7 +14,7 @@ const LogoEditor = ({ logoLocation, ...props }) => {
                 image={
                     <SVG name="arrow-left" className="avatar" alt="Back to top menu." />
                 }
-                text="Back to Top Menu"
+                text="Back"
                 handleClick={() => dispatch({ type: "EDITOR_CHANGE", menu: "defaultMenu" })}
             />
             <SliderItem
