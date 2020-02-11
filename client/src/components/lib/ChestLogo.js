@@ -11,10 +11,11 @@ const ChestLogo = ({ className, avatarImage, fontSize, ...props }) => {
                 <text x="50%" y={avatarImage ? "50%" : "33%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
-                        stroke: tertiaryColor,
-                        strokeWidth: chestLogo.outline ? .3 : 0,
+                        stroke: chestLogo.fontFamily === "Ewert" ? "" : tertiaryColor,
+                        strokeWidth: chestLogo.outline ? .2 : chestLogo.fontFamily === "Ewert" ? 0 : 0,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
+                        fontWeight: "900",
                         borderRadius: "initial"
                     }}>
                     {chestLogo.text}

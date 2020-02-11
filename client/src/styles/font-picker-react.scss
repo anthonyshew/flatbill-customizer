@@ -1,0 +1,35 @@
+@import './_variables.scss';
+
+#font-picker {
+    width: 100%;
+    box-shadow: initial;
+    border: none;
+
+    .dropdown-button {
+        display: none;
+    }
+
+    .font-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: $slider-height - 2vh;
+        max-height: initial;
+        background-color: $white;
+        box-shadow: initial;
+        overflow-x: auto;
+
+        .font-list-item {
+            height: 100%;
+            border: 1px solid $black;
+
+            .font-button {
+                width: 200px;
+                justify-content: center;
+                font-size: 28px;
+                white-space: initial;
+            }
+        }
+    }
+
+}

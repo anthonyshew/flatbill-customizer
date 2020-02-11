@@ -1,7 +1,5 @@
 @import '../../styles/_variables.scss';
 
-$height: 25vh;
-
 .horizontal-slider {
     position: absolute;
     bottom: 10vh;
@@ -9,13 +7,12 @@ $height: 25vh;
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    height: $height;
+    height: $slider-height;
     border: 8px solid $black;
     border-left: none;
     border-right: none;
     background-color: $white;
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-
-
 }
