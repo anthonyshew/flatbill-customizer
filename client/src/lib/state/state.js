@@ -5,7 +5,12 @@ export const initialState = {
     primaryColor: '#66b500',
     secondaryColor: '#4d4d4d',
     tertiaryColor: '#000000',
-    chestLogo: 'logo',
+    chestLogo: {
+        text: "Something that is vastly too long",
+        fontFamily: "Fira Sans Condensed",
+        fontSize: 24,
+        outline: false
+    },
     leftArmLogo: 'logo',
     rightArmLogo: 'hamburger',
     editorCurrentlyOpen: 'defaultMenu'
@@ -48,6 +53,22 @@ export const reducer = (state, action) => {
                 ...state,
                 editorCurrentlyOpen: action.menu,
                 tertiaryColor: action.tertiaryColor
+            }
+        case 'FONT_SIZE_DOWN':
+            return {
+                ...state,
+                chestLogo: {
+                    ...state.chestLogo,
+                    fontSize: state.chestLogo.fontSize - 1
+                }
+            }
+        case 'FONT_SIZE_UP':
+            return {
+                ...state,
+                chestLogo: {
+                    ...state.chestLogo,
+                    fontSize: state.chestLogo.fontSize + 1
+                }
             }
         default:
             return state

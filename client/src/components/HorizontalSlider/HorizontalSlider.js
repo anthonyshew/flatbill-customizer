@@ -4,7 +4,8 @@ import useStateValue from '../../lib/hooks/useStateValue'
 
 import DefaultSlider from '../DefaultSlider'
 import ModelSlider from '../ModelSlider'
-import ColorSlider from '../ColorSlider/ColorSlider'
+import ColorSlider from '../ColorSlider'
+import LogoSlider from '../LogoEditor'
 
 const HorizontalSlider = ({ ...props }) => {
 
@@ -17,7 +18,8 @@ const HorizontalSlider = ({ ...props }) => {
                     editorCurrentlyOpen === "primaryColor" ? <ColorSlider colorType="primary" /> :
                         editorCurrentlyOpen === "secondaryColor" ? <ColorSlider colorType="secondary" /> :
                             editorCurrentlyOpen === "tertiaryColor" ? <ColorSlider colorType="tertiary" /> :
-                                console.error('There is probably a state issue.')
+                                editorCurrentlyOpen === "chestLogo" ? <LogoSlider logoLocation="chestLogo" /> :
+                                    console.error('There is probably a state issue.')
             }
         </ul>
     )

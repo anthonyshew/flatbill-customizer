@@ -35,9 +35,9 @@ const DefaultSlider = ({ ...props }) => {
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'tertiaryColor' })
     },
     {
-        image: <SVG className="avatar" name={chestLogo} title={'shut'} alt={'up'} desc={'thanks'} />,
-        text: 'Logo',
-        clickHandler: () => console.log('default menu click')
+        image: <p className="chest-logo" style={{ maxWidth: "150px", whiteSpace: "nowrap", overflow: "hidden", padding: "1px", fontFamily: chestLogo.fontFamily, fontSize: chestLogo.fontSize + "px" }}>{chestLogo.text}</p>,
+        text: 'Chest Logo',
+        clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'chestLogo' })
     },
     {
         image: <SVG className="avatar " name={leftArmLogo} title={'shut'} alt={'up'} desc={'thanks'} />,
