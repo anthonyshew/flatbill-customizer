@@ -197,6 +197,30 @@ const getPath = (name,
                     </svg>
                 </>
             )
+        case "check-mark":
+            return (
+                <>
+                    <svg className={className} viewBox="0 0 120 60" fill="none" role="img" alt="Check yes!" >
+                        <path
+                            d="M4.183 47.378l20.648 19.81a5 5 0 006.505.36L96.23 17.751a5 5 0 00.688-7.294l-5.255-5.895a5 5 0 00-6.883-.554l-52.906 42.95a5 5 0 01-6.95-.63l-8.897-10.394a5 5 0 00-7.334-.284L4.11 40.235a5 5 0 00.074 7.143z"
+                            stroke="#086300"
+                            strokeWidth={5}
+                        />
+                    </svg>
+                </>
+            )
+        case "prohibit":
+            return (
+                <>
+                    <svg className={className} viewBox="0 0 100 100" fill="none" role="img" alt="The sign for general prohibition.">
+                        <path
+                            d="M66.373 8.071L26.097 88.134C13.424 80.172 5 66.07 5 50 5 25.147 25.147 5 50 5a44.887 44.887 0 0116.373 3.071zM50 95a44.93 44.93 0 01-14.894-2.523l40.118-79.748C87.158 20.82 95 34.495 95 50c0 24.853-20.147 45-45 45z"
+                            stroke="#E61B1B"
+                            strokeWidth={10}
+                        />
+                    </svg>
+                </>
+            )
         default:
             return <svg className={className} role="img">
                 <title>Forgotten SVG!</title>

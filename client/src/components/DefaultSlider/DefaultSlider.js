@@ -2,7 +2,8 @@ import React from 'react'
 import SliderItem from '../SliderItem/SliderItem'
 
 import useStateValue from '../../lib/hooks/useStateValue'
-import SVG from '../SVG/SVG'
+import SVG from '../SVG'
+import ChestLogo from '../lib/ChestLogo'
 
 const DefaultSlider = ({ ...props }) => {
 
@@ -10,7 +11,6 @@ const DefaultSlider = ({ ...props }) => {
         primaryColor,
         secondaryColor,
         tertiaryColor,
-        chestLogo,
         leftArmLogo,
         rightArmLogo }, dispatch] = useStateValue()
 
@@ -35,7 +35,7 @@ const DefaultSlider = ({ ...props }) => {
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'tertiaryColor' })
     },
     {
-        image: <p className="chest-logo" style={{ maxWidth: "150px", whiteSpace: "nowrap", overflow: "hidden", padding: "1px", fontFamily: chestLogo.fontFamily, fontSize: chestLogo.fontSize + "px" }}>{chestLogo.text}</p>,
+        image: <ChestLogo avatarImage className="avatar jersey-text" fontSize="32px" />,
         text: 'Chest Logo',
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'chestLogo' })
     },

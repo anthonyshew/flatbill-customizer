@@ -1,5 +1,6 @@
 import React from 'react'
 import './_HorizontalSlider.scss'
+import FontPicker from 'font-picker-react'
 import useStateValue from '../../lib/hooks/useStateValue'
 
 import DefaultSlider from '../DefaultSlider'
@@ -9,7 +10,7 @@ import LogoSlider from '../LogoEditor'
 
 const HorizontalSlider = ({ ...props }) => {
 
-    const [{ editorCurrentlyOpen }] = useStateValue()
+    const [{ editorCurrentlyOpen, chestLogo }, dispatch] = useStateValue()
 
     return (
         <ul className="horizontal-slider">
@@ -19,7 +20,14 @@ const HorizontalSlider = ({ ...props }) => {
                         editorCurrentlyOpen === "secondaryColor" ? <ColorSlider colorType="secondary" /> :
                             editorCurrentlyOpen === "tertiaryColor" ? <ColorSlider colorType="tertiary" /> :
                                 editorCurrentlyOpen === "chestLogo" ? <LogoSlider logoLocation="chestLogo" /> :
-                                    console.error('There is probably a state issue.')
+                                    editorCurrentlyOpen === "fontPickerChest" ? <FontPicker
+                                        apiKey="AIzaSyC3bkG4lNevY9wZ7LXAyLOwUyFUgpyq4fw"
+                                        activeFontFamily={chestLogo.fontFamily}
+                                        onChange={nextFont => dispatch({
+                                            type: "LOGO_FONT_CHANGE",
+                                            newFont: nextFont.family
+                                        })} /> :
+                                        console.error('There is probably a state issue.')
             }
         </ul>
     )

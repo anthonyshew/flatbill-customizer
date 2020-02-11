@@ -3,13 +3,13 @@ export const initialState = {
     view: 'front',
     model: 'solid',
     primaryColor: '#66b500',
-    secondaryColor: '#4d4d4d',
+    secondaryColor: '#969799',
     tertiaryColor: '#000000',
     chestLogo: {
-        text: "Something that is vastly too long",
+        text: "Flatbill",
         fontFamily: "Fira Sans Condensed",
-        fontSize: 24,
-        outline: false
+        fontSize: 8,
+        outline: true
     },
     leftArmLogo: 'logo',
     rightArmLogo: 'hamburger',
@@ -68,6 +68,22 @@ export const reducer = (state, action) => {
                 chestLogo: {
                     ...state.chestLogo,
                     fontSize: state.chestLogo.fontSize + 1
+                }
+            }
+        case 'TOGGLE_CHEST_OUTLINE':
+            return {
+                ...state,
+                chestLogo: {
+                    ...state.chestLogo,
+                    outline: !state.chestLogo.outline
+                }
+            }
+        case 'LOGO_FONT_CHANGE':
+            return {
+                ...state,
+                chestLogo: {
+                    ...state.chestLogo,
+                    fontFamily: action.newFont
                 }
             }
         default:
