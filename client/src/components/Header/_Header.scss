@@ -1,4 +1,18 @@
+@import '../../styles/_variables.scss';
+
 .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 5vh;
+    padding: 10px;
+    font-family: $fira-sans-condensed;
+
+    .platypus {
+        position: relative;
+        height: 40px;
+        top: 12px;
+    }
 }
