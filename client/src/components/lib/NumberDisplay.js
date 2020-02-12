@@ -12,7 +12,7 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, ...props }) 
                     style={{
                         fill: secondaryColor,
                         stroke: number.fontFamily === "Ewert" ? "" : tertiaryColor,
-                        strokeWidth: number.outline ? ".1em" : number.fontFamily === "Ewert" ? 0 : 0,
+                        strokeWidth: number.outline ? ".01em" : number.fontFamily === "Ewert" ? 0 : 0,
                         textShadow: number.shadow ? `4px 4px black` : null,
                         fontFamily: number.fontFamily,
                         fontSize: fontSize || number.fontSize,

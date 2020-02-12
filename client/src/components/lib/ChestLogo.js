@@ -12,8 +12,9 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, ...props }) => {
                     style={{
                         fill: secondaryColor,
                         stroke: chestLogo.fontFamily === "Ewert" ? "" : tertiaryColor,
-                        strokeWidth: chestLogo.outline ? ".1em" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
-                        textShadow: avatarImage ? `.05em .05em black, -.05em .05em black, .05em -.05em black, -.05em -.05em black` : chestLogo.shadow ? `.4em .4em black, -.4em .4em black, .4em -.4em black, -.4em -.4em black` : null,
+                        strokeWidth: chestLogo.outline ? ".01em" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
+                        textStroke: `2px ${tertiaryColor}`,
+                        textShadow: avatarImage ? `.00005em .00005em black, -.00005em .05em black, .00005em -.00005em black, -.05em -.05em black` : chestLogo.shadow ? `.4em .4em black, -.4em .4em black, .4em -.4em black, -.4em -.4em black` : null,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
                         fontWeight: "900",
