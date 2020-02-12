@@ -2,11 +2,13 @@ import React, { useEffect } from 'react'
 import './_HorizontalSlider.scss'
 import FontPicker from 'font-picker-react'
 import useStateValue from '../../lib/hooks/useStateValue'
+import fonts from '../lib/fonts'
 
 import DefaultSlider from '../DefaultSlider'
 import ModelSlider from '../ModelSlider'
 import ColorSlider from '../ColorSlider'
-import LogoSlider from '../LogoEditor'
+import LogoEditor from '../LogoEditor'
+import NumberEditor from '../NumberEditor'
 
 const HorizontalSlider = ({ ...props }) => {
 
@@ -23,66 +25,25 @@ const HorizontalSlider = ({ ...props }) => {
                     editorCurrentlyOpen === "primaryColor" ? <ColorSlider colorType="primary" /> :
                         editorCurrentlyOpen === "secondaryColor" ? <ColorSlider colorType="secondary" /> :
                             editorCurrentlyOpen === "tertiaryColor" ? <ColorSlider colorType="tertiary" /> :
-                                editorCurrentlyOpen === "chestLogo" ? <LogoSlider logoLocation="chestLogo" /> :
-                                    editorCurrentlyOpen === "fontPickerChest" ? <FontPicker
-                                        apiKey="AIzaSyC3bkG4lNevY9wZ7LXAyLOwUyFUgpyq4fw"
-                                        activeFontFamily={chestLogo.fontFamily}
-                                        families={["Lobster",
-                                            "Lemonada",
-                                            "Odibee Sans",
-                                            "Modak",
-                                            "Galada",
-                                            "Righteous",
-                                            "Patua One",
-                                            "Luckiest Guy",
-                                            "Passion One",
-                                            "Alfa Slab One",
-                                            "Bangers",
-                                            "Monoton",
-                                            "Baloo Bhai",
-                                            "Sigmar One",
-                                            "PLayball",
-                                            "Chewy",
-                                            "Black Ops One",
-                                            "Boogaloo",
-                                            "Shrikhand",
-                                            "Racing Sans One",
-                                            "Shojumaru",
-                                            "Bungee",
-                                            "Graduate",
-                                            "Turret Road",
-                                            "McLaren",
-                                            "Spicy Rice",
-                                            "Limelight",
-                                            "Bowlby One",
-                                            "Ranchers",
-                                            "Creepster",
-                                            "Ewert",
-                                            "Peralta",
-                                            "Germania One",
-                                            "Sarina",
-                                            "Trade Winds",
-                                            "Pirata One",
-                                            "Uncial Antiqua",
-                                            "Smokum",
-                                            "Iceberg",
-                                            "Caesar Dressing",
-                                            "Mrs Sheppards",
-                                            "Permanent Marker",
-                                            "Marck Script",
-                                            "Yellowtail",
-                                            "VT323",
-                                            "Oswald",
-                                            "Anton",
-                                            "Arvo",
-                                            "Acme",
-                                            "Monsterrat Subrayada",
-                                        ]}
-                                        onChange={nextFont => dispatch({
-                                            type: "LOGO_FONT_CHANGE",
-                                            newFont: nextFont.family
-                                        })} /> :
-                                        console.error('There is probably a state issue.')
+                                editorCurrentlyOpen === "chestLogo" ? <LogoEditor logoLocation="chestLogo" /> :
+                                    editorCurrentlyOpen === "numberEditor" ? <NumberEditor /> :
+                                        editorCurrentlyOpen === "fontPickerNumber" ? <FontPicker
+                                            apiKey="AIzaSyC3bkG4lNevY9wZ7LXAyLOwUyFUgpyq4fw"
+                                            activeFontFamily={chestLogo.fontFamily}
+                                            families={fonts}
+                                            onChange={nextFont => dispatch({
+                                                type: "NUMBER_FONT_CHANGE",
+                                                newFont: nextFont.family
+                                            })} /> :
+                                            editorCurrentlyOpen === "fontPickerChest" ? <FontPicker
+                                                apiKey="AIzaSyC3bkG4lNevY9wZ7LXAyLOwUyFUgpyq4fw"
+                                                activeFontFamily={chestLogo.fontFamily}
+                                                families={fonts}
+                                                onChange={nextFont => dispatch({
+                                                    type: "LOGO_FONT_CHANGE",
+                                                    newFont: nextFont.family
+                                                })} /> :
+                                                console.error('There is probably a state issue.')
             }
         </ul>
     )

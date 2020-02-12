@@ -4,6 +4,7 @@ import SliderItem from '../SliderItem/SliderItem'
 import useStateValue from '../../lib/hooks/useStateValue'
 import SVG from '../SVG'
 import ChestLogo from '../lib/ChestLogo'
+import NumberDisplay from '../lib/NumberDisplay'
 
 const DefaultSlider = ({ ...props }) => {
 
@@ -40,9 +41,9 @@ const DefaultSlider = ({ ...props }) => {
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'chestLogo' })
     },
     {
-        image: <p>Numbers Options</p>,
+        image: <NumberDisplay avatarImage className="avatar jersey-number" fontSize="32px" />,
         text: 'Numbers',
-        clickHandler: () => console.log('default menu click')
+        clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'numberEditor' })
     },
     {
         image: <SVG className="avatar " name={leftArmLogo} title={'shut'} alt={'up'} desc={'thanks'} />,

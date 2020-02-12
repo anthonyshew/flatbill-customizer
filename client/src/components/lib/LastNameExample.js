@@ -1,14 +1,14 @@
 import React from 'react'
 import useStateValue from '../../lib/hooks/useStateValue'
 
-const ChestLogo = ({ className, avatarImage, fontSize, shadow, ...props }) => {
+const LastNameExample = ({ className, avatarImage, fontSize, shadow, ...props }) => {
 
     const [{ chestLogo, secondaryColor, tertiaryColor }] = useStateValue()
 
     return (
         <>
             <svg className={className} style={{ width: avatarImage ? "100%" : "" }} viewBox="0 0 73 60" fill="none" role="img" >
-                <text x="49.5%" y={avatarImage ? "50%" : "33%"} dominantBaseline="middle" textAnchor="middle"
+                <text x="50%" y="16%" dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: chestLogo.fontFamily === "Ewert" ? "" : tertiaryColor,
@@ -19,11 +19,12 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, ...props }) => {
                         fontWeight: "900",
                         borderRadius: "initial"
                     }}>
-                    {chestLogo.text}
+                    Jones
                 </text>
             </svg>
+
         </>
     )
 }
 
-export default ChestLogo
+export default LastNameExample

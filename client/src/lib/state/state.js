@@ -2,12 +2,20 @@ export const initialState = {
     price: 300,
     view: 'front',
     model: 'solid',
-    primaryColor: '#66b500',
-    secondaryColor: '#969799',
+    primaryColor: '#960001',
+    secondaryColor: '#8abade',
     tertiaryColor: '#ffffff',
     chestLogo: {
         text: "Flatbill",
-        fontFamily: "Fira Sans Condensed",
+        fontFamily: "Graduate",
+        fontSize: 6,
+        outline: true,
+        shadow: true
+    },
+    number: {
+        digit: 31,
+        front: true,
+        fontFamily: "Graduate",
         fontSize: 8,
         outline: true,
         shadow: true
@@ -71,6 +79,22 @@ export const reducer = (state, action) => {
                     fontSize: state.chestLogo.fontSize + 1
                 }
             }
+        case 'NUMBER_SIZE_DOWN':
+            return {
+                ...state,
+                number: {
+                    ...state.number,
+                    fontSize: state.number.fontSize - 1
+                }
+            }
+        case 'NUMBER_SIZE_UP':
+            return {
+                ...state,
+                number: {
+                    ...state.number,
+                    fontSize: state.number.fontSize + 1
+                }
+            }
         case 'TOGGLE_CHEST_OUTLINE':
             return {
                 ...state,
@@ -87,11 +111,35 @@ export const reducer = (state, action) => {
                     shadow: !state.chestLogo.shadow
                 }
             }
+        case 'TOGGLE_NUMBER_OUTLINE':
+            return {
+                ...state,
+                number: {
+                    ...state.number,
+                    outline: !state.number.outline
+                }
+            }
+        case 'TOGGLE_NUMBER_SHADOW':
+            return {
+                ...state,
+                number: {
+                    ...state.number,
+                    shadow: !state.number.shadow
+                }
+            }
         case 'LOGO_FONT_CHANGE':
             return {
                 ...state,
                 chestLogo: {
                     ...state.chestLogo,
+                    fontFamily: action.newFont
+                }
+            }
+        case 'NUMBER_FONT_CHANGE':
+            return {
+                ...state,
+                number: {
+                    ...state.number,
                     fontFamily: action.newFont
                 }
             }
