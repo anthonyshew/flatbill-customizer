@@ -16,14 +16,15 @@ const ViewBar = ({ ...props }) => {
             newView: view === 'front' ? 'back' : 'front'
         })
         gsap.timeline()
+            .killTweensOf(".arrow-right")
             .set(".arrow-right", { x: 0 })
             .to(".arrow-right", {
-                duration: .5,
+                duration: .3,
                 x: 50,
                 autoAlpha: 1
             })
             .to(".arrow-right", {
-                duration: .5,
+                duration: .3,
                 x: 50,
                 autoAlpha: 0,
             })
