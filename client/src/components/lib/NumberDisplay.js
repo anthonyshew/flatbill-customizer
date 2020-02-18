@@ -8,7 +8,7 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, ...props }) 
     return (
         <>
             <svg className={className} style={{ width: avatarImage ? "100%" : "" }} viewBox={avatarImage ? "0 0 75 75" : "0 0 250 250"} fill="none" role="img" >
-                <text x={display ? "50%" : avatarImage ? "50%" : "37%"} y={display ? "45%" : avatarImage ? "50%" : "70%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={display ? "50%" : avatarImage ? "50%" : "37%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: number.fontFamily === "Ewert" ? "" : "black",
@@ -20,7 +20,7 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, ...props }) 
                     }}>
                     {number.digit}
                 </text>
-                <text x={display ? "50%" : avatarImage ? "50%" : "37%"} y={display ? "45%" : avatarImage ? "50%" : "70%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={display ? "50%" : avatarImage ? "50%" : "37%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: number.fontFamily === "Ewert" ? "" : tertiaryColor,
@@ -32,7 +32,7 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, ...props }) 
                     }}>
                     {number.digit}
                 </text>
-                <text x={display ? "50%" : avatarImage ? "50%" : "37%"} y={display ? "45%" : avatarImage ? "50%" : "70%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={display ? "50%" : avatarImage ? "50%" : "37%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         fontFamily: number.fontFamily,

@@ -1,8 +1,10 @@
 import React from 'react'
+import gsap from 'gsap'
 import './_ViewBar.scss'
 import useStateValue from '../../lib/hooks/useStateValue'
 
 import Button from '../Button'
+import SVG from '../SVG'
 
 const ViewBar = ({ ...props }) => {
 
@@ -13,6 +15,18 @@ const ViewBar = ({ ...props }) => {
             type: "flipView",
             newView: view === 'front' ? 'back' : 'front'
         })
+        gsap.timeline()
+            .set(".arrow-right", { x: 0 })
+            .to(".arrow-right", {
+                duration: .5,
+                x: 50,
+                autoAlpha: 1
+            })
+            .to(".arrow-right", {
+                duration: .5,
+                x: 50,
+                autoAlpha: 0,
+            })
     }
 
     return (
@@ -20,6 +34,7 @@ const ViewBar = ({ ...props }) => {
             <Button className="view-toggle"
                 text={view === 'front' ? "Front View" : "Back View"}
                 onClick={handleClick} />
+            <SVG name="arrow-right" className="arrow-right" alt="Activation arrow to show you that you changed jersey views." />
         </div>
 
     )

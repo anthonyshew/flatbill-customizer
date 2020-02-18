@@ -163,6 +163,19 @@ const getPath = (name,
                     </svg>
                 </>
             )
+        case "arrow-right":
+            return (
+                <>
+                    <svg className={className} viewBox="0 0 73 60" fill="none" role="img" alt={alt}>
+                        <path
+                            d="M5 30h61m0 0L43.546 5M66 30L43.546 55"
+                            stroke="#000"
+                            strokeWidth={10}
+                            strokeLinecap="round"
+                        />
+                    </svg>
+                </>
+            )
         case "increase-font-size":
             return (
                 <>
