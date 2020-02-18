@@ -11,7 +11,6 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, ...props }) => {
                 <text x="49.5%" y={avatarImage ? "50%" : "33%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
-                        textStroke: `2px ${tertiaryColor}`,
                         textShadow: avatarImage ? `.05em .05em black, -.05em .05em black, .05em -.05em black, -.05em -.05em black` : chestLogo.shadow ? `.4em .4em black, -.4em .4em black, .4em -.4em black, -.4em -.4em black` : null,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
@@ -25,7 +24,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, ...props }) => {
                         fill: secondaryColor,
                         stroke: chestLogo.fontFamily === "Ewert" ? "" : tertiaryColor,
                         strokeWidth: chestLogo.outline ? ".01em" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
-                        textStroke: `2px ${tertiaryColor}`,
+                        // textStroke: `2px ${tertiaryColor}`,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
                         fontWeight: "900",
