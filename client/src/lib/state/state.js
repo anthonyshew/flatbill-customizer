@@ -8,7 +8,7 @@ export const initialState = {
     chestLogo: {
         text: "Flatbill",
         fontFamily: "Graduate",
-        fontSize: 6,
+        fontSize: 24,
         outline: true,
         shadow: true
     },
