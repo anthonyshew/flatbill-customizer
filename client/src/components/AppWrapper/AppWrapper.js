@@ -13,7 +13,7 @@ const AppWrapper = ({ children }) => {
     }, [])
 
     return (
-        <div className={`app-wrapper`} style={{ minHeight: viewportHeight }}>
+        <div className={`app-wrapper`} style={{ height: viewportHeight }}>
             {children}
         </div>
     )
