@@ -16,7 +16,7 @@ export const initialState = {
         digit: 31,
         front: true,
         fontFamily: "Graduate",
-        fontSize: 8,
+        fontSize: 32,
         outline: true,
         shadow: true
     },

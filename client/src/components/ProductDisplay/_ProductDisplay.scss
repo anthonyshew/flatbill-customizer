@@ -19,7 +19,9 @@
         text-align: center;
     }
 
-    .jersey-number-front {
+    .jersey-number-front,
+    .jersey-number-back,
+    .jersey-name-back {
         position: absolute;
         left: 50%;
         top: 50%;

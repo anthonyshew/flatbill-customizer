@@ -1,15 +1,13 @@
 import React from 'react'
 import useStateValue from '../../lib/hooks/useStateValue'
-import useViewportDimensions from '../../lib/hooks/useViewportDimensions'
 
 const ChestLogo = ({ className, avatarImage, fontSize, shadow, ...props }) => {
 
     const [{ chestLogo, secondaryColor, tertiaryColor }] = useStateValue()
-    const [width] = useViewportDimensions()
 
     return (
         <>
-            <svg className={className} style={{ width: avatarImage ? "100%" : "" }} viewBox="0 0 250 250" fill="none" role="img" >
+            <svg className={className} style={{ width: avatarImage ? "100%" : "" }} viewBox={avatarImage ? "0 0 75 75" : "0 0 250 250"} fill="none" role="img" >
                 <text x="49.5%" y={avatarImage ? "50%" : "33%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
