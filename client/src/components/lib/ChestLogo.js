@@ -13,7 +13,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, ...props }) => {
                 <text x="49.5%" y={avatarImage ? "50%" : "33%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
-                        textShadow: width < 400 ? `10px 10px black, -10px 10px black, 10px -10px black, -10px -10px black` : avatarImage ? `.05em .05em black, -.05em .05em black, .05em -.05em black, -.05em -.05em black` : chestLogo.shadow ? `2.8px 2.8px black, -2.8px 2.8px black, 2.8px -2.8px black, -2.8px -2.8px black` : null,
+                        textShadow: width < 400 ? `5px 5px black, -5px 5px black, 5px -5px black, -5px -5px black` : avatarImage ? `.05em .05em black, -.05em .05em black, .05em -.05em black, -.05em -.05em black` : chestLogo.shadow ? `2.5px 2.5px black, -2.5px 2.5px black, 2.5px -2.5px black, -2.5px -2.5px black` : null,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
                         fontWeight: "900",
@@ -25,7 +25,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, ...props }) => {
                     style={{
                         fill: secondaryColor,
                         stroke: chestLogo.fontFamily === "Ewert" ? "" : tertiaryColor,
-                        strokeWidth: chestLogo.outline && width < 400 ? "5px" : chestLogo.outline ? ".1px" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
+                        strokeWidth: chestLogo.outline && width < 400 ? "2px" : chestLogo.outline ? ".1px" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
                         fontWeight: "900",
