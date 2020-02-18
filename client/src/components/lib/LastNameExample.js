@@ -12,17 +12,7 @@ const LastNameExample = ({ className, avatarImage, fontSize, shadow, ...props })
                     style={{
                         fill: secondaryColor,
                         stroke: chestLogo.fontFamily === "Ewert" ? "" : "black",
-                        strokeWidth: chestLogo.shadow ? "6px" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
-                        fontFamily: chestLogo.fontFamily,
-                        fontSize: fontSize,
-                        fontWeight: "900",
-                        borderRadius: "initial"
-                    }}>
-                    Jones
-                </text>
-                <text x="50%" y="18%" dominantBaseline="middle" textAnchor="middle"
-                    style={{
-                        fill: secondaryColor,
+                        strokeWidth: chestLogo.shadow ? "8px" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize,
                         fontWeight: "900",
@@ -34,9 +24,19 @@ const LastNameExample = ({ className, avatarImage, fontSize, shadow, ...props })
                     style={{
                         fill: secondaryColor,
                         stroke: chestLogo.fontFamily === "Ewert" ? "" : tertiaryColor,
-                        strokeWidth: chestLogo.outline ? ".01em" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
+                        strokeWidth: chestLogo.outline ? "2px" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize,
+                        fontWeight: "900",
+                        borderRadius: "initial"
+                    }}>
+                    Jones
+                </text>
+                <text x="50%" y="18%" dominantBaseline="middle" textAnchor="middle"
+                    style={{
+                        fill: secondaryColor,
+                        fontFamily: chestLogo.fontFamily,
+                        fontSize: fontSize || chestLogo.fontSize,
                         fontWeight: "900",
                         borderRadius: "initial"
                     }}>
