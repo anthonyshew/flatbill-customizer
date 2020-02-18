@@ -23,7 +23,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, ...props }) => {
                     style={{
                         fill: secondaryColor,
                         stroke: chestLogo.fontFamily === "Ewert" ? "" : tertiaryColor,
-                        strokeWidth: chestLogo.outline ? ".1px" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
+                        strokeWidth: chestLogo.outline ? ".1%" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
                         fontWeight: "900",
