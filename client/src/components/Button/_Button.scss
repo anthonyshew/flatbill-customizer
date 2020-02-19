@@ -8,4 +8,11 @@
     font-family: $fira-sans-condensed;
     font-weight: 900;
     cursor: pointer;
+    transition: all .2s linear;
+}
+
+@media (hover: hover) {
+    .button:hover {
+        background-color: $gold;
+    }
 }
