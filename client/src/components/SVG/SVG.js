@@ -122,8 +122,8 @@ const getPath = (name,
                         <path d="M7.5 164.5L80 196.5L79 200.5L6.5 167.5L7.5 164.5Z" fill={tertiaryColor} />
                         <path d="M313.5 206.5L391 173L392 176L314.5 210.5L313.5 206.5Z" fill={tertiaryColor} />
                         <path d="M387.5 163.866L312.5 197L313 201.5L388.5 167L387.5 163.866Z" fill={tertiaryColor} />
-                        <image className="display-image left" href={leftArmLogo} alt="Left arm logo display." clipPath="url(#left-logo-cut)" />
-                        <image className="display-image right" href={rightArmLogo} alt="right arm logo display." clipPath="url(#right-logo-cut)" />
+                        <image className={`${className === 'avatar' ? "avatar " : null}display-image left`} href={leftArmLogo} alt="Left arm logo display." clipPath="url(#left-logo-cut)" />
+                        <image className={`${className === 'avatar' ? "avatar " : null}display-image right`} href={rightArmLogo} alt="right arm logo display." clipPath="url(#right-logo-cut)" />
                     </svg>
                 </>
             )
@@ -133,6 +133,14 @@ const getPath = (name,
                     <svg className={className} onClick={handleClick} viewBox="0 0 396 442" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="Solid Jersey Model">
                         <title>Solid Jersey Model</title>
                         <desc>This jersey model is one solid color. </desc>
+                        <defs>
+                            <clipPath id="left-logo-cut">
+                                <rect x="355" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                            <clipPath id="right-logo-cut">
+                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                        </defs>
                         <path d="M81.387 36.7534L142.643 4.74231L249.346 5.13751L309.417 36.7534C346.693 57.1961 364.277 98.2022 394.5 181.5L314.554 214.988L316.926 403.5C286.5 439.5 280.5 441 195 441C111.5 439.5 109 441 79.8062 403.5L77.4351 216.174L1 181.5C34.559 92.5928 51.7431 53.7199 81.387 36.7534Z" fill={primaryColor} />
                         <path d="M81.387 36.7534L142.643 4.74231L249.346 5.13751L309.417 36.7534M81.387 36.7534C51.7431 53.7199 34.559 92.5928 1 181.5L77.4351 216.174M81.387 36.7534C76.1886 71.7431 76.5565 91.394 79.411 126.464C84.4657 168.557 81.7274 185.406 77.4351 216.174M77.4351 216.174L79.8062 403.5C109 441 111.5 439.5 195 441C280.5 441 286.5 439.5 316.926 403.5L314.554 214.988M314.554 214.988L394.5 181.5C364.277 98.2022 346.693 57.1961 309.417 36.7534M314.554 214.988C310.755 185.743 308.388 169.819 311.986 125.871C314.274 89.0479 312.35 70.3715 309.417 36.7534" stroke="black" />
                         <path d="M8.49997 162L80.5 193.5L80 196.5L7.49997 164.5L8.49997 162Z" fill={secondaryColor} />
@@ -145,6 +153,8 @@ const getPath = (name,
                         <path d="M313.5 206.5L391 173L392 176L314.5 210.5L313.5 206.5Z" fill={tertiaryColor} />
                         <path d="M387.5 163.866L312.5 197L313 201.5L388.5 167L387.5 163.866Z" fill={tertiaryColor} />
                         <path d="M144 5.5C185.438 13.574 208.168 13.1615 248 5.5L243 12.5C205.505 18.982 184.794 19.3182 148.5 13L148.39 12.8404C145.348 8.43117 143.609 5.90987 144 5.5Z" fill={tertiaryColor} />
+                        <image className={`${className === 'avatar' ? "avatar " : null}display-image left`} href={rightArmLogo} alt="Left arm logo display." clipPath="url(#left-logo-cut)" />
+                        <image className={`${className === 'avatar' ? "avatar " : null}display-image right`} href={leftArmLogo} alt="right arm logo display." clipPath="url(#right-logo-cut)" />
                     </svg>
                 </>
             )
