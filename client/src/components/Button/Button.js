@@ -22,7 +22,9 @@ const Button = ({
                     borderRadius: borderRadius,
                     padding: padding,
                     ...style
-                }}>{text}</button>
+                }}>
+                {text}
+            </button>
         </>
     )
 }
