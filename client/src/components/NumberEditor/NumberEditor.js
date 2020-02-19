@@ -3,7 +3,7 @@ import SliderItem from '../SliderItem/SliderItem'
 
 import useStateValue from '../../lib/hooks/useStateValue'
 import SVG from '../SVG/SVG'
-import ChestLogo from '../lib/ChestLogo'
+import NumberDisplay from '../lib/NumberDisplay'
 
 const NumberEditor = ({ logoLocation, ...props }) => {
 
@@ -30,7 +30,7 @@ const NumberEditor = ({ logoLocation, ...props }) => {
                 handleClick={() => dispatch({ type: "NUMBER_SIZE_UP" })}
             />
             <SliderItem
-                image={<ChestLogo avatarImage className="avatar jersey-text" fontSize="32px" />}
+                image={<NumberDisplay avatarImage className="avatar jersey-text" fontSize="32px" />}
                 text="Select Font"
                 handleClick={() => dispatch({ type: "EDITOR_CHANGE", menu: "fontPickerNumber" })}
             />
