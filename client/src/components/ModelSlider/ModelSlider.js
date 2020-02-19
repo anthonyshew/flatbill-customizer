@@ -29,7 +29,6 @@ const ModelSlider = ({ ...props }) => {
                         text={elem.modelDisplayName}
                         handleClick={() => dispatch({
                             type: "MODEL_SELECT",
-                            menu: "defaultMenu",
                             model: elem.modelId
                         })}
                     />

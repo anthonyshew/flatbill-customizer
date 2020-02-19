@@ -126,17 +126,14 @@ const ColorSlider = ({ colorType, ...props }) => {
                         text={elem.colorName}
                         handleClick={colorType === "primary" ? () => dispatch({
                             type: "PRIMARY_COLOR_SELECT",
-                            menu: 'defaultMenu',
                             primaryColor: elem.hexCode
                         })
                             : colorType === "secondary" ? () => dispatch({
                                 type: "SECONDARY_COLOR_SELECT",
-                                menu: 'defaultMenu',
                                 secondaryColor: elem.hexCode
                             })
                                 : colorType === "tertiary" ? () => dispatch({
                                     type: "TERTIARY_COLOR_SELECT",
-                                    menu: 'defaultMenu',
                                     tertiaryColor: elem.hexCode
                                 })
                                     : console.error('There is an issue with the way handleClick is happening in <ColorSlider />.')

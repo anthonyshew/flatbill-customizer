@@ -42,13 +42,11 @@ export const reducer = (state, action) => {
         case 'MODEL_SELECT':
             return {
                 ...state,
-                editorCurrentlyOpen: action.menu,
                 model: action.model
             }
         case 'PRIMARY_COLOR_SELECT':
             return {
                 ...state,
-                editorCurrentlyOpen: action.menu,
                 primaryColor: action.primaryColor
             }
         case 'SECONDARY_COLOR_SELECT':

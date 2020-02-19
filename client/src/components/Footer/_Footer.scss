@@ -11,7 +11,10 @@
         bottom: 0;
     }
 
-    .price {
-        font-size: 24px;
+    .button-confirm,
+    .button-design {
+        transition: none;
+        visibility: hidden;
+        transform: translateY(50px);
     }
 }
