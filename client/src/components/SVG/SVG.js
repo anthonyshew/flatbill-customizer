@@ -103,12 +103,12 @@ const getPath = (name,
                         <title>Solid Jersey Model</title>
                         <desc>This jersey model is one solid color. </desc>
                         <defs>
-                            <clipPath id="left-logo-cut">
+                            {/* <clipPath id="left-logo-cut">
                                 <rect x="355" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                             <clipPath id="right-logo-cut">
                                 <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(6deg)", transformOrigin: "50% 50%" }} />
-                            </clipPath>
+                            </clipPath> */}
                         </defs>
                         <path d="M144.224 6.3231C186.444 14.5696 209.038 13.9798 248.951 5.92791L249.346 5.13751L309.417 36.7534C346.693 57.1961 364.277 98.2022 394.5 181.5L314.554 214.988L316.926 403.5C286.5 439.5 280.5 441 195 441C111.5 439.5 109 441 79.8062 403.5L77.4351 216.174L1 181.5C34.559 92.5928 51.7431 53.7199 81.387 36.7534L142.643 4.74231L144.224 6.3231Z" fill={primaryColor} />
                         <path d="M144.224 6.3231C145.017 8.78703 145.684 10.0938 147.385 12.2511C185.336 18.9083 206.702 19.0076 244.999 12.2511C246.984 9.6197 247.955 8.19605 248.951 5.92791M144.224 6.3231C186.444 14.5696 209.038 13.9798 248.951 5.92791M144.224 6.3231L142.643 4.74231L81.387 36.7534M248.951 5.92791L249.346 5.13751L309.417 36.7534M81.387 36.7534C51.7431 53.7199 34.559 92.5928 1 181.5L77.4351 216.174M81.387 36.7534C76.1886 71.7431 76.5565 91.394 79.411 126.464C84.4657 168.557 81.7274 185.406 77.4351 216.174M77.4351 216.174L79.8062 403.5C109 441 111.5 439.5 195 441C280.5 441 286.5 439.5 316.926 403.5L314.554 214.988M314.554 214.988L394.5 181.5C364.277 98.2022 346.693 57.1961 309.417 36.7534M314.554 214.988C310.755 185.743 308.388 169.819 311.986 125.871C314.274 89.0479 312.35 70.3715 309.417 36.7534" stroke="black" />
@@ -122,8 +122,8 @@ const getPath = (name,
                         <path d="M7.5 164.5L80 196.5L79 200.5L6.5 167.5L7.5 164.5Z" fill={tertiaryColor} />
                         <path d="M313.5 206.5L391 173L392 176L314.5 210.5L313.5 206.5Z" fill={tertiaryColor} />
                         <path d="M387.5 163.866L312.5 197L313 201.5L388.5 167L387.5 163.866Z" fill={tertiaryColor} />
-                        <object type="image/svg+xml" className={`${className === 'avatar' ? "avatar " : null}display-image left`} data={leftArmLogo} alt="Left arm logo display." clipPath="url(#left-logo-cut)" />
-                        <object type="image/svg+xml" className={`${className === 'avatar' ? "avatar " : null}display-image right`} data={rightArmLogo} alt="right arm logo display." clipPath="url(#right-logo-cut)" />
+                        <image className={`${className === 'avatar' ? "avatar " : null}display-image left`} href={leftArmLogo} alt="Left arm logo display." clipPath="url(#left-logo-cut)" />
+                        <image className={`${className === 'avatar' ? "avatar " : null}display-image right`} href={rightArmLogo} alt="right arm logo display." clipPath="url(#right-logo-cut)" />
                     </svg>
                 </>
             )
