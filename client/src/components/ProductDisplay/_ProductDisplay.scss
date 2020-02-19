@@ -28,26 +28,4 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
-
-    .left {
-        position: relative;
-        x: 368;
-        y: 156;
-        width: 50px;
-        height: 50px;
-        transform: rotate(-19deg);
-        transform-origin: 50% 50%;
-        -webkit-clip-path: url("#left-logo-cut")
-    }
-
-    .right {
-        position: relative;
-        x: -23;
-        y: 161;
-        width: 50px;
-        height: 50px;
-        transform: rotate(19deg);
-        transform-origin: 50% 50%;
-        -webkit-clip-path: url("#right-logo-cut")
-    }
 }
