@@ -122,8 +122,8 @@ const getPath = (name,
                         <path d="M7.5 164.5L80 196.5L79 200.5L6.5 167.5L7.5 164.5Z" fill={tertiaryColor} />
                         <path d="M313.5 206.5L391 173L392 176L314.5 210.5L313.5 206.5Z" fill={tertiaryColor} />
                         <path d="M387.5 163.866L312.5 197L313 201.5L388.5 167L387.5 163.866Z" fill={tertiaryColor} />
-                        <image className={`${className === 'avatar' ? "avatar " : null}display-image left`} href={leftArmLogo} alt="Left arm logo display." clipPath="url(#left-logo-cut)" />
-                        <image className={`${className === 'avatar' ? "avatar " : null}display-image right`} href={rightArmLogo} alt="right arm logo display." clipPath="url(#right-logo-cut)" />
+                        <image height="200" width="200" className={`${className === 'avatar' ? "avatar " : null}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image className={`${className === 'avatar' ? "avatar " : null}display-image right`} href={rightArmLogo} alt="right arm logo display." />
                     </svg>
                 </>
             )
