@@ -20,8 +20,8 @@ export const initialState = {
         outline: true,
         shadow: true
     },
-    leftArmLogo: 'logo',
-    rightArmLogo: 'hamburger',
+    leftArmLogo: '/media/platypus.png',
+    rightArmLogo: '/media/star.png',
     editorCurrentlyOpen: 'defaultMenu'
 }
 
@@ -142,6 +142,16 @@ export const reducer = (state, action) => {
                     ...state.number,
                     fontFamily: action.newFont
                 }
+            }
+        case 'LEFT_SLEEVE_LOGO':
+            return {
+                ...state,
+                leftArmLogo: action.url
+            }
+        case 'RIGHT_SLEEVE_LOGO':
+            return {
+                ...state,
+                rightArmLogo: action.url
             }
         default:
             return state

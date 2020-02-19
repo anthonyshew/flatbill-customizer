@@ -46,14 +46,14 @@ const DefaultSlider = ({ ...props }) => {
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'numberEditor' })
     },
     {
-        image: <SVG className="avatar" name="platypus" title={'shut'} alt={'up'} desc={'thanks'} />,
+        image: <img className="avatar sleeve-logo" src={leftArmLogo} alt="Left arm sleeve logo." />,
         text: 'Left Arm Logo',
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'leftArmLogo' })
     },
     {
-        image: <SVG className="avatar" name={rightArmLogo} title={'shut'} alt={'up'} desc={'thanks'} />,
+        image: <img className="avatar sleeve-logo" src={rightArmLogo} alt="right arm sleeve logo." />,
         text: 'Right Arm Logo',
-        clickHandler: () => console.log('default menu click')
+        clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'rightArmLogo' })
     }
     ]
 
