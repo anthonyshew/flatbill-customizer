@@ -8,7 +8,7 @@ import SVG from '../SVG'
 
 const ArmLogoSlider = ({ side }) => {
 
-    const [{ leftArmLogo, rightArmLogo }, dispatch] = useStateValue()
+    const [, dispatch] = useStateValue()
 
     const handleUpload = (e) => {
         let input = e.target
@@ -32,10 +32,17 @@ const ArmLogoSlider = ({ side }) => {
                 text="Back"
                 handleClick={() => dispatch({ type: "EDITOR_CHANGE", menu: "defaultMenu" })}
             />
-            <input type="file" id="leftArmLogoImage" onChange={handleUpload} />
+            <input className="file-uploader" type="file" onChange={handleUpload} />
             <SliderItem
-                image={<img className="avatar sleeve-logo" src={side === 'left' ? leftArmLogo : rightArmLogo} alt={`${side === 'left' ? "Left" : "Right"} arm sleeve logo.`} />}
-                text="Current"
+                image={<SVG name="red-x" className="avatar" />}
+                text="Remove Logo"
+                handleClick={() => {
+                    if (side === 'left')
+                        dispatch({ type: "LEFT_SLEEVE_LOGO", url: "/media/clear.png" })
+
+                    if (side === 'right')
+                        dispatch({ type: "RIGHT_SLEEVE_LOGO", url: "/media/clear.png" })
+                }}
             />
         </>
     )

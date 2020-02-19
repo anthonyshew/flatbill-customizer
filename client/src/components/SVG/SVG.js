@@ -274,6 +274,13 @@ const getPath = (name,
                 </svg>
 
             )
+        case "red-x":
+            return (
+                <svg className={className} viewBox="0 0 80 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="7.27946" y1="71.4187" x2="70.9191" y2="7.77905" stroke="#CE0000" strokeWidth="10" strokeLinecap="round" />
+                    <line x1="9.07107" y1="8" x2="72.7107" y2="71.6396" stroke="#CE0000" strokeWidth="10" strokeLinecap="round" />
+                </svg>
+            )
         default:
             return <svg className={className} role="img">
                 <title>Forgotten SVG!</title>
