@@ -7,6 +7,7 @@ import fonts from '../lib/fonts'
 import DefaultSlider from '../DefaultSlider'
 import ModelSlider from '../ModelSlider'
 import ColorSlider from '../ColorSlider'
+import ArmLogoSlider from '../ArmLogoSlider'
 import LogoEditor from '../LogoEditor'
 import NumberEditor from '../NumberEditor'
 
@@ -27,23 +28,25 @@ const HorizontalSlider = ({ ...props }) => {
                             editorCurrentlyOpen === "tertiaryColor" ? <ColorSlider colorType="tertiary" /> :
                                 editorCurrentlyOpen === "chestLogo" ? <LogoEditor logoLocation="chestLogo" /> :
                                     editorCurrentlyOpen === "numberEditor" ? <NumberEditor /> :
-                                        editorCurrentlyOpen === "fontPickerNumber" ? <FontPicker
-                                            apiKey="AIzaSyC3bkG4lNevY9wZ7LXAyLOwUyFUgpyq4fw"
-                                            activeFontFamily={chestLogo.fontFamily}
-                                            families={fonts}
-                                            onChange={nextFont => dispatch({
-                                                type: "NUMBER_FONT_CHANGE",
-                                                newFont: nextFont.family
-                                            })} /> :
-                                            editorCurrentlyOpen === "fontPickerChest" ? <FontPicker
-                                                apiKey="AIzaSyC3bkG4lNevY9wZ7LXAyLOwUyFUgpyq4fw"
-                                                activeFontFamily={chestLogo.fontFamily}
-                                                families={fonts}
-                                                onChange={nextFont => dispatch({
-                                                    type: "LOGO_FONT_CHANGE",
-                                                    newFont: nextFont.family
-                                                })} /> :
-                                                console.error('There is probably a state issue.')
+                                        editorCurrentlyOpen === "leftArmLogo" ? <ArmLogoSlider side="left" /> :
+                                            editorCurrentlyOpen === "rightArmLogo" ? <ArmLogoSlider side="right" /> :
+                                                editorCurrentlyOpen === "fontPickerNumber" ? <FontPicker
+                                                    apiKey="AIzaSyC3bkG4lNevY9wZ7LXAyLOwUyFUgpyq4fw"
+                                                    activeFontFamily={chestLogo.fontFamily}
+                                                    families={fonts}
+                                                    onChange={nextFont => dispatch({
+                                                        type: "NUMBER_FONT_CHANGE",
+                                                        newFont: nextFont.family
+                                                    })} /> :
+                                                    editorCurrentlyOpen === "fontPickerChest" ? <FontPicker
+                                                        apiKey="AIzaSyC3bkG4lNevY9wZ7LXAyLOwUyFUgpyq4fw"
+                                                        activeFontFamily={chestLogo.fontFamily}
+                                                        families={fonts}
+                                                        onChange={nextFont => dispatch({
+                                                            type: "LOGO_FONT_CHANGE",
+                                                            newFont: nextFont.family
+                                                        })} /> :
+                                                        console.error('There is probably a state issue.')
             }
         </ul>
     )
