@@ -13,7 +13,7 @@ const ProductDisplay = ({ ...props }) => {
 
     return (
         <div className="product-display">
-            {<SVG name={model + "-" + view} alt={'shut'} title={'up'} desc='please' /> ?? "Look at my product!"}
+            {<SVG name={model + "-" + view} />}
             {view === "front" ? <ChestLogo className="chest-logo" shadow /> : null}
             {view === "front" && number.front ? <NumberDisplay className="jersey-number-front" /> : null}
             {view === "back" ? <NumberDisplay display className="jersey-number-back" fontSize={number.fontSize * 2} /> : null}
