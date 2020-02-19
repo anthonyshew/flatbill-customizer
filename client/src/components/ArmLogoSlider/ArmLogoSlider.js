@@ -27,11 +27,6 @@ const ArmLogoSlider = ({ side }) => {
 
     return (
         <>
-            <SliderItem
-                image={<SVG name="arrow-left" className="avatar" alt="Back to top menu." />}
-                text="Back"
-                handleClick={() => dispatch({ type: "EDITOR_CHANGE", menu: "defaultMenu" })}
-            />
             <input className="file-uploader" type="file" onChange={handleUpload} />
             <SliderItem
                 image={<SVG name="red-x" className="avatar" />}

@@ -9,6 +9,7 @@ const Button = ({
     borderRadius,
     onClick,
     padding,
+    style,
     ...props }) => {
     return (
         <>
@@ -19,7 +20,8 @@ const Button = ({
                     backgroundColor: backgroundColor,
                     border: border,
                     borderRadius: borderRadius,
-                    padding: padding
+                    padding: padding,
+                    ...style
                 }}>{text}</button>
         </>
     )

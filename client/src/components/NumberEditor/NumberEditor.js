@@ -12,13 +12,6 @@ const NumberEditor = ({ logoLocation, ...props }) => {
         <>
             <SliderItem
                 image={
-                    <SVG name="arrow-left" className="avatar" alt="Back to top menu." />
-                }
-                text="Back"
-                handleClick={() => dispatch({ type: "EDITOR_CHANGE", menu: "defaultMenu" })}
-            />
-            <SliderItem
-                image={
                     <SVG name="decrease-font-size" className="avatar" />
                 }
                 text="Decrease Font Size"
