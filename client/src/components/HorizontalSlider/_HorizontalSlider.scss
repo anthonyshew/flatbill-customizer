@@ -15,4 +15,8 @@
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+
+    .avatar.display-image {
+        display: none;
+    }
 }
