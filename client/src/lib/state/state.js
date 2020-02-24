@@ -61,6 +61,14 @@ export const reducer = (state, action) => {
                 editorCurrentlyOpen: action.menu,
                 tertiaryColor: action.tertiaryColor
             }
+        case 'NAME_CHANGE':
+            return {
+                ...state,
+                chestLogo: {
+                    ...state.chestLogo,
+                    text: action.teamName
+                }
+            }
         case 'FONT_SIZE_DOWN':
             return {
                 ...state,

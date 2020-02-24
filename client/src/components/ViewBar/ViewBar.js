@@ -30,12 +30,21 @@ const ViewBar = ({ ...props }) => {
             })
     }
 
+    const handleInputChange = (e) => {
+        if (e.target.value.length === 0) {
+            dispatch({ type: "NAME_CHANGE", teamName: "Flatbill" })
+        } else {
+            dispatch({ type: "NAME_CHANGE", teamName: e.target.value })
+        }
+    }
+
     return (
         <div className="viewbar">
             <Button className="view-toggle"
                 text={view === 'front' ? "Front View" : "Back View"}
                 onClick={handleClick} />
             <SVG name="arrow-right" className="arrow-right" alt="Activation arrow to show you that you changed jersey views." />
+            <input className="team-input" placeholder="Team Name" onChange={handleInputChange} />
         </div>
 
     )
