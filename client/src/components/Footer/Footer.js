@@ -44,7 +44,7 @@ const Footer = ({ sticky }) => {
                 : <Button
                     className="half-height button-confirm"
                     text="Confirm"
-                    padding=".5rem"
+                    padding=".3rem"
                     border={`2px solid ${colors.darkGray}`}
                     borderRadius="1rem"
                     style={{ width: "80vw" }}
