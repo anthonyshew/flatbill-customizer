@@ -10,11 +10,11 @@ const usePreventMobileZoom = () => {
         let lastTouchEnd = 0;
         document.addEventListener('touchend', (event) => {
             let now = (new Date()).getTime()
-            if (now - lastTouchEnd <= 300) {
+            if (now - lastTouchEnd <= 500) {
                 event.preventDefault()
             }
-            lastTouchEnd = now;
-        }, { passive: false });
+            lastTouchEnd = now
+        }, { passive: false })
     }, [])
 }
 
