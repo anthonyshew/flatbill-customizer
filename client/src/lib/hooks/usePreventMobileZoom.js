@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 
 const usePreventMobileZoom = () => {
     useEffect(() => {
-        window.addEventListener("resize", () => setViewportHeight(window.innerHeight))
         document.addEventListener('touchmove', (event) => {
             if (event.scale !== 1) { event.preventDefault() }
         }, { passive: false })
