@@ -36,7 +36,7 @@ const Footer = ({ sticky }) => {
                     className="half-height button-design"
                     text="Done Designing!"
                     padding=".5rem"
-                    border={`5px solid ${colors.darkGray}`}
+                    border={`2px solid ${colors.darkGray}`}
                     borderRadius="1rem"
                     style={{ width: "80vw" }}
                     onClick={() => console.log("Go to team roster page.")}
@@ -44,7 +44,7 @@ const Footer = ({ sticky }) => {
                 : <Button
                     className="half-height button-confirm"
                     text="Confirm"
-                    padding=".3rem"
+                    padding=".5rem"
                     border={`2px solid ${colors.darkGray}`}
                     borderRadius="1rem"
                     style={{ width: "80vw" }}
