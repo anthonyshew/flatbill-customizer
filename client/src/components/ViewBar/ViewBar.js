@@ -44,7 +44,10 @@ const ViewBar = ({ ...props }) => {
                 text={view === 'front' ? "Front View" : "Back View"}
                 onClick={handleClick} />
             <SVG name="arrow-right" className="arrow-right" alt="Activation arrow to show you that you changed jersey views." />
-            <input className="team-input" placeholder="Team Name" onChange={handleInputChange} />
+            <input className="team-input"
+                placeholder="Team Name"
+                onChange={handleInputChange}
+            />
         </div>
 
     )

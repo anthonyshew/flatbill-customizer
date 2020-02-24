@@ -39,6 +39,17 @@ const ArmLogoSlider = ({ side }) => {
                         dispatch({ type: "RIGHT_SLEEVE_LOGO", url: "/media/clear.png" })
                 }}
             />
+            <SliderItem
+                image={side === "left" ? <img className="avatar sleeve-logo" src="/media/platypus.png" alt="Left arm sleeve logo." /> : <img className="avatar sleeve-logo" src="/media/star.png" alt="right arm sleeve logo." />}
+                text="Use Default"
+                handleClick={() => {
+                    if (side === 'left')
+                        dispatch({ type: "LEFT_SLEEVE_LOGO", url: "/media/platypus.png" })
+
+                    if (side === 'right')
+                        dispatch({ type: "RIGHT_SLEEVE_LOGO", url: "/media/star.png" })
+                }}
+            />
         </>
     )
 }
