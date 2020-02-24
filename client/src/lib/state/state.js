@@ -52,13 +52,11 @@ export const reducer = (state, action) => {
         case 'SECONDARY_COLOR_SELECT':
             return {
                 ...state,
-                editorCurrentlyOpen: action.menu,
                 secondaryColor: action.secondaryColor
             }
         case 'TERTIARY_COLOR_SELECT':
             return {
                 ...state,
-                editorCurrentlyOpen: action.menu,
                 tertiaryColor: action.tertiaryColor
             }
         case 'NAME_CHANGE':

@@ -20,12 +20,12 @@ const ViewBar = ({ ...props }) => {
             .set(".arrow-right", { x: 0 })
             .to(".arrow-right", {
                 duration: .3,
-                x: 50,
+                x: 30,
                 autoAlpha: 1
             })
             .to(".arrow-right", {
                 duration: .3,
-                x: 50,
+                x: 30,
                 autoAlpha: 0,
             })
     }
