@@ -34,6 +34,10 @@ const ModelSlider = ({ ...props }) => {
         modelDisplayName: "Armbar"
     },
     {
+        modelId: "raglan",
+        modelDisplayName: "Raglan"
+    },
+    {
         modelId: "sideswipe",
         modelDisplayName: "Sideswipe"
     },
@@ -44,6 +48,10 @@ const ModelSlider = ({ ...props }) => {
     {
         modelId: "5-star",
         modelDisplayName: "5 Star"
+    },
+    {
+        modelId: "sideslider",
+        modelDisplayName: "Sideslider"
     }
     ]
 
