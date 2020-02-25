@@ -24,6 +24,18 @@ const ModelSlider = ({ ...props }) => {
     {
         modelId: "piper",
         modelDisplayName: "Piper"
+    },
+    {
+        modelId: "armbar",
+        modelDisplayName: "Armbar"
+    },
+    {
+        modelId: "sideswipe",
+        modelDisplayName: "Sideswipe"
+    },
+    {
+        modelId: "stripehead",
+        modelDisplayName: "Stripehead"
     }
     ]
 
