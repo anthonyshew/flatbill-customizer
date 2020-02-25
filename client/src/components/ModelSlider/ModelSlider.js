@@ -14,6 +14,10 @@ const ModelSlider = ({ ...props }) => {
         modelDisplayName: "Solid"
     },
     {
+        modelId: "solid-accent",
+        modelDisplayName: "Solid (Accent)"
+    },
+    {
         modelId: "striper",
         modelDisplayName: "Striper"
     },
@@ -36,6 +40,10 @@ const ModelSlider = ({ ...props }) => {
     {
         modelId: "stripehead",
         modelDisplayName: "Stripehead"
+    },
+    {
+        modelId: "5-star",
+        modelDisplayName: "5 Star"
     }
     ]
 
