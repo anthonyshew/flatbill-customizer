@@ -11,8 +11,8 @@ const LastNameExample = ({ className, avatarImage, fontSize, shadow, ...props })
                 <text x="50%" y="18%" dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
-                        stroke: chestLogo.fontFamily === "Ewert" ? "" : "black",
-                        strokeWidth: chestLogo.shadow ? "8px" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
+                        stroke: "black",
+                        strokeWidth: chestLogo.shadow ? "8px" : 0,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize,
                         fontWeight: "900",
@@ -23,8 +23,8 @@ const LastNameExample = ({ className, avatarImage, fontSize, shadow, ...props })
                 <text x="50%" y="18%" dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
-                        stroke: chestLogo.fontFamily === "Ewert" ? "" : tertiaryColor,
-                        strokeWidth: chestLogo.outline ? "2px" : chestLogo.fontFamily === "Ewert" ? 0 : 0,
+                        stroke: tertiaryColor,
+                        strokeWidth: chestLogo.outline ? "2px" : 0,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize,
                         fontWeight: "900",

@@ -8,11 +8,11 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, ...props }) 
     return (
         <>
             <svg className={className} style={{ width: avatarImage ? "100%" : "" }} viewBox={avatarImage ? "0 0 75 75" : "0 0 250 250"} fill="none" role="img" >
-                <text x={display ? "50%" : avatarImage ? "50%" : "37%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={display ? "50%" : avatarImage ? "50%" : "33%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
-                        stroke: number.fontFamily === "Ewert" ? "" : "black",
-                        strokeWidth: number.shadow && className === "jersey-number-back" ? "12px" : number.shadow ? "8px" : number.fontFamily === "Ewert" ? 0 : 0,
+                        stroke: "black",
+                        strokeWidth: number.shadow && className === "jersey-number-back" ? "12px" : number.shadow ? "8px" : 0,
                         fontFamily: number.fontFamily,
                         fontSize: fontSize || number.fontSize,
                         fontWeight: "900",
@@ -20,11 +20,11 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, ...props }) 
                     }}>
                     {number.digit}
                 </text>
-                <text x={display ? "50%" : avatarImage ? "50%" : "37%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={display ? "50%" : avatarImage ? "50%" : "33%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
-                        stroke: number.fontFamily === "Ewert" ? "" : tertiaryColor,
-                        strokeWidth: number.outline && className === "jersey-number-back" ? "4px" : number.outline ? "2px" : number.fontFamily === "Ewert" ? 0 : 0,
+                        stroke: tertiaryColor,
+                        strokeWidth: number.outline && className === "jersey-number-back" ? "4px" : number.outline ? "2px" : 0,
                         fontFamily: number.fontFamily,
                         fontSize: fontSize || number.fontSize,
                         fontWeight: "900",
@@ -32,7 +32,7 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, ...props }) 
                     }}>
                     {number.digit}
                 </text>
-                <text x={display ? "50%" : avatarImage ? "50%" : "37%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={display ? "50%" : avatarImage ? "50%" : "33%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         fontFamily: number.fontFamily,

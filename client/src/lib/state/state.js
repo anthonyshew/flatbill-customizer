@@ -7,15 +7,15 @@ export const initialState = {
     tertiaryColor: '#ffffff',
     chestLogo: {
         text: "Flatbill",
-        fontFamily: "Graduate",
-        fontSize: 24,
+        fontFamily: "Galada",
+        fontSize: 32,
         outline: true,
         shadow: true
     },
     number: {
         digit: 31,
         front: true,
-        fontFamily: "Graduate",
+        fontFamily: "Galada",
         fontSize: 32,
         outline: true,
         shadow: true
