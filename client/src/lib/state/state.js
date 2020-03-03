@@ -1,4 +1,6 @@
 export const initialState = {
+    step: 1,
+    teamDetails: [],
     price: 300,
     view: 'front',
     model: 'solid',
@@ -33,6 +35,11 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 view: action.newView
+            }
+        case 'STEP_CHANGE':
+            return {
+                ...state,
+                step: action.step
             }
         case 'EDITOR_CHANGE':
             return {

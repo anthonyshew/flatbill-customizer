@@ -39,7 +39,7 @@ const Footer = ({ sticky }) => {
                     border={`2px solid ${colors.darkGray}`}
                     borderRadius="1rem"
                     style={{ width: "80vw" }}
-                    onClick={() => console.log("Go to team roster page.")}
+                    onClick={() => dispatch({ type: "STEP_CHANGE", step: 2 })}
                 />
                 : <Button
                     className="half-height button-confirm"
