@@ -255,7 +255,7 @@ const getPath = (name,
                                 <rect x="368" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                             <clipPath id={`right-logo-${name}`}>
-                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="-1" y="28" width="41" height="500" style={{ transform: "rotate(3deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                         </defs>
                         <path d="M149.235 6.62707C192.932 15.1621 216.317 14.5517 257.627 6.21805L258.036 5.39999L320.208 38.1221C358.789 59.2801 376.988 101.721 408.268 187.933L325.525 222.593L327.979 417.701C296.489 454.96 290.279 456.513 201.788 456.513C115.366 454.96 112.779 456.513 82.5635 417.701L80.1094 223.82L1 187.933C35.7332 95.9152 53.5185 55.6822 84.1996 38.1221L147.599 4.99097L149.235 6.62707Z" fill={primaryColor} />
@@ -323,8 +323,8 @@ const getPath = (name,
                         <path d="M293.135 45.7135C293.393 45.7135 293.602 45.9176 293.602 46.1694C293.602 46.4211 293.393 46.6252 293.135 46.6252C292.878 46.6252 292.669 46.4211 292.669 46.1694C292.669 45.9176 292.878 45.7135 293.135 45.7135Z" fill={tertiaryColor} />
                         <path fillRule="evenodd" clipRule="evenodd" d="M267.354 50.0967L267.362 50.076C267.395 50.1464 267.391 50.1454 267.354 50.0967ZM261.88 51.7854L261.847 51.8454C261.868 51.7503 261.883 51.7212 261.88 51.7854Z" fill={tertiaryColor} />
                         <path d="M251.732 48.2525C248.7 48.7084 247.826 43.0919 251.732 44.6058C255.464 46.0521 257.572 45.4312 257.984 44.7078M249.866 51.6713C250.199 51.5193 248.085 51.0854 248 53.7227C248 55.6238 249.279 56.2398 251.145 55.9194C254.067 55.4179 256.411 48.1682 257.984 44.7078M253.365 50.3039H256.463M261.064 45.9734C257.54 53.2595 257.368 54.7123 258.731 54.8623C259.886 55.0091 260.585 54.1263 261.847 51.8454M267.362 50.076L268.062 48.9364M267.362 50.076C267.359 50.0829 267.357 50.0898 267.354 50.0967M267.362 50.076C267.395 50.1464 267.391 50.1454 267.354 50.0967M267.362 50.076L267.354 50.0967M261.88 51.7854C263.011 49.3502 263.727 49.0024 265.029 48.7084C266.348 48.7132 267.187 49.8794 267.354 50.0967M261.88 51.7854C261.883 51.7212 261.868 51.7503 261.847 51.8454M261.88 51.7854C261.869 51.8055 261.858 51.8255 261.847 51.8454M261.88 51.7854L261.847 51.8454M265.231 53.7227C264.453 54.4592 263.675 54.9614 262.697 54.8623C261.45 54.736 261.735 52.3525 261.847 51.8454M265.231 53.7227C265.615 55.6604 266.691 55.2668 269.228 53.4947M265.231 53.7227C265.92 53.0702 266.594 51.9914 267.354 50.0967M269.228 53.4947C269.789 53.1643 270.665 51.2229 272.728 46.2013M269.228 53.4947C269.968 56.2612 270.977 55.9576 273.894 52.1272M269.928 48.0247H273.894M281.238 49.3603C278.672 42.7506 291.269 42.2947 288.936 47.7648C288.344 48.7883 287.872 49.2247 286.837 49.8161M286.837 49.8161C289.385 52.8881 287.537 56.1095 285.437 55.5141C283.693 55.0195 282.978 54.5376 281.938 53.4947C281.895 53.4653 281.853 53.4365 281.811 53.4084M286.837 49.8161L284.231 49.3603M285.904 46.2013C285.291 47.3802 284.736 48.431 284.231 49.3603M284.231 49.3603C283.263 51.1393 282.477 52.4732 281.811 53.4084M292.202 48.6765C290.509 51.8615 289.403 55.0582 291.036 55.0582C291.966 55.0582 292.829 54.5601 293.955 52.779M297.101 46.2013C295.808 49.3531 294.807 51.4326 293.955 52.779M293.955 52.779C294.013 54.5134 294.223 55.0569 295.002 55.0582C295.81 55.2838 296.764 54.3763 297.789 52.779M301.067 46.2013C299.956 48.7985 298.836 51.1483 297.789 52.779M297.789 52.779C297.789 56.1978 299.667 55.742 302 52.1272M257.984 44.7078C258.004 44.674 258.019 44.6399 258.031 44.6058C258.016 44.6394 258 44.6734 257.984 44.7078ZM281.811 53.4084C280.781 54.8575 280.041 55.3496 279.372 55.0582C277.739 55.0582 277.039 52.3232 279.372 52.3232C280.23 52.4314 280.797 52.7193 281.811 53.4084ZM293.135 45.7135C293.393 45.7135 293.602 45.9176 293.602 46.1694M293.135 45.7135C292.878 45.7135 292.669 45.9176 292.669 46.1694M293.135 45.7135H293.146C293.398 45.7135 293.602 45.9176 293.602 46.1694V46.1694M293.135 45.7135H293.125C292.873 45.7135 292.669 45.9176 292.669 46.1694V46.1694M293.602 46.1694C293.602 46.4211 293.393 46.6252 293.135 46.6252M293.602 46.1694V46.1694C293.602 46.4211 293.398 46.6252 293.146 46.6252H293.135M293.135 46.6252C292.878 46.6252 292.669 46.4211 292.669 46.1694M293.135 46.6252H293.125C292.873 46.6252 292.669 46.4211 292.669 46.1694V46.1694" stroke={tertiaryColor} strokeWidth="2" strokeLinecap="round" />
-                        <image x="383" y="192" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
-                        <image x="-26" y="192" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
+                        <image x="379" y="199" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="-26" y="198" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
                     </svg>
 
                 </>
@@ -336,11 +336,11 @@ const getPath = (name,
                         <title>Blockhead Jersey Model</title>
                         <desc>This jersey model has one bar across its arms and chest.</desc>
                         <defs>
-                            <clipPath id="left-logo-cut">
-                                <rect x="461" y="115" width="41" height="500" style={{ transform: "rotate(-3deg)", transformOrigin: "50% 50%" }} />
+                            <clipPath id={`left-logo-${name}`}>
+                                <rect x="-1" y="132" width="50" height="250" style={{ transform: "rotate(1deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
-                            <clipPath id="right-logo-cut">
-                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                            <clipPath id={`right-logo-${name}`}>
+                                <rect x="360" y="132" width="50" height="250" style={{ transform: "rotate(0deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                         </defs>
                         <path d="M149.235 2.54431C192.932 11.0794 216.317 10.4689 257.627 2.13528L258.036 1.31723L320.208 34.0393C358.789 55.1973 376.988 97.6382 408.268 183.85L325.525 218.51L327.979 413.618C296.489 450.878 290.279 452.43 201.788 452.43C115.366 450.878 112.779 452.43 82.5635 413.618L80.1094 219.737L1 183.85C35.7332 91.8324 53.5185 51.5995 84.1996 34.0393L147.599 0.908203L149.235 2.54431Z" fill={primaryColor} />
@@ -354,6 +354,8 @@ const getPath = (name,
                         <path d="M386.66 127.06L321.265 156.034C321.111 159.986 321.095 162.583 321.142 167.624L390.975 137.787L386.66 127.06Z" fill={secondaryColor} />
                         <path d="M82.4 206.515C82.6877 203.926 83.8 195.345 83.8 195.542C83.8 195.739 243.268 195.624 322.2 195.542C322.5 199.417 323.043 202.19 323.5 206.515H82.4Z" fill={secondaryColor} />
                         <path d="M81.5 122.156C81.4014 120.183 80.8096 111.521 80.9677 111.183C80.9677 111.183 244.602 111.388 323.534 111.306C323.657 115.498 323.164 117.717 323.139 122.156H81.5Z" fill={secondaryColor} />
+                        <image x="-26" y="200" height="50" width="50" style={{ transform: "rotate(21deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="388" y="203" height="50" width="50" style={{ transform: "rotate(-22deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="right arm logo display." />
                     </svg>
                 </>
             )
@@ -362,13 +364,13 @@ const getPath = (name,
                 <>
                     <svg className={className} viewBox="0 0 1623 1907" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="Piper Jersey Model">
                         <title>Piper Jersey Model</title>
-                        <desc>This jersey model is unique for it's piping and buttons that run the length of the front of the jersey. </desc>
+                        <desc>This jersey model uses the traditional piping model with a button down front.</desc>
                         <defs>
                             <clipPath id={`left-logo-${name}`}>
-                                <rect x="355" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="1487" y="467" width="150" height="750" style={{ transform: "rotate(-2deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                             <clipPath id={`right-logo-${name}`}>
-                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="-6" y="750" width="100" height="750" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                         </defs>
                         <path d="M591.222 3.42576C760.744 21.8398 853.746 19.5012 1022.07 1.70068L1023.7 3.42576L1270.83 141.432C1424.18 230.666 1496.52 409.661 1620.86 773.262L1291.96 919.44L1301.72 1742.31C1176.55 1899.45 1151.86 1906 800.116 1906C781.451 1905.64 763.769 1905.33 747 1905.02C455.155 1899.66 439.786 1897.11 326.209 1742.31L316.454 924.615L2 773.262C140.062 385.175 210.757 215.492 332.712 141.432L584.719 1.70068L591.222 3.42576Z" fill={primaryColor} />
@@ -461,8 +463,8 @@ const getPath = (name,
                         <circle cx="790.461" cy="1538.36" r="2.96053" fill={tertiaryColor} />
                         <circle cx="790.461" cy="1545.46" r="2.96053" fill={tertiaryColor} />
                         <circle cx="783.355" cy="1545.46" r="2.96053" fill={tertiaryColor} />
-                        <image x="368" y="156" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
-                        <image x="-23" y="161" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
+                        <image x="1358" y="761" height="200" width="500" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="-240" y="700" height="200" width="500" style={{ transform: "rotate(15deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
                     </svg>
                 </>
             )
@@ -470,14 +472,14 @@ const getPath = (name,
             return (
                 <>
                     <svg className={className} viewBox="0 0 1623 1908" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="Piper Jersey Model">
-                        <title>Stripe Jersey Model</title>
-                        <desc>This jersey model is made of a body that has gradient stripes to create an interesting striping effect.</desc>
+                        <title>Piper Jersey Model</title>
+                        <desc>This jersey model uses the traditional piping model with a button down front.</desc>
                         <defs>
                             <clipPath id={`left-logo-${name}`}>
-                                <rect x="460" y="115" width="41" height="500" style={{ transform: "rotate(-3deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="0" y="500" width="250" height="500" style={{ transform: "rotate(-3deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                             <clipPath id={`right-logo-${name}`}>
-                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(3deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="1379" y="500" width="250" height="500" style={{ transform: "rotate(3deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                         </defs>
                         <path d="M591.222 3.72508C760.744 22.1391 853.746 19.8005 1022.07 2L1023.7 3.72508L1270.83 141.731C1424.18 230.965 1496.52 409.96 1620.86 773.561L1291.96 919.739L1301.72 1742.61C1176.55 1899.75 1151.86 1906.3 800.116 1906.3C781.451 1905.94 763.769 1905.63 747 1905.32C455.155 1899.96 439.786 1897.41 326.209 1742.61L316.454 924.915L2 773.561C140.062 385.474 210.757 215.791 332.712 141.731L584.719 2L591.222 3.72508Z" fill={primaryColor} />
@@ -488,8 +490,9 @@ const getPath = (name,
                         <path d="M17.7349 729.799L323.5 873.299L321.532 885.04L13.7617 741.003L17.7349 729.799Z" fill={secondaryColor} />
                         <path d="M1601.5 718.299L1285.5 862.799L1286.5 873.799L1605 728.299L1601.5 718.299Z" fill={secondaryColor} />
                         <path d="M1609.53 741.095L1289 893.799L1290.5 905.799L1613.5 752.299L1609.53 741.095Z" fill={secondaryColor} />
+                        <image x="-110" y="779" height="200" width="200" style={{ transform: "rotate(21deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="1537" y="812" height="200" width="200" style={{ transform: "rotate(-22deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="right arm logo display." />
                     </svg>
-
                 </>
             )
         case "armbar-front":
@@ -500,7 +503,7 @@ const getPath = (name,
                         <desc>This jersey model is one solid color with a large bar across its sleeves. </desc>
                         <defs>
                             <clipPath id={`left-logo-${name}`}>
-                                <rect x="355" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="369" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                             <clipPath id={`right-logo-${name}`}>
                                 <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
@@ -568,8 +571,8 @@ const getPath = (name,
                         <path d="M293.135 45.7136C293.393 45.7136 293.602 45.9176 293.602 46.1694C293.602 46.4212 293.393 46.6252 293.135 46.6252C292.878 46.6252 292.669 46.4212 292.669 46.1694C292.669 45.9176 292.878 45.7136 293.135 45.7136Z" fill={tertiaryColor} />
                         <path fillRule="evenodd" clipRule="evenodd" d="M267.354 50.0967L267.362 50.076C267.395 50.1464 267.391 50.1454 267.354 50.0967ZM261.88 51.7854L261.847 51.8454C261.868 51.7503 261.883 51.7212 261.88 51.7854Z" fill={tertiaryColor} />
                         <path d="M251.732 48.2526C248.7 48.7084 247.826 43.092 251.732 44.6059C255.464 46.0521 257.572 45.4312 257.984 44.7078M249.866 51.6714C250.199 51.5193 248.085 51.0854 248 53.7227C248 55.6239 249.279 56.2398 251.145 55.9195C254.067 55.4179 256.411 48.1682 257.984 44.7078M253.365 50.3039H256.463M261.064 45.9734C257.54 53.2595 257.368 54.7123 258.731 54.8623C259.886 55.0091 260.585 54.1263 261.847 51.8454M267.362 50.076L268.062 48.9364M267.362 50.076C267.359 50.0829 267.357 50.0898 267.354 50.0967M267.362 50.076C267.395 50.1464 267.391 50.1454 267.354 50.0967M267.362 50.076L267.354 50.0967M261.88 51.7854C263.011 49.3502 263.727 49.0024 265.029 48.7085C266.348 48.7132 267.187 49.8794 267.354 50.0967M261.88 51.7854C261.883 51.7212 261.868 51.7503 261.847 51.8454M261.88 51.7854C261.869 51.8055 261.858 51.8255 261.847 51.8454M261.88 51.7854L261.847 51.8454M265.231 53.7227C264.453 54.4592 263.675 54.9614 262.697 54.8623C261.45 54.736 261.735 52.3526 261.847 51.8454M265.231 53.7227C265.615 55.6604 266.691 55.2668 269.228 53.4948M265.231 53.7227C265.92 53.0703 266.594 51.9914 267.354 50.0967M269.228 53.4948C269.789 53.1643 270.665 51.2229 272.728 46.2014M269.228 53.4948C269.968 56.2612 270.977 55.9576 273.894 52.1273M269.928 48.0247H273.894M281.238 49.3603C278.672 42.7506 291.269 42.2948 288.936 47.7649C288.344 48.7883 287.872 49.2247 286.837 49.8161M286.837 49.8161C289.385 52.8882 287.537 56.1095 285.437 55.5141C283.693 55.0195 282.978 54.5376 281.938 53.4948C281.895 53.4653 281.853 53.4365 281.811 53.4084M286.837 49.8161L284.231 49.3603M285.904 46.2014C285.291 47.3803 284.736 48.431 284.231 49.3603M284.231 49.3603C283.263 51.1394 282.477 52.4732 281.811 53.4084M292.202 48.6765C290.509 51.8615 289.403 55.0583 291.036 55.0583C291.966 55.0583 292.829 54.5601 293.955 52.7791M297.101 46.2014C295.808 49.3531 294.807 51.4327 293.955 52.7791M293.955 52.7791C294.013 54.5134 294.223 55.0569 295.002 55.0583C295.81 55.2838 296.764 54.3764 297.789 52.7791M301.067 46.2014C299.956 48.7985 298.836 51.1483 297.789 52.7791M297.789 52.7791C297.789 56.1978 299.667 55.742 302 52.1273M257.984 44.7078C258.004 44.674 258.019 44.6399 258.031 44.6059C258.016 44.6395 258 44.6735 257.984 44.7078ZM281.811 53.4084C280.781 54.8576 280.041 55.3496 279.372 55.0583C277.739 55.0583 277.039 52.3232 279.372 52.3232C280.23 52.4314 280.797 52.7194 281.811 53.4084ZM293.135 45.7136C293.393 45.7136 293.602 45.9176 293.602 46.1694M293.135 45.7136C292.878 45.7136 292.669 45.9176 292.669 46.1694M293.135 45.7136H293.146C293.398 45.7136 293.602 45.9176 293.602 46.1694V46.1694M293.135 45.7136H293.125C292.873 45.7136 292.669 45.9176 292.669 46.1694V46.1694M293.602 46.1694C293.602 46.4212 293.393 46.6252 293.135 46.6252M293.602 46.1694V46.1694C293.602 46.4212 293.398 46.6252 293.146 46.6252H293.135M293.135 46.6252C292.878 46.6252 292.669 46.4212 292.669 46.1694M293.135 46.6252H293.125C292.873 46.6252 292.669 46.4212 292.669 46.1694V46.1694" stroke={tertiaryColor} strokeWidth="2" strokeLinecap="round" />
-                        <image x="368" y="156" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
-                        <image x="-23" y="161" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
+                        <image x="381" y="200" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="-23" y="197" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
                     </svg>
                 </>
             )
@@ -577,6 +580,16 @@ const getPath = (name,
             return (
                 <>
                     <svg className={className} viewBox="0 0 409 457" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="Armbar Jersey Model">
+                        <title>Armbar Jersey Model</title>
+                        <desc>This jersey model is one solid color with a large bar across its sleeves. </desc>
+                        <defs>
+                            <clipPath id={`left-logo-${name}`}>
+                                <rect x="369" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                            <clipPath id={`right-logo-${name}`}>
+                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                        </defs>
                         <path d="M148.967 6.54437C192.664 15.0794 216.049 14.469 257.359 6.13534L257.768 5.31729L319.94 38.0394C358.521 59.1974 376.72 101.638 408 187.85L325.257 222.51L327.711 417.618C296.221 454.878 290.011 456.43 201.52 456.43C115.098 454.878 112.511 456.43 82.2955 417.618L79.8413 223.737L0.731934 187.85C35.4652 95.8325 53.2504 55.5995 83.9315 38.0394L147.331 4.90826L148.967 6.54437Z" fill={primaryColor} />
                         <path d="M148.967 6.54437C149.788 9.09451 150.479 10.447 152.239 12.6798C191.518 19.5699 213.631 19.6727 253.268 12.6798C255.322 9.95631 256.328 8.48285 257.359 6.13534M148.967 6.54437C192.664 15.0794 216.049 14.469 257.359 6.13534M148.967 6.54437L147.331 4.90826L83.9316 38.0394M257.359 6.13534L257.768 5.31729L319.94 38.0394M83.9316 38.0394C53.2504 55.5995 35.4652 95.8325 0.731934 187.85L79.8413 223.737M83.9316 38.0394C78.5513 74.2534 78.932 94.5918 81.8865 130.888C87.118 174.455 84.2839 191.893 79.8413 223.737M79.8413 223.737L82.2955 417.618C112.511 456.43 115.098 454.878 201.52 456.43C290.011 456.43 296.221 454.878 327.711 417.618L325.257 222.51M325.257 222.51L408 187.85C376.72 101.638 358.521 59.1974 319.94 38.0394M325.257 222.51C321.325 192.242 318.875 175.761 322.598 130.275C324.967 92.1636 322.976 72.8337 319.94 38.0394" stroke="black" />
                         <path d="M19.2259 140.307L84.6944 169.898C84.7111 180.473 84.311 187.658 82.2285 205.652L7.38977 170.391C12.1607 158.667 14.3109 152.065 19.2259 140.307Z" fill={tertiaryColor} />
@@ -587,8 +600,9 @@ const getPath = (name,
                         <path d="M402.173 172.117L323.122 205.101C323.044 205.32 324.499 216.009 324.499 216.009L405.749 181.98L402.173 172.117Z" fill={secondaryColor} />
                         <path d="M386.392 131.06L320.997 160.034C320.843 163.986 320.827 166.583 320.874 171.624L390.707 141.787L386.392 131.06Z" fill={secondaryColor} />
                         <path d="M147.327 5.17834C190.215 13.5349 216.078 13.971 257.304 6.04139C256.278 8.15697 255.401 9.59073 253.172 12.6908C214.366 19.6343 189.824 19.3312 152.259 12.5759C150.451 10.3395 148.029 7.7529 147.327 5.17834Z" fill={secondaryColor} />
+                        <image x="381" y="200" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={rightArmLogo} alt="Left arm logo display." />
+                        <image x="-23" y="197" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={leftArmLogo} alt="Right arm logo display." />
                     </svg>
-
                 </>
             )
         case "sideswipe-front":
@@ -599,10 +613,10 @@ const getPath = (name,
                         <desc>This jersey model has a thin triangle accent on the jersey body. </desc>
                         <defs>
                             <clipPath id={`left-logo-${name}`}>
-                                <rect x="355" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="1161" y="469" width="100" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                             <clipPath id={`right-logo-${name}`}>
-                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="0" y="460" width="100" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                         </defs>
                         <path d="M458.152 20.1825C592.912 46.5045 665.03 44.6217 792.429 18.9211L793.69 16.3983L985.427 117.312C1104.41 182.563 1160.53 313.449 1257 579.325L1001.83 686.215L1009.39 1287.92C912.28 1402.83 893.129 1407.62 620.223 1407.62C353.702 1402.83 345.722 1407.62 252.539 1287.92L244.971 689.999L1 579.325C108.116 295.544 162.965 171.467 257.585 117.312L453.106 15.1368L458.152 20.1825Z" fill={primaryColor} />
@@ -665,8 +679,8 @@ const getPath = (name,
                         <path d="M911.116 158.679C911.938 158.679 912.605 159.331 912.605 160.134C912.605 160.938 911.938 161.589 911.116 161.589C910.293 161.589 909.627 160.938 909.627 160.134C909.627 159.331 910.293 158.679 911.116 158.679Z" fill={tertiaryColor} />
                         <path fillRule="evenodd" clipRule="evenodd" d="M828.825 172.67L828.851 172.604C828.955 172.828 828.944 172.825 828.825 172.67ZM811.353 178.06L811.247 178.251C811.314 177.948 811.361 177.855 811.353 178.06Z" fill={tertiaryColor} />
                         <path d="M778.963 166.783C769.283 168.238 766.494 150.312 778.963 155.144C790.875 159.76 797.603 157.778 798.918 155.469M773.006 177.696C774.068 177.211 767.32 175.826 767.05 184.243C767.05 190.312 771.131 192.278 777.088 191.255C786.415 189.654 793.895 166.514 798.918 155.469M784.175 173.331H794.061M808.747 159.509C797.5 182.765 796.952 187.402 801.301 187.881C804.989 188.35 807.219 185.532 811.247 178.251M828.851 172.604L831.085 168.966M828.851 172.604C828.842 172.626 828.834 172.648 828.825 172.67M828.851 172.604C828.955 172.828 828.944 172.825 828.825 172.67M828.851 172.604L828.825 172.67M811.353 178.06C814.964 170.287 817.247 169.177 821.405 168.239C825.614 168.254 828.294 171.976 828.825 172.67M811.353 178.06C811.361 177.855 811.314 177.948 811.247 178.251M811.353 178.06C811.318 178.124 811.282 178.188 811.247 178.251M811.353 178.06L811.247 178.251M822.049 184.243C819.566 186.594 817.081 188.197 813.959 187.881C809.981 187.478 810.891 179.87 811.247 178.251M822.049 184.243C823.275 190.428 826.707 189.172 834.808 183.516M822.049 184.243C824.249 182.161 826.401 178.717 828.825 172.67M834.808 183.516C836.598 182.461 839.393 176.264 845.977 160.236M834.808 183.516C837.168 192.346 840.388 191.377 849.7 179.151M837.042 166.056H849.7M873.141 170.319C864.951 149.222 905.159 147.767 897.713 165.227C895.822 168.494 894.315 169.887 891.012 171.774M891.012 171.774C899.144 181.58 893.246 191.862 886.544 189.961C880.977 188.383 878.696 186.845 875.375 183.516C875.238 183.422 875.104 183.33 874.971 183.24M891.012 171.774L882.694 170.319M888.033 160.236C886.078 163.999 884.307 167.353 882.694 170.319M882.694 170.319C879.605 175.998 877.095 180.255 874.971 183.24M908.138 168.137C902.734 178.303 899.202 188.506 904.414 188.506C907.383 188.506 910.139 186.916 913.734 181.231M923.774 160.236C919.646 170.296 916.451 176.934 913.734 181.231M913.734 181.231C913.917 186.767 914.589 188.502 917.073 188.506C919.652 189.226 922.699 186.33 925.971 181.231M936.432 160.236C932.885 168.526 929.311 176.026 925.971 181.231M925.971 181.231C925.971 192.144 931.965 190.689 939.411 179.151M798.918 155.469C798.98 155.361 799.03 155.252 799.067 155.144C799.018 155.251 798.968 155.359 798.918 155.469ZM874.971 183.24C871.681 187.866 869.322 189.436 867.185 188.506C861.972 188.506 859.739 179.777 867.185 179.777C869.925 180.122 871.734 181.041 874.971 183.24ZM911.116 158.679C911.938 158.679 912.605 159.331 912.605 160.134M911.116 158.679C910.293 158.679 909.627 159.331 909.627 160.134M911.116 158.679H911.15C911.954 158.679 912.605 159.331 912.605 160.134V160.134M911.116 158.679H911.082C910.278 158.679 909.627 159.331 909.627 160.134V160.134M912.605 160.134C912.605 160.938 911.938 161.589 911.116 161.589M912.605 160.134V160.134C912.605 160.938 911.954 161.589 911.15 161.589H911.116M911.116 161.589C910.293 161.589 909.627 160.938 909.627 160.134M911.116 161.589H911.082C910.278 161.589 909.627 160.938 909.627 160.134V160.134" stroke={tertiaryColor} strokeWidth="5" strokeLinecap="round" />
-                        <image x="368" y="156" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
-                        <image x="-23" y="161" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
+                        <image x="1171" y="600" height="150" width="150" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="-71" y="600" height="150" width="150" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
                     </svg>
                 </>
             )
@@ -674,6 +688,16 @@ const getPath = (name,
             return (
                 <>
                     <svg className={className} viewBox="0 0 1258 1409" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="Sideswipe Jersey Model">
+                        <title>Sideswipe Jersey Model</title>
+                        <desc>This jersey model has a thin triangle accent on the jersey body. </desc>
+                        <defs>
+                            <clipPath id={`left-logo-${name}`}>
+                                <rect x="1161" y="469" width="100" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                            <clipPath id={`right-logo-${name}`}>
+                                <rect x="0" y="460" width="100" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                        </defs>
                         <path d="M458.152 20.1825C592.912 46.5045 665.03 44.6217 792.429 18.9211L793.69 16.3983L985.427 117.312C1104.41 182.563 1160.53 313.449 1257 579.325L1001.83 686.215L1009.39 1287.92C912.28 1402.83 893.129 1407.62 620.223 1407.62C353.702 1402.83 345.722 1407.62 252.539 1287.92L244.971 689.999L1 579.325C108.116 295.544 162.965 171.467 257.585 117.312L453.106 15.1368L458.152 20.1825Z" fill={primaryColor} />
                         <path d="M458.152 20.1825C460.684 28.0471 462.814 32.2181 468.243 39.1039C589.378 60.3529 657.573 60.6698 779.815 39.1039C786.148 30.7048 789.25 26.1607 792.429 18.9211M458.152 20.1825C592.912 46.5045 665.03 44.6217 792.429 18.9211M458.152 20.1825L453.106 15.1368L257.585 117.312M792.429 18.9211L793.69 16.3983L985.427 117.312M257.585 117.312C162.965 171.467 108.116 295.544 1 579.325L244.971 689.999M257.585 117.312C240.993 228.995 242.167 291.718 251.278 403.656C267.412 538.012 258.672 591.791 244.971 689.999M244.971 689.999L252.539 1287.92C345.722 1407.62 353.702 1402.83 620.223 1407.62C893.129 1407.62 912.28 1402.83 1009.39 1287.92L1001.83 686.215M1001.83 686.215L1257 579.325C1160.53 313.449 1104.41 182.563 985.427 117.312M1001.83 686.215C989.698 592.869 982.142 542.04 993.626 401.763C1000.93 284.23 994.789 224.617 985.427 117.312" stroke="black" />
                         <path d="M261 526L290.5 1333.5L261 1298.5V526Z" fill={secondaryColor} />
@@ -686,14 +710,25 @@ const getPath = (name,
                         <path d="M798.918 155.469C798.98 155.361 799.03 155.252 799.067 155.144C799.018 155.251 798.968 155.359 798.918 155.469Z" fill={tertiaryColor} />
                         <path d="M911.116 158.679C911.938 158.679 912.605 159.331 912.605 160.134C912.605 160.938 911.938 161.589 911.116 161.589C910.293 161.589 909.627 160.938 909.627 160.134C909.627 159.331 910.293 158.679 911.116 158.679Z" fill={tertiaryColor} />
                         <path fillRule="evenodd" clipRule="evenodd" d="M828.825 172.67L828.851 172.604C828.955 172.828 828.944 172.825 828.825 172.67ZM811.353 178.06L811.247 178.251C811.314 177.948 811.361 177.855 811.353 178.06Z" fill={tertiaryColor} />
+                        <image x="1180" y="600" height="150" width="150" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={rightArmLogo} alt="Left arm logo display." />
+                        <image x="-79" y="600" height="150" width="150" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={leftArmLogo} alt="Right arm logo display." />
                     </svg>
-
                 </>
             )
         case "stripehead-front":
             return (
                 <>
                     <svg className={className} viewBox="0 0 1048 1173" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Striphead Jersey Model</title>
+                        <desc>This jersey model features a horizontal gradient striping pattern with two colored bars on the arm sleeves.</desc>
+                        <defs>
+                            <clipPath id={`left-logo-${name}`}>
+                                <rect x="897" y="467" width="150" height="750" style={{ transform: "rotate(-2deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                            <clipPath id={`right-logo-${name}`}>
+                                <rect x="0" y="467" width="100" height="750" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                        </defs>
                         <path d="M381.622 16.8289C493.824 38.7444 553.869 37.1769 659.94 15.7786L660.991 13.6781L820.63 97.6987C919.694 152.026 966.424 261.001 1046.74 482.368L834.283 571.364L840.585 1072.34C759.728 1168.01 743.782 1172 516.563 1172C294.658 1168.01 288.014 1172 210.431 1072.34L204.129 574.515L1 482.368C90.1845 246.094 135.852 142.788 214.632 97.6987L377.421 12.6279L381.622 16.8289Z" fill={primaryColor} />
                         <path d="M381.622 16.8289C383.731 23.3769 385.504 26.8497 390.025 32.5827C490.881 50.2745 547.66 50.5384 649.438 32.5827C654.711 25.5897 657.294 21.8063 659.94 15.7786M381.622 16.8289C493.824 38.7444 553.869 37.1769 659.94 15.7786M381.622 16.8289L377.421 12.6279L214.632 97.6987M659.94 15.7786L660.991 13.6781L820.63 97.6987M214.632 97.6987C135.852 142.788 90.1845 246.094 1 482.368L204.129 574.515M214.632 97.6987C200.817 190.685 201.794 242.908 209.38 336.107C222.813 447.972 215.536 492.748 204.129 574.515M204.129 574.515L210.431 1072.34C288.014 1172 294.658 1168.01 516.563 1172C743.782 1172 759.728 1168.01 840.585 1072.34L834.283 571.364M834.283 571.364L1046.74 482.368C966.424 261.001 919.694 152.026 820.63 97.6987M834.283 571.364C824.186 493.645 817.895 451.325 827.456 334.532C833.538 236.673 828.425 187.04 820.63 97.6987" stroke="black" />
                         <path d="M381.622 30.4825C488.262 52.7531 548.05 49.771 654.689 30.4825C614.361 92.3294 584.239 119.986 521.306 160.714C454.435 123.007 423.596 94.7636 381.622 30.4825Z" fill="#505050" stroke="black" />
@@ -761,8 +796,8 @@ const getPath = (name,
                         <path d="M751.116 117.191C751.777 117.191 752.314 117.715 752.314 118.362C752.314 119.008 751.777 119.532 751.116 119.532C750.454 119.532 749.918 119.008 749.918 118.362C749.918 117.715 750.454 117.191 751.116 117.191Z" fill={tertiaryColor} />
                         <path fillRule="evenodd" clipRule="evenodd" d="M684.917 128.446L684.938 128.393C685.021 128.573 685.012 128.571 684.917 128.446ZM670.862 132.782L670.776 132.936C670.83 132.692 670.868 132.617 670.862 132.782Z" fill={tertiaryColor} />
                         <path d="M644.806 123.711C637.018 124.881 634.775 110.46 644.806 114.347C654.388 118.06 659.801 116.466 660.859 114.609M640.014 132.489C640.868 132.099 635.439 130.984 635.222 137.756C635.222 142.638 638.505 144.219 643.297 143.397C650.8 142.109 656.817 123.494 660.859 114.609M648.998 128.978H656.951M668.765 117.858C659.717 136.567 659.277 140.297 662.775 140.682C665.742 141.059 667.536 138.793 670.776 132.936M684.938 128.393L686.735 125.466M684.938 128.393C684.931 128.41 684.924 128.428 684.917 128.446M684.938 128.393C685.021 128.573 685.012 128.571 684.917 128.446M684.938 128.393L684.917 128.446M670.862 132.782C673.766 126.529 675.603 125.636 678.948 124.881C682.334 124.893 684.489 127.888 684.917 128.446M670.862 132.782C670.868 132.617 670.83 132.692 670.776 132.936M670.862 132.782C670.833 132.833 670.805 132.885 670.776 132.936M670.862 132.782L670.776 132.936M679.466 137.756C677.468 139.647 675.47 140.937 672.958 140.682C669.758 140.358 670.49 134.238 670.776 132.936M679.466 137.756C680.452 142.732 683.213 141.721 689.73 137.171M679.466 137.756C681.235 136.081 682.967 133.311 684.917 128.446M689.73 137.171C691.17 136.322 693.419 131.337 698.715 118.444M689.73 137.171C691.628 144.274 694.219 143.495 701.71 133.66M691.527 123.125H701.71M720.567 126.555C713.978 109.583 746.324 108.413 740.334 122.458C738.813 125.086 737.6 126.207 734.943 127.725M734.943 127.725C741.485 135.613 736.74 143.885 731.349 142.356C726.871 141.086 725.035 139.849 722.364 137.171C722.254 137.095 722.146 137.021 722.039 136.949M734.943 127.725L728.252 126.555M732.547 118.444C730.974 121.471 729.549 124.169 728.252 126.555M728.252 126.555C725.767 131.123 723.747 134.548 722.039 136.949M748.72 124.799C744.373 132.977 741.532 141.186 745.725 141.186C748.113 141.186 750.33 139.906 753.222 135.333M761.299 118.444C757.978 126.536 755.407 131.876 753.222 135.333M753.222 135.333C753.369 139.786 753.91 141.182 755.908 141.186C757.982 141.765 760.434 139.435 763.066 135.333M771.481 118.444C768.628 125.112 765.753 131.146 763.066 135.333M763.066 135.333C763.066 144.112 767.888 142.941 773.877 133.66M660.859 114.609C660.908 114.522 660.948 114.434 660.978 114.347C660.939 114.433 660.899 114.52 660.859 114.609ZM722.039 136.949C719.393 140.67 717.494 141.934 715.775 141.186C711.582 141.186 709.785 134.163 715.775 134.163C717.979 134.441 719.435 135.18 722.039 136.949ZM751.116 117.191C751.777 117.191 752.314 117.715 752.314 118.362M751.116 117.191C750.454 117.191 749.918 117.715 749.918 118.362M751.116 117.191H751.143C751.79 117.191 752.314 117.715 752.314 118.362V118.362M751.116 117.191H751.088C750.442 117.191 749.918 117.715 749.918 118.362V118.362M752.314 118.362C752.314 119.008 751.777 119.532 751.116 119.532M752.314 118.362V118.362C752.314 119.008 751.79 119.532 751.143 119.532H751.116M751.116 119.532C750.454 119.532 749.918 119.008 749.918 118.362M751.116 119.532H751.088C750.442 119.532 749.918 119.008 749.918 118.362V118.362" stroke={tertiaryColor} strokeWidth="2" strokeLinecap="round" />
-                        <image x="368" y="156" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
-                        <image x="-23" y="161" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
+                        <image x="983" y="459" height="100" width="100" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="-45" y="420" height="100" width="100" style={{ transform: "rotate(15deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
                     </svg>
                 </>
             )
@@ -770,6 +805,16 @@ const getPath = (name,
             return (
                 <>
                     <svg className={className} viewBox="0 0 1048 1161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Striphead Jersey Model</title>
+                        <desc>This jersey model features a horizontal gradient striping pattern with two colored bars on the arm sleeves.</desc>
+                        <defs>
+                            <clipPath id={`left-logo-${name}`}>
+                                <rect x="900" y="467" width="150" height="750" style={{ transform: "rotate(-2deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                            <clipPath id={`right-logo-${name}`}>
+                                <rect x="0" y="467" width="100" height="750" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                        </defs>
                         <path d="M381.622 4.8289C493.824 26.7444 553.869 25.1769 659.94 3.77864L660.991 1.67813L820.63 85.6987C919.694 140.026 966.424 249.001 1046.74 470.368L834.283 559.364L840.585 1060.34C759.728 1156.01 743.782 1160 516.563 1160C294.658 1156.01 288.014 1160 210.431 1060.34L204.129 562.515L1 470.368C90.1845 234.094 135.852 130.788 214.632 85.6987L377.421 0.627869L381.622 4.8289Z" fill={primaryColor} />
                         <path d="M381.622 4.8289C383.731 11.3769 385.504 14.8497 390.025 20.5827C490.881 38.2745 547.66 38.5384 649.438 20.5827C654.711 13.5897 657.294 9.80632 659.94 3.77864M381.622 4.8289C493.824 26.7444 553.869 25.1769 659.94 3.77864M381.622 4.8289L377.421 0.627869L214.632 85.6987M659.94 3.77864L660.991 1.67813L820.63 85.6987M214.632 85.6987C135.852 130.788 90.1845 234.094 1 470.368L204.129 562.515M214.632 85.6987C200.817 178.685 201.794 230.908 209.38 324.107C222.813 435.972 215.536 480.748 204.129 562.515M204.129 562.515L210.431 1060.34C288.014 1160 294.658 1156.01 516.563 1160C743.782 1160 759.728 1156.01 840.585 1060.34L834.283 559.364M834.283 559.364L1046.74 470.368C966.424 249.001 919.694 140.026 820.63 85.6987M834.283 559.364C824.186 481.645 817.895 439.325 827.456 322.532C833.538 224.673 828.425 175.04 820.63 85.6987" stroke="black" />
                         <path d="M1018.29 393.475L824.905 475.475L829.392 520.486L1031.69 429.944C1029.53 426.25 1039.5 446.352 1018.29 393.475Z" fill={tertiaryColor} />
@@ -783,8 +828,9 @@ const getPath = (name,
                         <path d="M824.405 480.475C818.9 442.968 826 316.5 829.125 281.118H206.405C210.5 334.5 223.5 419 214.905 480.475L211.105 515.975H827.802L824.405 480.475Z" fill={tertiaryColor} />
                         <path d="M18.2737 425.19L210.945 510.231C211.145 510.792 211.043 512.477 207.409 538.239L8.59766 450.547L18.2737 425.19Z" fill={secondaryColor} />
                         <path d="M1031.78 429.969L828.8 514.663C828.6 515.224 832.336 542.671 832.336 542.671L1040.96 455.295L1031.78 429.969Z" fill={secondaryColor} />
+                        <image x="990" y="450" height="100" width="100" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={rightArmLogo} alt="Left arm logo display." />
+                        <image x="-40" y="415" height="100" width="100" style={{ transform: "rotate(15deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={leftArmLogo} alt="Right arm logo display." />
                     </svg>
-
                 </>
             )
         case "solid-accent-front":
@@ -891,13 +937,13 @@ const getPath = (name,
                 <>
                     <svg className={className} viewBox="0 0 1048 1173" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="5 Star Jersey Model">
                         <title>5 Star Jersey Model</title>
-                        <desc>This jersey model is notable for its 5 stars across its front. </desc>
+                        <desc>This jersey model is notable for its 5 stars across its front.</desc>
                         <defs>
                             <clipPath id={`left-logo-${name}`}>
-                                <rect x="355" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="897" y="467" width="150" height="750" style={{ transform: "rotate(-2deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                             <clipPath id={`right-logo-${name}`}>
-                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="0" y="467" width="100" height="750" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                         </defs>
                         <path d="M381.622 16.8289C493.824 38.7444 553.869 37.1769 659.94 15.7787L660.991 13.6781L820.63 97.6987C919.694 152.026 966.424 261.001 1046.74 482.369L834.283 571.364L840.585 1072.34C759.728 1168.01 743.782 1172 516.563 1172C294.658 1168.01 288.014 1172 210.431 1072.34L204.129 574.515L1 482.369C90.1845 246.094 135.852 142.788 214.632 97.6987L377.421 12.6279L381.622 16.8289Z" fill={primaryColor} />
@@ -967,8 +1013,8 @@ const getPath = (name,
                         <path d="M751.116 117.191C751.777 117.191 752.314 117.715 752.314 118.362C752.314 119.008 751.777 119.532 751.116 119.532C750.454 119.532 749.918 119.008 749.918 118.362C749.918 117.715 750.454 117.191 751.116 117.191Z" fill={tertiaryColor} />
                         <path fillRule="evenodd" clipRule="evenodd" d="M684.917 128.446L684.938 128.392C685.021 128.573 685.012 128.571 684.917 128.446ZM670.862 132.782L670.776 132.936C670.83 132.692 670.868 132.617 670.862 132.782Z" fill={tertiaryColor} />
                         <path d="M644.806 123.71C637.018 124.881 634.775 110.46 644.806 114.347C654.388 118.06 659.801 116.466 660.859 114.609M640.014 132.489C640.868 132.099 635.439 130.984 635.222 137.756C635.222 142.638 638.505 144.219 643.297 143.397C650.8 142.109 656.817 123.494 660.859 114.609M648.998 128.978H656.951M668.765 117.858C659.717 136.567 659.277 140.297 662.775 140.682C665.742 141.059 667.536 138.793 670.776 132.936M684.938 128.392L686.735 125.466M684.938 128.392C684.931 128.41 684.924 128.428 684.917 128.446M684.938 128.392C685.021 128.573 685.012 128.571 684.917 128.446M684.938 128.392L684.917 128.446M670.862 132.782C673.766 126.529 675.603 125.636 678.948 124.881C682.334 124.893 684.489 127.888 684.917 128.446M670.862 132.782C670.868 132.617 670.83 132.692 670.776 132.936M670.862 132.782C670.833 132.833 670.805 132.885 670.776 132.936M670.862 132.782L670.776 132.936M679.466 137.756C677.468 139.647 675.47 140.937 672.958 140.682C669.758 140.358 670.49 134.238 670.776 132.936M679.466 137.756C680.452 142.732 683.213 141.721 689.73 137.171M679.466 137.756C681.235 136.081 682.967 133.311 684.917 128.446M689.73 137.171C691.17 136.322 693.419 131.337 698.715 118.444M689.73 137.171C691.628 144.274 694.219 143.495 701.71 133.66M691.527 123.125H701.71M720.567 126.555C713.978 109.583 746.324 108.413 740.334 122.458C738.813 125.086 737.6 126.207 734.943 127.725M734.943 127.725C741.485 135.613 736.74 143.885 731.349 142.356C726.871 141.086 725.035 139.849 722.364 137.171C722.254 137.095 722.146 137.021 722.039 136.949M734.943 127.725L728.252 126.555M732.547 118.444C730.974 121.471 729.549 124.169 728.252 126.555M728.252 126.555C725.767 131.123 723.747 134.548 722.039 136.949M748.72 124.799C744.373 132.977 741.532 141.185 745.725 141.185C748.113 141.185 750.33 139.906 753.222 135.333M761.299 118.444C757.978 126.536 755.407 131.876 753.222 135.333M753.222 135.333C753.369 139.786 753.91 141.182 755.908 141.185C757.982 141.765 760.434 139.435 763.066 135.333M771.481 118.444C768.628 125.112 765.753 131.146 763.066 135.333M763.066 135.333C763.066 144.112 767.888 142.941 773.877 133.66M660.859 114.609C660.908 114.522 660.948 114.434 660.978 114.347C660.939 114.433 660.899 114.52 660.859 114.609ZM722.039 136.949C719.393 140.67 717.494 141.934 715.775 141.185C711.582 141.185 709.785 134.163 715.775 134.163C717.979 134.441 719.435 135.18 722.039 136.949ZM751.116 117.191C751.777 117.191 752.314 117.715 752.314 118.362M751.116 117.191C750.454 117.191 749.918 117.715 749.918 118.362M751.116 117.191H751.143C751.79 117.191 752.314 117.715 752.314 118.362V118.362M751.116 117.191H751.088C750.442 117.191 749.918 117.715 749.918 118.362V118.362M752.314 118.362C752.314 119.008 751.777 119.532 751.116 119.532M752.314 118.362V118.362C752.314 119.008 751.79 119.532 751.143 119.532H751.116M751.116 119.532C750.454 119.532 749.918 119.008 749.918 118.362M751.116 119.532H751.088C750.442 119.532 749.918 119.008 749.918 118.362V118.362" stroke={tertiaryColor} strokeWidth="4" strokeLinecap="round" />
-                        <image x="368" y="156" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
-                        <image x="-23" y="161" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
+                        <image x="983" y="459" height="100" width="100" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="-45" y="420" height="100" width="100" style={{ transform: "rotate(15deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
                     </svg>
                 </>
             )
@@ -976,6 +1022,16 @@ const getPath = (name,
             return (
                 <>
                     <svg className={className} viewBox="0 0 1048 1172" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="5 Star Jersey Model">
+                        <title>5 Star Jersey Model</title>
+                        <desc>This jersey model is notable for its 5 stars across its front. </desc>
+                        <defs>
+                            <clipPath id={`left-logo-${name}`}>
+                                <rect x="900" y="467" width="150" height="750" style={{ transform: "rotate(-2deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                            <clipPath id={`right-logo-${name}`}>
+                                <rect x="0" y="467" width="100" height="750" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                        </defs>
                         <path d="M381.622 15.8289C493.824 37.7444 553.869 36.1769 659.94 14.7787L660.991 12.6781L820.63 96.6987C919.694 151.026 966.424 260.001 1046.74 481.369L834.283 570.364L840.585 1071.34C759.728 1167.01 743.782 1171 516.563 1171C294.658 1167.01 288.014 1171 210.431 1071.34L204.129 573.515L1 481.369C90.1845 245.094 135.852 141.788 214.632 96.6987L377.421 11.6279L381.622 15.8289Z" fill={primaryColor} />
                         <path d="M381.622 15.8289C383.731 22.3769 385.504 25.8497 390.025 31.5828C490.881 49.2746 547.66 49.5384 649.438 31.5828C654.711 24.5897 657.294 20.8063 659.94 14.7787M381.622 15.8289C493.824 37.7444 553.869 36.1769 659.94 14.7787M381.622 15.8289L377.421 11.6279L214.632 96.6987M659.94 14.7787L660.991 12.6781L820.63 96.6987M214.632 96.6987C135.852 141.788 90.1845 245.094 1 481.369L204.129 573.515M214.632 96.6987C200.817 189.685 201.794 241.908 209.38 335.107C222.813 446.972 215.536 491.748 204.129 573.515M204.129 573.515L210.431 1071.34C288.014 1171 294.658 1167.01 516.563 1171C743.782 1171 759.728 1167.01 840.585 1071.34L834.283 570.364M834.283 570.364L1046.74 481.369C966.424 260.001 919.694 151.026 820.63 96.6987M834.283 570.364C824.186 492.645 817.895 450.325 827.456 333.532C833.538 235.673 828.425 186.04 820.63 96.6987" stroke="black" />
                         <path d="M11 456L208 543L204 573L1.5 481.5L11 456Z" fill={tertiaryColor} />
@@ -990,8 +1046,9 @@ const getPath = (name,
                         <path d="M649.5 524L659.266 554.058H690.871L665.302 572.634L675.069 602.692L649.5 584.116L623.931 602.692L633.698 572.634L608.129 554.058H639.734L649.5 524Z" fill={secondaryColor} />
                         <path d="M779.5 524L789.266 554.058H820.871L795.302 572.634L805.069 602.692L779.5 584.116L753.931 602.692L763.698 572.634L738.129 554.058H769.734L779.5 524Z" fill={secondaryColor} />
                         <path d="M377.654 10.694L400.432 0C459.247 7.53159 591.581 9.57113 634.639 0L659.975 11.4274C654.135 34.7346 388.365 41.4439 377.654 10.694Z" fill={secondaryColor} />
+                        <image x="990" y="450" height="100" width="100" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={rightArmLogo} alt="Left arm logo display." />
+                        <image x="-40" y="415" height="100" width="100" style={{ transform: "rotate(15deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={leftArmLogo} alt="Right arm logo display." />
                     </svg>
-
                 </>
             )
         case "sideslider-front":
@@ -1002,10 +1059,10 @@ const getPath = (name,
                         <desc>This jersey model has a pattern on its side as well as an accent underneath the jersey's arms. </desc>
                         <defs>
                             <clipPath id={`left-logo-${name}`}>
-                                <rect x="355" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="860" y="467" width="150" height="750" style={{ transform: "rotate(-2deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                             <clipPath id={`right-logo-${name}`}>
-                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="0" y="467" width="100" height="750" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                         </defs>
                         <path d="M367.521 16.1815C475.566 37.2851 533.387 35.7757 635.528 15.1702L636.54 13.1475L790.265 94.0553C885.659 146.37 930.657 251.308 1008 464.474L803.412 550.173L809.48 1032.59C731.619 1124.72 716.264 1128.56 497.463 1128.56C283.779 1124.72 277.381 1128.56 202.672 1032.59L196.604 553.207L1 464.474C86.8805 236.953 130.856 137.474 206.717 94.0553L363.476 12.1361L367.521 16.1815Z" fill={primaryColor} />
@@ -1066,8 +1123,8 @@ const getPath = (name,
                         <path d="M730.686 127.221C731.345 127.221 731.88 127.743 731.88 128.388C731.88 129.032 731.345 129.554 730.686 129.554C730.026 129.554 729.492 129.032 729.492 128.388C729.492 127.743 730.026 127.221 730.686 127.221Z" fill={tertiaryColor} />
                         <path fillRule="evenodd" clipRule="evenodd" d="M664.709 138.438L664.73 138.385C664.813 138.565 664.804 138.563 664.709 138.438ZM650.701 142.76L650.616 142.913C650.669 142.67 650.707 142.595 650.701 142.76Z" fill={tertiaryColor} />
                         <path d="M624.732 133.719C616.971 134.885 614.735 120.512 624.732 124.387C634.282 128.088 639.677 126.499 640.731 124.647M619.956 142.468C620.808 142.079 615.397 140.968 615.18 147.717C615.18 152.583 618.453 154.159 623.229 153.339C630.707 152.056 636.704 133.503 640.731 124.647M628.911 138.968H636.837M648.611 127.886C639.594 146.532 639.155 150.25 642.642 150.634C645.598 151.009 647.386 148.75 650.616 142.913M664.73 138.385L666.521 135.469M664.73 138.385C664.723 138.403 664.716 138.42 664.709 138.438M664.73 138.385C664.813 138.565 664.804 138.563 664.709 138.438M664.73 138.385L664.709 138.438M650.701 142.76C653.595 136.528 655.426 135.638 658.76 134.885C662.135 134.898 664.283 137.882 664.709 138.438M650.701 142.76C650.707 142.595 650.669 142.67 650.616 142.913M650.701 142.76C650.672 142.811 650.644 142.862 650.616 142.913M650.701 142.76L650.616 142.913M659.276 147.717C657.285 149.602 655.293 150.887 652.79 150.634C649.601 150.31 650.331 144.211 650.616 142.913M659.276 147.717C660.259 152.676 663.011 151.669 669.506 147.134M659.276 147.717C661.04 146.048 662.765 143.287 664.709 138.438M669.506 147.134C670.941 146.288 673.182 141.32 678.461 128.47M669.506 147.134C671.398 154.213 673.98 153.437 681.445 143.634M671.297 133.136H681.445M700.24 136.553C693.673 119.639 725.91 118.472 719.94 132.471C718.424 135.09 717.215 136.207 714.567 137.72M714.567 137.72C721.087 145.582 716.358 153.825 710.985 152.302C706.522 151.036 704.693 149.803 702.03 147.134C701.921 147.059 701.813 146.985 701.707 146.913M714.567 137.72L707.898 136.553M712.179 128.47C710.611 131.486 709.192 134.175 707.898 136.553M707.898 136.553C705.422 141.106 703.409 144.52 701.707 146.913M728.298 134.804C723.965 142.954 721.134 151.135 725.313 151.135C727.693 151.135 729.903 149.86 732.784 145.302M740.834 128.47C737.525 136.535 734.963 141.857 732.784 145.302M732.784 145.302C732.931 149.741 733.47 151.132 735.462 151.135C737.529 151.712 739.973 149.39 742.596 145.302M750.983 128.47C748.139 135.116 745.274 141.129 742.596 145.302M742.596 145.302C742.596 154.051 747.401 152.885 753.371 143.634M640.731 124.647C640.781 124.561 640.82 124.474 640.851 124.387C640.811 124.473 640.771 124.56 640.731 124.647ZM701.707 146.913C699.069 150.621 697.177 151.881 695.464 151.135C691.285 151.135 689.494 144.136 695.464 144.136C697.661 144.413 699.111 145.15 701.707 146.913ZM730.686 127.221C731.345 127.221 731.88 127.743 731.88 128.388M730.686 127.221C730.026 127.221 729.492 127.743 729.492 128.388M730.686 127.221H730.713C731.357 127.221 731.88 127.743 731.88 128.388V128.388M730.686 127.221H730.658C730.014 127.221 729.492 127.743 729.492 128.388V128.388M731.88 128.388C731.88 129.032 731.345 129.554 730.686 129.554M731.88 128.388V128.388C731.88 129.032 731.357 129.554 730.713 129.554H730.686M730.686 129.554C730.026 129.554 729.492 129.032 729.492 128.388M730.686 129.554H730.658C730.014 129.554 729.492 129.032 729.492 128.388V128.388" stroke={tertiaryColor} strokeWidth="5" strokeLinecap="round" />
-                        <image x="368" y="156" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
-                        <image x="-23" y="161" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
+                        <image x="946" y="459" height="100" width="100" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="-45" y="459" height="100" width="100" style={{ transform: "rotate(15deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
                     </svg>
                 </>
             )
@@ -1075,6 +1132,16 @@ const getPath = (name,
             return (
                 <>
                     <svg className={className} viewBox="0 0 1009 1130" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="Sideslider Jersey Model">
+                        <title>Sideslider Jersey Model</title>
+                        <desc>This jersey model has a pattern on its side as well as an accent underneath the jersey's arms. </desc>
+                        <defs>
+                            <clipPath id={`left-logo-${name}`}>
+                                <rect x="860" y="467" width="150" height="750" style={{ transform: "rotate(-2deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                            <clipPath id={`right-logo-${name}`}>
+                                <rect x="0" y="467" width="100" height="750" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                        </defs>
                         <path d="M367.521 16.1815C475.566 37.2851 533.387 35.7757 635.528 15.1702L636.54 13.1475L790.265 94.0553C885.659 146.37 930.657 251.308 1008 464.474L803.412 550.173L809.48 1032.59C731.619 1124.72 716.264 1128.56 497.463 1128.56C283.779 1124.72 277.381 1128.56 202.672 1032.59L196.604 553.207L1 464.474C86.8805 236.953 130.856 137.474 206.717 94.0553L363.476 12.1361L367.521 16.1815Z" fill={primaryColor} />
                         <path d="M367.521 16.1815C369.552 22.4869 371.259 25.8311 375.612 31.3517C472.732 48.3881 527.408 48.6422 625.415 31.3517C630.493 24.6178 632.98 20.9746 635.528 15.1702M367.521 16.1815C475.566 37.2851 533.387 35.7757 635.528 15.1702M367.521 16.1815L363.476 12.1361L206.717 94.0553M635.528 15.1702L636.54 13.1475L790.265 94.0553M206.717 94.0553C130.856 137.474 86.8805 236.953 1 464.474L196.604 553.207M206.717 94.0553C193.414 183.597 194.355 233.885 201.66 323.631C214.596 431.352 207.588 474.469 196.604 553.207M196.604 553.207L202.672 1032.59C277.381 1128.56 283.779 1124.72 497.463 1128.56C716.264 1128.56 731.619 1124.72 809.48 1032.59L803.412 550.173M803.412 550.173L1008 464.474C930.657 251.308 885.659 146.37 790.265 94.0553M803.412 550.173C793.689 475.333 787.631 434.581 796.838 322.114C802.695 227.881 797.771 180.087 790.265 94.0553" stroke="black" />
                         <path d="M196.515 552.76L130.822 522.729L202.459 332.845C212.996 422.546 208.553 473.655 196.515 552.76Z" fill={tertiaryColor} />
@@ -1082,8 +1149,9 @@ const getPath = (name,
                         <path d="M803 550C788.522 458.156 789.084 414.479 795 341L703 667.5L792.5 1052L809 1032.5L803 550Z" fill={tertiaryColor} />
                         <path d="M197 554C211.478 462.156 210.916 418.479 205 345L297 671.5L219.5 1053.5L203 1032.5L197 554Z" fill={tertiaryColor} />
                         <path d="M363.792 10.2978L385.726 0C442.362 7.25256 569.793 9.21655 611.256 0L635.653 11.0041C630.03 33.4477 374.106 39.9086 363.792 10.2978Z" fill={tertiaryColor} />
+                        <image x="955" y="459" height="100" width="100" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={rightArmLogo} alt="Left arm logo display." />
+                        <image x="-50" y="459" height="100" width="100" style={{ transform: "rotate(15deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={leftArmLogo} alt="Right arm logo display." />
                     </svg>
-
                 </>
             )
         case "raglan-front":
@@ -1094,10 +1162,10 @@ const getPath = (name,
                         <desc>This jersey model is one color on its body and one color on its arms much like a raglan t-shirt. </desc>
                         <defs>
                             <clipPath id={`left-logo-${name}`}>
-                                <rect x="355" y="112" width="41" height="500" style={{ transform: "rotate(-4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="895" y="400" width="125" height="500" style={{ transform: "rotate(-2deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                             <clipPath id={`right-logo-${name}`}>
-                                <rect x="0" y="28" width="41" height="500" style={{ transform: "rotate(4deg)", transformOrigin: "50% 50%" }} />
+                                <rect x="-2" y="400" width="191" height="500" style={{ transform: "rotate(2deg)", transformOrigin: "50% 50%" }} />
                             </clipPath>
                         </defs>
                         <path d="M369.614 16.2737C478.275 37.4978 536.426 35.9798 639.151 15.2566L640.168 13.2224L794.771 94.5921C890.709 147.205 935.965 252.743 1013.75 467.126L807.993 553.314L814.096 1038.49C735.79 1131.14 720.348 1135 500.297 1135C285.393 1131.14 278.959 1135 203.823 1038.49L197.72 556.365L0.999756 467.126C87.3705 238.306 131.597 138.259 207.891 94.5921L365.545 12.2053L369.614 16.2737Z" fill={primaryColor} />
@@ -1162,8 +1230,8 @@ const getPath = (name,
                         <path d="M727.45 113.47C728.091 113.47 728.61 113.977 728.61 114.603C728.61 115.229 728.091 115.737 727.45 115.737C726.809 115.737 726.29 115.229 726.29 114.603C726.29 113.977 726.809 113.47 727.45 113.47Z" fill={tertiaryColor} />
                         <path fillRule="evenodd" clipRule="evenodd" d="M663.339 124.369L663.36 124.318C663.441 124.493 663.432 124.49 663.339 124.369ZM649.728 128.568L649.645 128.718C649.697 128.481 649.734 128.409 649.728 128.568Z" fill={tertiaryColor} />
                         <path d="M624.494 119.783C616.952 120.917 614.78 106.951 624.494 110.715C633.774 114.312 639.016 112.768 640.04 110.969M619.853 128.285C620.68 127.907 615.423 126.828 615.212 133.386C615.212 138.114 618.392 139.645 623.033 138.849C630.299 137.601 636.126 119.574 640.04 110.969M628.554 124.884H636.256M647.697 114.116C638.935 132.234 638.508 135.847 641.896 136.22C644.77 136.585 646.507 134.39 649.645 128.718M663.36 124.318L665.1 121.484M663.36 124.318C663.353 124.335 663.346 124.352 663.339 124.369M663.36 124.318C663.441 124.493 663.432 124.49 663.339 124.369M663.36 124.318L663.339 124.369M649.728 128.568C652.54 122.513 654.32 121.648 657.559 120.917C660.838 120.929 662.925 123.829 663.339 124.369M649.728 128.568C649.734 128.409 649.697 128.481 649.645 128.718M649.728 128.568C649.7 128.618 649.673 128.668 649.645 128.718M649.728 128.568L649.645 128.718M658.061 133.386C656.126 135.217 654.19 136.466 651.758 136.22C648.659 135.906 649.368 129.979 649.645 128.718M658.061 133.386C659.016 138.204 661.69 137.226 668.001 132.819M658.061 133.386C659.774 131.763 661.451 129.081 663.339 124.369M668.001 132.819C669.395 131.997 671.573 127.17 676.702 114.683M668.001 132.819C669.839 139.698 672.348 138.943 679.603 129.419M669.741 119.217H679.603M697.865 122.538C691.484 106.102 722.809 104.968 717.008 118.571C715.535 121.116 714.36 122.201 711.787 123.671M711.787 123.671C718.123 131.311 713.528 139.321 708.307 137.841C703.97 136.611 702.192 135.412 699.605 132.819C699.499 132.746 699.394 132.674 699.291 132.604M711.787 123.671L705.307 122.538M709.467 114.683C707.943 117.614 706.564 120.227 705.307 122.538M705.307 122.538C702.901 126.962 700.945 130.279 699.291 132.604M725.129 120.838C720.919 128.758 718.168 136.707 722.229 136.707C724.541 136.707 726.689 135.468 729.489 131.039M737.311 114.683C734.096 122.52 731.606 127.691 729.489 131.039M729.489 131.039C729.632 135.352 730.155 136.704 732.091 136.707C734.1 137.268 736.474 135.011 739.023 131.039M747.173 114.683C744.41 121.141 741.625 126.984 739.023 131.039M739.023 131.039C739.023 139.541 743.692 138.407 749.493 129.419M640.04 110.969C640.088 110.885 640.127 110.8 640.156 110.715C640.118 110.799 640.079 110.883 640.04 110.969ZM699.291 132.604C696.728 136.208 694.889 137.432 693.224 136.707C689.164 136.707 687.423 129.906 693.224 129.906C695.359 130.175 696.769 130.891 699.291 132.604ZM727.45 113.47C728.091 113.47 728.61 113.977 728.61 114.603M727.45 113.47C726.809 113.47 726.29 113.977 726.29 114.603M727.45 113.47H727.476C728.103 113.47 728.61 113.977 728.61 114.603V114.603M727.45 113.47H727.423C726.797 113.47 726.29 113.977 726.29 114.603V114.603M728.61 114.603C728.61 115.229 728.091 115.737 727.45 115.737M728.61 114.603V114.603C728.61 115.229 728.103 115.737 727.476 115.737H727.45M727.45 115.737C726.809 115.737 726.29 115.229 726.29 114.603M727.45 115.737H727.423C726.797 115.737 726.29 115.229 726.29 114.603V114.603" stroke={tertiaryColor} strokeWidth="4" strokeLinecap="round" />
-                        <image x="368" y="156" height="50" width="50" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
-                        <image x="-23" y="161" height="50" width="50" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
+                        <image x="965" y="400" height="250" width="80" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={leftArmLogo} alt="Left arm logo display." />
+                        <image x="-38" y="400" height="250" width="80" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={rightArmLogo} alt="Right arm logo display." />
                     </svg>
                 </>
             )
@@ -1171,6 +1239,16 @@ const getPath = (name,
             return (
                 <>
                     <svg className={className} viewBox="0 0 1015 1136" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" alt="Raglan Jersey Model">
+                        <title>Raglan Jersey Model</title>
+                        <desc>This jersey model is one color on its body and one color on its arms much like a raglan t-shirt. </desc>
+                        <defs>
+                            <clipPath id={`left-logo-${name}`}>
+                                <rect x="895" y="400" width="125" height="500" style={{ transform: "rotate(-2deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                            <clipPath id={`right-logo-${name}`}>
+                                <rect x="-2" y="400" width="191" height="500" style={{ transform: "rotate(2deg)", transformOrigin: "50% 50%" }} />
+                            </clipPath>
+                        </defs>
                         <path d="M369.614 16.2737C478.275 37.4978 536.426 35.9798 639.151 15.2566L640.168 13.2224L794.771 94.5921C890.71 147.205 935.965 252.743 1013.75 467.126L807.993 553.314L814.096 1038.49C735.79 1131.14 720.348 1135 500.297 1135C285.393 1131.14 278.959 1135 203.823 1038.49L197.721 556.365L1 467.126C87.3708 238.306 131.597 138.259 207.892 94.5921L365.546 12.2053L369.614 16.2737Z" fill={primaryColor} />
                         <path d="M369.614 16.2737C371.656 22.6152 373.373 25.9784 377.751 31.5306C475.426 48.6642 530.413 48.9197 628.98 31.5306C634.087 24.7582 636.588 21.0941 639.151 15.2566M369.614 16.2737C478.275 37.4978 536.426 35.9798 639.151 15.2566M369.614 16.2737L365.546 12.2053L207.892 94.5921M639.151 15.2566L640.168 13.2224L794.771 94.5921M207.892 94.5921C131.597 138.259 87.3708 238.306 1 467.126L197.721 556.365M207.892 94.5921C194.513 184.645 195.459 235.22 202.806 325.479C215.815 433.814 208.768 477.177 197.721 556.365M197.721 556.365L203.823 1038.49C278.959 1135 285.393 1131.14 500.297 1135C720.348 1135 735.79 1131.14 814.096 1038.49L807.993 553.314M807.993 553.314L1013.75 467.126C935.965 252.743 890.71 147.205 794.771 94.5921M807.993 553.314C798.215 478.047 792.122 437.062 801.382 323.953C807.272 229.182 802.32 181.115 794.771 94.5921" stroke="black" />
                         <path d="M1013.75 467.126C935.965 252.743 890.71 147.205 794.771 94.5921C802.32 181.115 807.272 229.182 801.382 323.953C792.122 437.062 798.215 478.047 807.993 553.314L1013.75 467.126Z" fill={secondaryColor} />
@@ -1181,8 +1259,9 @@ const getPath = (name,
                         <path d="M16.0002 429L203 514L201.5 527L11.5002 440.5L16.0002 429Z" fill={tertiaryColor} />
                         <path d="M1008 452.5L806 535L808.5 552.5L1013.37 467.057L1008 452.5Z" fill={tertiaryColor} />
                         <path d="M999 429L803 511.5L804.5 524.5L1003.5 440.5L999 429Z" fill={tertiaryColor} />
+                        <image x="975" y="400" height="250" width="80" style={{ transform: "rotate(-19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#left-logo-${name}")` }} className={`${className === 'avatar' ? "avatar " : ""}display-image left`} href={rightArmLogo} alt="Left arm logo display." />
+                        <image x="-38" y="400" height="250" width="80" style={{ transform: "rotate(19deg)", transformOrigin: "50% 50%", WebkitClipPath: `url("#right-logo-${name}` }} className={`${className === 'avatar' ? "avatar " : ""}display-image right`} href={leftArmLogo} alt="Right arm logo display." />
                     </svg>
-
                 </>
             )
         case "hamburger":
