@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
 import './_HorizontalSlider.scss'
 import FontPicker from 'font-picker-react'
-import useStateValue from '../../lib/hooks/useStateValue'
+import useStateValue from '../../../lib/hooks/useStateValue'
 import fonts from '../lib/fonts'
 
-import DefaultSlider from '../DefaultSlider'
-import ModelSlider from '../ModelSlider'
-import ColorSlider from '../ColorSlider'
+import DefaultSlider from '../DefaultSlider/DefaultSlider'
+import ModelSlider from '../ModelSlider/'
+import ColorSlider from '../ColorSlider/'
 import ArmLogoSlider from '../ArmLogoSlider'
-import LogoEditor from '../LogoEditor'
-import NumberEditor from '../NumberEditor'
+import LogoEditor from '../LogoEditor/'
+import NumberEditor from '../NumberEditor/'
 
 const HorizontalSlider = ({ ...props }) => {
 

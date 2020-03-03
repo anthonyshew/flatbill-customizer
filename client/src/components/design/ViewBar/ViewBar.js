@@ -1,10 +1,10 @@
 import React from 'react'
 import gsap from 'gsap'
 import './_ViewBar.scss'
-import useStateValue from '../../lib/hooks/useStateValue'
+import useStateValue from '../../../lib/hooks/useStateValue'
 
-import Button from '../Button'
-import SVG from '../SVG'
+import Button from '../../Button/Button'
+import SVG from '../../SVG/SVG'
 
 const ViewBar = ({ ...props }) => {
 

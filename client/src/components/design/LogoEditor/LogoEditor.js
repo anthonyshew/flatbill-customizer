@@ -1,8 +1,8 @@
 import React from 'react'
 import SliderItem from '../SliderItem'
 
-import useStateValue from '../../lib/hooks/useStateValue'
-import SVG from '../SVG'
+import useStateValue from '../../../lib/hooks/useStateValue'
+import SVG from '../../SVG'
 import ChestLogo from '../lib/ChestLogo'
 
 const LogoEditor = ({ logoLocation, ...props }) => {

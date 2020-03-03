@@ -1,7 +1,7 @@
 import React from 'react'
 import SliderItem from '../SliderItem/SliderItem'
 
-import useStateValue from '../../lib/hooks/useStateValue'
+import useStateValue from '../../../lib/hooks/useStateValue'
 
 const ColorSlider = ({ colorType, ...props }) => {
 

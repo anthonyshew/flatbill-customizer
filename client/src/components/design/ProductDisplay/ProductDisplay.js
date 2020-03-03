@@ -1,8 +1,8 @@
 import React from 'react'
 import './_ProductDisplay.scss'
-import useStateValue from '../../lib/hooks/useStateValue'
+import useStateValue from '../../../lib/hooks/useStateValue'
 
-import SVG from '../SVG'
+import SVG from '../../SVG'
 import ChestLogo from '../lib/ChestLogo'
 import LastNameExample from '../lib/LastNameExample'
 import NumberDisplay from '../lib/NumberDisplay'

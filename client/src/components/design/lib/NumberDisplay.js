@@ -1,5 +1,5 @@
 import React from 'react'
-import useStateValue from '../../lib/hooks/useStateValue'
+import useStateValue from '../../../lib/hooks/useStateValue'
 
 const NumberDisplay = ({ className, avatarImage, fontSize, display, ...props }) => {
 

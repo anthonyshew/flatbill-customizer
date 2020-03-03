@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import './_Footer.scss'
-import { colors } from '../../styles/colors'
-import useStateValue from '../../lib/hooks/useStateValue'
+import { colors } from '../../../styles/colors'
+import useStateValue from '../../../lib/hooks/useStateValue'
 
-import Button from '../Button/Button'
+import Button from '../../Button/Button'
 
 const Footer = ({ sticky }) => {
 

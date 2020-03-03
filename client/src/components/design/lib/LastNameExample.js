@@ -1,5 +1,5 @@
 import React from 'react'
-import useStateValue from '../../lib/hooks/useStateValue'
+import useStateValue from '../../../lib/hooks/useStateValue'
 
 const LastNameExample = ({ className, avatarImage, fontSize, shadow, ...props }) => {
 

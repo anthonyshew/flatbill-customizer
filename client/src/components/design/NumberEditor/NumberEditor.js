@@ -1,8 +1,8 @@
 import React from 'react'
 import SliderItem from '../SliderItem/SliderItem'
 
-import useStateValue from '../../lib/hooks/useStateValue'
-import SVG from '../SVG/SVG'
+import useStateValue from '../../../lib/hooks/useStateValue'
+import SVG from '../../SVG'
 import NumberDisplay from '../lib/NumberDisplay'
 
 const NumberEditor = ({ logoLocation, ...props }) => {

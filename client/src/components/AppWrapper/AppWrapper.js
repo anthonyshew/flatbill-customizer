@@ -4,10 +4,10 @@ import usePreventMobileZoom from '../../lib/hooks/usePreventMobileZoom'
 import useStateValue from '../../lib/hooks/useStateValue'
 
 import Header from '../Header'
-import ViewBar from '../ViewBar'
-import ProductDisplay from '../ProductDisplay'
-import HorizontalSlider from '../HorizontalSlider'
-import Footer from '../Footer'
+import ViewBar from '../design/ViewBar'
+import ProductDisplay from '../design/ProductDisplay'
+import HorizontalSlider from '../design/HorizontalSlider'
+import Footer from '../design/Footer'
 
 const AppWrapper = ({ children }) => {
     usePreventMobileZoom()

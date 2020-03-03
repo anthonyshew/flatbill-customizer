@@ -1,9 +1,9 @@
 import React from 'react'
 import SliderItem from '../SliderItem'
 
-import useStateValue from '../../lib/hooks/useStateValue'
+import useStateValue from '../../../lib/hooks/useStateValue'
 
-import SVG from '../SVG'
+import SVG from '../../SVG'
 
 const ModelSlider = ({ ...props }) => {
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import './_ArmLogoSlider.scss'
-import SliderItem from '../SliderItem'
+import SliderItem from '../SliderItem/SliderItem'
 
-import useStateValue from '../../lib/hooks/useStateValue'
+import useStateValue from '../../../lib/hooks/useStateValue'
 
-import SVG from '../SVG'
+import SVG from '../../SVG/SVG'
 
 const ArmLogoSlider = ({ side }) => {
 
