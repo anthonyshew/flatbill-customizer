@@ -1,5 +1,5 @@
 export const initialState = {
-    step: 2,
+    step: 1,
     teamDetails: [],
     price: 300,
     view: 'front',
@@ -40,6 +40,11 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 step: action.step
+            }
+        case 'ROSTER_CONFIRM':
+            return {
+                ...state,
+                teamDetails: action.roster
             }
         case 'EDITOR_CHANGE':
             return {

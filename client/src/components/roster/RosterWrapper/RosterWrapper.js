@@ -92,7 +92,7 @@ const RosterWrapper = ({ ...props }) => {
                     Add Player +
                 </button>
             </div>
-            <Footer />
+            <Footer currentRoster={roster} />
         </div>
     )
 }

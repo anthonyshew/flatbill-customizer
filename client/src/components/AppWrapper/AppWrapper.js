@@ -9,6 +9,7 @@ import ProductDisplay from '../design/ProductDisplay'
 import HorizontalSlider from '../design/HorizontalSlider'
 import Footer from '../design/Footer'
 import RosterWrapper from '../roster/RosterWrapper/RosterWrapper'
+import Summary from '../summary'
 
 const AppWrapper = ({ children }) => {
     usePreventMobileZoom()
@@ -23,7 +24,8 @@ const AppWrapper = ({ children }) => {
             {
                 step === 1 ? <StepOne /> :
                     step === 2 ? <StepTwo /> :
-                        <p>Something went wrong...</p>
+                        step === 3 ? <StepThree /> :
+                            <p>Something went wrong...</p>
             }
         </div>
     )
@@ -45,5 +47,11 @@ const StepOne = (props) => {
 const StepTwo = (props) => {
     return (
         <RosterWrapper />
+    )
+}
+
+const StepThree = (props) => {
+    return (
+        <Summary />
     )
 }

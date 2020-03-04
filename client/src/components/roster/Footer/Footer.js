@@ -5,7 +5,7 @@ import useStateValue from '../../../lib/hooks/useStateValue'
 
 import Button from '../../Button/Button'
 
-const Footer = ({ sticky }) => {
+const Footer = ({ sticky, currentRoster }) => {
     const [, dispatch] = useStateValue()
 
     return (
@@ -17,7 +17,10 @@ const Footer = ({ sticky }) => {
                 border={`2px solid ${colors.darkGray}`}
                 borderRadius="1rem"
                 style={{ width: "80vw" }}
-                onClick={() => dispatch({ type: "STEP_CHANGE", step: 3 })}
+                onClick={() => {
+                    dispatch({ type: "STEP_CHANGE", step: 3 })
+                    dispatch({ type: "ROSTER_CONFIRM", roster: currentRoster })
+                }}
             />
         </div>
     )
