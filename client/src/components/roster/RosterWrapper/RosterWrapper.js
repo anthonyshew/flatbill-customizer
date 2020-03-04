@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './_RosterWrapper.scss'
+import Footer from '../Footer'
 
 const RosterWrapper = ({ ...props }) => {
 
@@ -91,6 +92,7 @@ const RosterWrapper = ({ ...props }) => {
                     Add Player +
                 </button>
             </div>
+            <Footer />
         </div>
     )
 }
@@ -130,11 +132,7 @@ const Player = ({ id,
                 placeholder="#"
             />
             <div id={`sizes-${id}`}>
-                <button id={id} className="size-button" onClick={onSizeChange}>XS</button>
-                <button id={id} className="size-button" onClick={onSizeChange}>S</button>
-                <button id={id} className="size-button" onClick={onSizeChange}>M</button>
-                <button id={id} className="size-button" onClick={onSizeChange}>L</button>
-                <button id={id} className="size-button" onClick={onSizeChange}>XL</button>
+                {["XS", "S", "M", "L", "XL"].map(elem => <button key={elem} id={id} className="size-button" onClick={onSizeChange}>{elem}</button>)}
             </div>
             <button
                 data-id={id}
