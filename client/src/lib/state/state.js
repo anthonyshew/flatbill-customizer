@@ -1,5 +1,5 @@
 export const initialState = {
-    step: 1,
+    step: 2,
     teamDetails: [],
     price: 300,
     view: 'front',

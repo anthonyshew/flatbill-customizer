@@ -8,6 +8,7 @@ import ViewBar from '../design/ViewBar'
 import ProductDisplay from '../design/ProductDisplay'
 import HorizontalSlider from '../design/HorizontalSlider'
 import Footer from '../design/Footer'
+import RosterWrapper from '../roster/RosterWrapper/RosterWrapper'
 
 const AppWrapper = ({ children }) => {
     usePreventMobileZoom()
@@ -19,7 +20,11 @@ const AppWrapper = ({ children }) => {
     return (
         <div className={`app-wrapper`} style={{ height: viewportHeight }}>
             <Header />
-            {step === 1 ? <StepOne /> : <p>step 2</p>}
+            {
+                step === 1 ? <StepOne /> :
+                    step === 2 ? <StepTwo /> :
+                        <p>Something went wrong...</p>
+            }
         </div>
     )
 }
@@ -32,7 +37,13 @@ const StepOne = (props) => {
             <ProductDisplay />
             <ViewBar />
             <HorizontalSlider />
-            <Footer sticky price={200} />
+            <Footer sticky />
         </>
+    )
+}
+
+const StepTwo = (props) => {
+    return (
+        <RosterWrapper />
     )
 }
