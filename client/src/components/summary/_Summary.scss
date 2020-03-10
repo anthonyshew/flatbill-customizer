@@ -1,0 +1,80 @@
+@import '../../styles/_variables.scss';
+
+.container-summary {
+    margin-top: 3rem;
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .button-back {
+        position: absolute;
+        width: 150px;
+        top: 28px;
+        left: 0;
+        padding: 4px;
+        background-color: $bright-green;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+
+        .svg {
+            position: relative;
+            top: -2px;
+            width: 12px;
+        }
+    }
+
+    .price {
+        position: absolute;
+        top: 34px;
+        left: 150px;
+        margin-left: 4px;
+        font-size: 20px;
+    }
+
+    .container-design-view {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 250px;
+            padding: 1rem 0;
+
+            .product-display {
+                height: 100%;
+            }
+        }
+    }
+
+    .container-roster-summary {
+        padding-top: .5rem;
+        padding: .5rem;
+
+        .player {
+            padding-bottom: .5rem;
+        }
+    }
+
+    .confirm-button {
+        display: block;
+        margin: 0 auto;
+        padding: .6rem 1rem;
+        border: none;
+        border-radius: 1rem;
+        color: $white;
+        background-color: $gold;
+        font-size: 20px;
+        font-weight: 900;
+        cursor: pointer;
+    }
+}

@@ -7,7 +7,7 @@ import Footer from '../Footer'
 
 const RosterWrapper = ({ ...props }) => {
 
-    const [, dispatch] = useStateValue()
+    const [{ price, teamDetails }, dispatch] = useStateValue()
 
     const [roster, setRoster] = useState([{
         id: Date.now(),
@@ -15,6 +15,10 @@ const RosterWrapper = ({ ...props }) => {
         number: '',
         size: 'M',
     }])
+
+    useEffect(() => {
+        dispatch({ type: "ROSTER_UPDATE", roster: roster })
+    }, [dispatch, roster])
 
     const handleNameChange = (e) => {
         const index = roster.findIndex(elem => elem.id === Number(e.target.dataset.id))
@@ -66,7 +70,9 @@ const RosterWrapper = ({ ...props }) => {
     }
 
     const handleDelete = (e) => {
-        const newRoster = roster.filter(item => item.id !== Number(e.target.id))
+        if (teamDetails.length <= 1) { return setRoster(roster) }
+
+        const newRoster = roster.filter(item => item.id !== Number(e.target.dataset.id))
         setRoster(newRoster)
     }
 
@@ -80,6 +86,11 @@ const RosterWrapper = ({ ...props }) => {
             >
                 {<SVG name="arrow-left" className="svg" />} Back to Design
                 </button>
+            <span
+                className="price"
+            >
+                ${price * teamDetails.length}
+            </span>
             <div className="container-player-list">
                 {
                     roster.map((elem, index) => {

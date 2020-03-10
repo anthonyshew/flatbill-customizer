@@ -7,9 +7,9 @@ import ChestLogo from '../lib/ChestLogo'
 import LastNameExample from '../lib/LastNameExample'
 import NumberDisplay from '../lib/NumberDisplay'
 
-const ProductDisplay = ({ ...props }) => {
+const ProductDisplay = ({ view }) => {
 
-    const [{ number, model, view }] = useStateValue()
+    const [{ number, model }] = useStateValue()
 
     return (
         <div className="product-display">

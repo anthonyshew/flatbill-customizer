@@ -1,6 +1,11 @@
 export const initialState = {
-    step: 2,
-    teamDetails: [],
+    step: 3,
+    teamDetails: [{
+        id: Date.now(),
+        name: '',
+        number: '',
+        size: 'M',
+    }],
     price: 300,
     view: 'front',
     model: 'solid',
@@ -40,6 +45,11 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 step: action.step
+            }
+        case 'ROSTER_UPDATE':
+            return {
+                ...state,
+                teamDetails: action.roster
             }
         case 'ROSTER_CONFIRM':
             return {

@@ -34,9 +34,12 @@ const AppWrapper = ({ children }) => {
 export default AppWrapper
 
 const StepOne = (props) => {
+
+    const [{ view }] = useStateValue()
+
     return (
         <>
-            <ProductDisplay />
+            <ProductDisplay view={view} />
             <ViewBar />
             <HorizontalSlider />
             <Footer sticky />
