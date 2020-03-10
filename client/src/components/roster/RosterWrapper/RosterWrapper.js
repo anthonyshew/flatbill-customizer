@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import './_RosterWrapper.scss'
+import useStateValue from '../../../lib/hooks/useStateValue'
+
+import SVG from '../../SVG/SVG'
 import Footer from '../Footer'
 
 const RosterWrapper = ({ ...props }) => {
+
+    const [, dispatch] = useStateValue()
 
     const [roster, setRoster] = useState([{
         id: Date.now(),
@@ -69,6 +74,12 @@ const RosterWrapper = ({ ...props }) => {
         <div className="container-roster">
             <h2 className="h2">Roster Builder</h2>
             <p>Give us your list of players so we know who to make jerseys for.</p>
+            <button
+                className="button-back"
+                onClick={() => dispatch({ type: "STEP_CHANGE", step: 1 })}
+            >
+                {<SVG name="arrow-left" className="svg" />} Back to Design
+                </button>
             <div className="container-player-list">
                 {
                     roster.map((elem, index) => {

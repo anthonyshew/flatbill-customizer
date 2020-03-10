@@ -2,11 +2,29 @@
 
 .container-roster {
     height: 100%;
+    margin-top: 1rem;
     padding: 1rem;
     font-size: 18px;
     font-family: $fira-sans-condensed;
     text-align: center;
     overflow-y: auto;
+
+    .button-back {
+        position: absolute;
+        width: 150px;
+        top: 28px;
+        left: 0;
+        padding: 4px;
+        background-color: $bright-green;
+        border: none;
+        font-size: 18px;
+
+        .svg {
+            position: relative;
+            top: -2px;
+            width: 12px;
+        }
+    }
 
     h2 {
         margin-bottom: 1rem;
