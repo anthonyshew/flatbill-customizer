@@ -3,7 +3,6 @@ import './_Summary.scss'
 import useStateValue from '../../lib/hooks/useStateValue'
 
 import SVG from '../SVG/SVG'
-
 import ProductDisplay from '../design/ProductDisplay'
 
 const Summary = ({ ...props }) => {
@@ -42,7 +41,10 @@ const Summary = ({ ...props }) => {
                     })
                 }
             </div>
-            <button className="confirm-button">
+            <button
+                className="confirm-button"
+                onClick={() => dispatch({ type: "STEP_CHANGE", step: 4 })}
+            >
                 Checkout
             </button>
         </div>

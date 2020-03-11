@@ -25,7 +25,8 @@ const AppWrapper = ({ children }) => {
                 step === 1 ? <StepOne /> :
                     step === 2 ? <StepTwo /> :
                         step === 3 ? <StepThree /> :
-                            <p>Something went wrong...</p>
+                            step === 4 ? <StepFour /> :
+                                <p>Something went wrong with the steps...</p>
             }
         </div>
     )
@@ -56,5 +57,11 @@ const StepTwo = (props) => {
 const StepThree = (props) => {
     return (
         <Summary />
+    )
+}
+
+const StepFour = (props) => {
+    return (
+        <p>Checkout page</p>
     )
 }
