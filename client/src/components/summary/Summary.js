@@ -7,7 +7,7 @@ import ProductDisplay from '../design/ProductDisplay'
 
 const Summary = ({ ...props }) => {
 
-    const [{ price, teamDetails }, dispatch] = useStateValue()
+    const [{ price, teamDetails, chestLogo }, dispatch] = useStateValue()
 
     return (
         <div className="container-summary">
@@ -31,6 +31,7 @@ const Summary = ({ ...props }) => {
                     <ProductDisplay view="back" />
                 </div>
             </div>
+            <h2 className="team-name">Your Team Name: {chestLogo.text}</h2>
             <h2>Your Roster</h2>
             <div className="container-roster-summary">
                 {
