@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
 import './_AppWrapper.scss'
 import usePreventMobileZoom from '../../lib/hooks/usePreventMobileZoom'
 import useStateValue from '../../lib/hooks/useStateValue'
@@ -10,6 +12,7 @@ import HorizontalSlider from '../design/HorizontalSlider'
 import Footer from '../design/Footer'
 import RosterWrapper from '../roster/RosterWrapper/RosterWrapper'
 import Summary from '../summary'
+import CheckoutForm from '../checkout/Checkout'
 
 const AppWrapper = ({ children }) => {
     usePreventMobileZoom()
@@ -61,7 +64,12 @@ const StepThree = (props) => {
 }
 
 const StepFour = (props) => {
+
+    const stripePromise = loadStripe('pk_test_yA60f4O7QuqY0FSlR4lNg8Q0');
+
     return (
-        <p>Checkout page</p>
+        <Elements stripe={stripePromise}>
+            <CheckoutForm />
+        </Elements>
     )
 }
