@@ -117,7 +117,7 @@ const CheckoutForm = () => {
                 {<SVG name="arrow-left" className="svg" />} Back to Summary
                 </button>
             <h2>Checkout</h2>
-            <h3>Order Your Jerseys</h3>
+            <h3>Get Your Jerseys</h3>
             <h4>Basic Info</h4>
             <label>
                 Name
@@ -203,11 +203,14 @@ const CheckoutForm = () => {
             </label>
             <h4>Billing Info</h4>
             <div className="container-checkbox">
-                <input
-                    type="checkbox"
-                    checked={matchDetails}
-                    onChange={handleCheckboxChange}
-                />
+                <label class="checkbox">
+                    <input
+                        type="checkbox"
+                        checked={matchDetails}
+                        onChange={handleCheckboxChange}
+                    />
+                    <span></span>
+                </label>
                 <p>My billing info is the same as my shipping info.</p>
             </div>
             {!matchDetails && <BillingDetailsInputs
@@ -217,7 +220,8 @@ const CheckoutForm = () => {
             <h4>Order Summary</h4>
             <div className="container-order-summary">
                 <p>Custom Baseball Jersey x {teamDetails.length}</p>
-                <h5>${price * teamDetails.length}</h5>
+                <p className="p-margin">Shipping: FREE!</p>
+                <h5>Total: ${price * teamDetails.length}</h5>
             </div>
             <h4>Card Info</h4>
             <label>
