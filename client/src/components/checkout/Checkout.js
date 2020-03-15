@@ -203,7 +203,7 @@ const CheckoutForm = () => {
             </label>
             <h4>Billing Info</h4>
             <div className="container-checkbox">
-                <label class="checkbox">
+                <label className="checkbox">
                     <input
                         type="checkbox"
                         checked={matchDetails}
