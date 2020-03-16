@@ -1,7 +1,12 @@
+if (process.env.NODE_ENV !== 'PRODUCTION') {
+  require('dotenv').config()
+}
+
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const chalk = require('chalk')
+const stripe = require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
 
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
@@ -25,35 +30,44 @@ if (!isDev && cluster.isMaster) {
 } else {
   const app = express()
 
-    const logger = () => {
-        return (req, res, next) => {
-            res.on('finish', () => {
-                if (res.statusCode === 200) console.log(`${chalk.blue('[' + new Date(Date.now()).toLocaleString() + ']')} ${chalk.green("[200] ") + req.originalUrl}`)
-                if (res.statusCode === 304) console.log(`${chalk.blue('[' + new Date(Date.now()).toLocaleString() + ']')} ${chalk.yellow("[304] ") + req.originalUrl}`)
-                if (res.statusCode === 404) console.log(`${chalk.blue('[' + new Date(Date.now()).toLocaleString() + ']')} ${chalk.red("[404] ") + req.originalUrl}`)
-                if (res.statusCode === 500) console.log(`${chalk.blue('[' + new Date(Date.now()).toLocaleString() + ']')} ${chalk.bgRed("[500]") + " " + req.originalUrl}`)
-            })
-            next()
-        }
+  const logger = () => {
+    return (req, res, next) => {
+      res.on('finish', () => {
+        if (res.statusCode === 200) console.log(`${chalk.blue('[' + new Date(Date.now()).toLocaleString() + ']')} ${chalk.green("[200] ") + req.originalUrl}`)
+        if (res.statusCode === 304) console.log(`${chalk.blue('[' + new Date(Date.now()).toLocaleString() + ']')} ${chalk.yellow("[304] ") + req.originalUrl}`)
+        if (res.statusCode === 404) console.log(`${chalk.blue('[' + new Date(Date.now()).toLocaleString() + ']')} ${chalk.red("[404] ") + req.originalUrl}`)
+        if (res.statusCode === 500) console.log(`${chalk.blue('[' + new Date(Date.now()).toLocaleString() + ']')} ${chalk.bgRed("[500]") + " " + req.originalUrl}`)
+      })
+      next()
     }
+  }
 
-    const requireHTTPS = (req, res, next) => {
-        // The 'x-forwarded-proto' check is for Heroku
-        if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
-            return res.redirect('https://' + req.get('host') + req.url)
-        }
-        next()
+  const requireHTTPS = (req, res, next) => {
+    // The 'x-forwarded-proto' check is for Heroku
+    if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
+      return res.redirect('https://' + req.get('host') + req.url)
     }
+    next()
+  }
 
-    app.use(logger())
-    app.use(requireHTTPS)
-    app.use(bodyParser.json())
+  app.use(logger())
+  app.use(requireHTTPS)
+  app.use(bodyParser.json())
 
   // Priority serve any static files.
   app.use(express.static(path.resolve(__dirname, '../client/build'), {
-	// Prevents router from using above line as index response
-	index: false,
-}))
+    // Prevents router from using above line as index response
+    index: false,
+  }))
+
+  app.post('/checkout', async (req, res) => {
+    const clientSecret = await stripe.paymentIntents.create({
+      amount: req.body.amount * 100,
+      currency: 'usd',
+    })
+
+    res.send(clientSecret)
+  })
 
 
   // All remaining requests return the React app, so it can handle routing.

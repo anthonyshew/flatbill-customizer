@@ -101,11 +101,30 @@ const CheckoutForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
-            type: 'card',
-            card: elements.getElement(CardNumberElement)
+        fetch('/checkout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ amount: price })
         })
-        console.log(error, paymentMethod)
+            .then(res => res.json())
+            .then(async (res) => {
+
+                console.log({
+                    card: elements.getElement(CardNumberElement),
+                    billing_details: billingDetails
+                })
+
+                const { error, paymentMethod } = await stripe.confirmCardPayment(`${res.client_secret}`, {
+                    payment_method: {
+                        card: elements.getElement(CardNumberElement),
+                        billing_details: matchDetails ? shippingDetails : billingDetails
+                    }
+                })
+
+                console.log(error, paymentMethod)
+            })
     }
 
     return (
