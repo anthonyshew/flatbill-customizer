@@ -7,7 +7,7 @@ import ProductDisplay from '../design/ProductDisplay'
 
 const Summary = ({ ...props }) => {
 
-    const [{ price, teamDetails, chestLogo }, dispatch] = useStateValue()
+    const [{ price, teamDetails }, dispatch] = useStateValue()
 
     return (
         <div className="container-summary">
@@ -31,17 +31,28 @@ const Summary = ({ ...props }) => {
                     <ProductDisplay view="back" />
                 </div>
             </div>
-            <h2 className="team-name">Your Team Name: {chestLogo.text}</h2>
             <h2>Your Roster</h2>
-            <div className="container-roster-summary">
-                {
-                    teamDetails.map(elem => {
-                        return <div key={elem.id} className="player">
-                            {elem.name}, {elem.number}, {elem.size}
-                        </div>
-                    })
-                }
-            </div>
+            <table className="container-roster-summary">
+                <thead className="table-headers">
+                    <tr className="headers-row">
+                        <th className="w-80 align-left">Player Name</th>
+                        <th className="w-10 align-left">#</th>
+                        <th className="w-10 align-left">Size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        teamDetails.map(elem => {
+                            return <tr key={elem.id} className="player">
+                                <td className="w-80 align-left">{elem.name}</td>
+                                <td className="w-10 align-left">{elem.number}</td>
+                                <td className="w-10 align-left">{elem.size}</td>
+                            </tr>
+                        })
+                    }
+                </tbody>
+
+            </table>
             <button
                 className="confirm-button"
                 onClick={() => dispatch({ type: "STEP_CHANGE", step: 4 })}

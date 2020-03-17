@@ -1,7 +1,13 @@
 @import '../../styles/_variables.scss';
 
 .container-summary {
-    margin-top: 3rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    overflow-y: auto;
 
     h2 {
         font-size: 24px;
@@ -61,11 +67,32 @@
     }
 
     .container-roster-summary {
+        margin: 1rem auto;
         padding-top: .5rem;
         padding: .5rem;
 
+        .table-headers {
+            font-weight: 900;
+        }
+
+        .headers-row {
+            height: 1.5rem;
+        }
+
+        .w-80 {
+            width: 80%;
+        }
+
+        .w-10 {
+            width: 10%;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
         .player {
-            padding-bottom: .5rem;
+            height: 1.5rem;
         }
     }
 
