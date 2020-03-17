@@ -1,4 +1,5 @@
 import React from 'react'
+import './_NumberEditor.scss'
 import SliderItem from '../SliderItem/SliderItem'
 
 import useStateValue from '../../../lib/hooks/useStateValue'
@@ -10,6 +11,30 @@ const NumberEditor = ({ logoLocation, ...props }) => {
     const [{ number }, dispatch] = useStateValue()
     return (
         <>
+            <label className="container-input-display-number">
+                <input
+                    name="input-number"
+                    type="number"
+                    className="input-display-number"
+                    value={number.digit}
+                    onChange={(e) => {
+                        if (e.target.value >= 0 && e.target.value <= 99) {
+                            dispatch({ type: "CHANGE_DISPLAY_NUMBER", number: e.target.value })
+                        } else {
+                            if (e.target.value < 0) {
+                                e.target.value = 0
+                                dispatch({ type: "CHANGE_DISPLAY_NUMBER", number: 0 })
+                            }
+
+                            if (e.target.value > 99) {
+                                e.target.value = 99
+                                dispatch({ type: "CHANGE_DISPLAY_NUMBER", number: 99 })
+                            }
+                        }
+                    }}
+                />
+                Display Number
+            </label>
             <SliderItem
                 image={
                     <SVG name="decrease-font-size" className="avatar" />
