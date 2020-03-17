@@ -29,7 +29,8 @@ const AppWrapper = ({ children }) => {
                     step === 2 ? <StepTwo /> :
                         step === 3 ? <StepThree /> :
                             step === 4 ? <StepFour /> :
-                                <p>Something went wrong with the steps...</p>
+                                step === 5 ? <StepFive /> :
+                                    <p>Something went wrong with the steps...</p>
             }
         </div>
     )
@@ -71,5 +72,13 @@ const StepFour = (props) => {
         <Elements stripe={stripePromise}>
             <CheckoutForm />
         </Elements>
+    )
+}
+
+const StepFive = (props) => {
+    return (
+        <div className="container-thank-you">
+            Thanks!
+        </div>
     )
 }

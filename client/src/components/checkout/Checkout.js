@@ -36,9 +36,11 @@ const CheckoutForm = () => {
         bool: false,
         message: ""
     })
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
     const onSubmit = async (formData, event) => {
         event.preventDefault()
+        setIsSubmitting(true)
 
         fetch('/checkout', {
             method: 'POST',
@@ -67,6 +69,7 @@ const CheckoutForm = () => {
 
                 if (error) {
                     setStripeError({ bool: true, message: error.message })
+                    setIsSubmitting(false)
                 } else {
                     dispatch({ type: "STEP_CHANGE", step: 5 })
                 }
@@ -213,7 +216,12 @@ const CheckoutForm = () => {
                 />
             </label>
             {stripeError.bool && <p className="error mb-1">{stripeError.message}</p>}
-            <button type="submit" className="submit" disabled={!stripe}>
+            <button
+                type="submit"
+                className="submit"
+                disabled={!stripe}
+                style={isSubmitting ? { backgroundColor: "#e5e5e5", transform: "scale(.6)" } : null}
+            >
                 Pay
       </button>
         </form>
