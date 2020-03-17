@@ -16,6 +16,11 @@ const RosterWrapper = ({ ...props }) => {
         size: 'M',
     }])
 
+    //This produces a warning...But does exactly what I want it to do? Is there some other way of doing this?
+    useEffect(() => {
+        setRoster(teamDetails)
+    }, [])
+
     useEffect(() => {
         dispatch({ type: "ROSTER_UPDATE", roster: roster })
     }, [dispatch, roster])
