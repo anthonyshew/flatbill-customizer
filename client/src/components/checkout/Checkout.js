@@ -30,6 +30,7 @@ const CheckoutForm = () => {
     const stripe = useStripe()
     const elements = useElements()
     const [{ price, teamDetails }, dispatch] = useStateValue()
+    const [state] = useStateValue()
 
     const [matchDetails, setMatchDetails] = useState(true)
     const [stripeError, setStripeError] = useState({
@@ -71,6 +72,14 @@ const CheckoutForm = () => {
                     setStripeError({ bool: true, message: error.message })
                     setIsSubmitting(false)
                 } else {
+                    fetch('/checkout-success', {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ orderInfo: state })
+                    })
+
                     dispatch({ type: "STEP_CHANGE", step: 5 })
                 }
             })

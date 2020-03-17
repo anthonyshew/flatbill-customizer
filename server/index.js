@@ -69,6 +69,9 @@ if (!isDev && cluster.isMaster) {
     res.send(clientSecret)
   })
 
+  app.post('/checkout-success', (req, res) => {
+    console.log(req.body)
+  })
 
   // All remaining requests return the React app, so it can handle routing.
   app.get('*', (req, res) => {
