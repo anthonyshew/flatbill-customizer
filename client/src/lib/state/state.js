@@ -1,5 +1,5 @@
 export const initialState = {
-    step: 4,
+    step: 1,
     teamDetails: [{
         id: Date.now(),
         name: '',
@@ -103,6 +103,14 @@ export const reducer = (state, action) => {
                 chestLogo: {
                     ...state.chestLogo,
                     fontSize: state.chestLogo.fontSize + 1
+                }
+            }
+        case 'CHANGE_DISPLAY_NUMBER':
+            return {
+                ...state,
+                number: {
+                    ...state.number,
+                    digit: action.number
                 }
             }
         case 'NUMBER_SIZE_DOWN':

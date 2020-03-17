@@ -7,6 +7,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const chalk = require('chalk')
 const stripe = require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
+const sendGrid = require('@sendgrid/mail')
 
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
