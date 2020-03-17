@@ -2,6 +2,7 @@ if (process.env.NODE_ENV !== 'PRODUCTION') {
   require('dotenv').config()
 }
 
+const fs = require('fs')
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
@@ -71,7 +72,35 @@ if (!isDev && cluster.isMaster) {
   })
 
   app.post('/checkout-success', (req, res) => {
-    console.log(req.body)
+    const crypto = require('crypto')
+    const id = crypto.randomBytes(16).toString("hex")
+
+    const pathToAttachment = `${dirname}/${id}.pdf`
+    const attachment = fs.readFileSync(pathToAttachment).toString("base64")
+
+    const msg = {
+      to: process.env.AGENCY_EMAIL,
+      from: "no-reply@flatbillbaseball.com",
+      subject: 'Message from Website Contact Form!',
+      html: `<h1>Incoming Mail from your website!</h1>
+  <h2>${name} said...</h2>
+  <p>${message}</p>
+  <br>
+  <hr>
+  <p>Reply to this message using the reply button below to send an e-mail response.</p>
+  `,
+      attachments: [
+        {
+          content: attachment,
+          filename: `${id}.pdf`,
+          type: "application/pdf",
+          disposition: "attachment"
+        }
+      ]
+    }
+
+    sendGrid.send(msg).catch(err => console.log(err))
+
   })
 
   // All remaining requests return the React app, so it can handle routing.

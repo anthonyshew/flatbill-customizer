@@ -72,6 +72,35 @@ const CheckoutForm = () => {
                     setStripeError({ bool: true, message: error.message })
                     setIsSubmitting(false)
                 } else {
+                    const Renderer = require()
+
+                    const r = new Renderer({ dirname: __dirname })
+
+                    const htmlString = `
+  <html>
+    <head>
+      <link rel='stylesheet' href='style.scss'>
+    </head>
+    <body>
+      <div class='Page'>
+        Page1: {{myText}}
+      </div>
+
+      <div class='Page'>
+        Page2: Goodbye world!
+      </div>
+    </body>
+  </html>
+`;
+
+                    r.render({
+                        templateSource: htmlString,
+                        contentSource: {
+                            myText: "Hello world!"
+                        },
+                        outputName: 'example'
+                    });
+
                     fetch('/checkout-success', {
                         method: "POST",
                         headers: {
