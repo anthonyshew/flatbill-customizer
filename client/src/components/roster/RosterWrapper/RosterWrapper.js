@@ -17,6 +17,7 @@ const RosterWrapper = ({ ...props }) => {
     }])
 
     //This produces a warning...But does exactly what I want it to do? Is there some other way of doing this?
+    //Including the "dependency" would create an infinite loop
     useEffect(() => {
         setRoster(teamDetails)
     }, [])

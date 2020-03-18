@@ -56,6 +56,8 @@ if (!isDev && cluster.isMaster) {
   app.use(requireHTTPS)
   app.use(bodyParser.json())
 
+  sendGrid.setApiKey(process.env.SENDGRID_API_KEY)
+
   // Priority serve any static files.
   app.use(express.static(path.resolve(__dirname, '../client/build'), {
     // Prevents router from using above line as index response
@@ -72,35 +74,46 @@ if (!isDev && cluster.isMaster) {
   })
 
   app.post('/checkout-success', (req, res) => {
+    console.log(req.body)
+
     const crypto = require('crypto')
     const id = crypto.randomBytes(16).toString("hex")
+    let attachment
 
-    const pathToAttachment = `${dirname}/${id}.pdf`
-    const attachment = fs.readFileSync(pathToAttachment).toString("base64")
+    const pathToAttachment = path.resolve(__dirname, `./tmp/images/${id}.pdf`)
+    fs.writeFile(pathToAttachment, req.body.receipt, 'pdf', (err) => {
+      if (err) throw err
+      return attachment = fs.readFile(pathToAttachment, (err) => {
+        if (err) throw err
+      })
+    })
 
     const msg = {
       to: process.env.AGENCY_EMAIL,
-      from: "no-reply@flatbillbaseball.com",
+      from: "info@flatbillbaseball.com",
       subject: 'Message from Website Contact Form!',
-      html: `<h1>Incoming Mail from your website!</h1>
-  <h2>${name} said...</h2>
-  <p>${message}</p>
-  <br>
-  <hr>
-  <p>Reply to this message using the reply button below to send an e-mail response.</p>
+      html: `<h1>It worked!</h1>
+  <p>It better be attached down there.</p>
   `,
       attachments: [
         {
           content: attachment,
-          filename: `${id}.pdf`,
+          filename: "CustomJerseyOrderReceipt",
           type: "application/pdf",
           disposition: "attachment"
         }
       ]
     }
 
-    sendGrid.send(msg).catch(err => console.log(err))
-
+    sendGrid.send(msg)
+      .then(success => res.send({
+        statusCode: 200,
+        success: true,
+        errors: {},
+        data: {},
+      })
+      )
+      .catch(err => console.log(err))
   })
 
   // All remaining requests return the React app, so it can handle routing.

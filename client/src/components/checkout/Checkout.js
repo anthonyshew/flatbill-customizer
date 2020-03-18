@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import './_Checkout.scss'
 import {
@@ -8,8 +9,9 @@ import {
     useElements,
 } from '@stripe/react-stripe-js'
 import { useForm } from 'react-hook-form'
-import useStateValue from '../../lib/hooks/useStateValue'
+import ReactToPdf from 'react-to-pdf'
 
+import useStateValue from '../../lib/hooks/useStateValue'
 import SVG from '../SVG/SVG'
 
 const style = {
@@ -30,7 +32,6 @@ const CheckoutForm = () => {
     const stripe = useStripe()
     const elements = useElements()
     const [{ price, teamDetails }, dispatch] = useStateValue()
-    const [state] = useStateValue()
 
     const [matchDetails, setMatchDetails] = useState(true)
     const [stripeError, setStripeError] = useState({
@@ -72,44 +73,7 @@ const CheckoutForm = () => {
                     setStripeError({ bool: true, message: error.message })
                     setIsSubmitting(false)
                 } else {
-                    const Renderer = require()
-
-                    const r = new Renderer({ dirname: __dirname })
-
-                    const htmlString = `
-  <html>
-    <head>
-      <link rel='stylesheet' href='style.scss'>
-    </head>
-    <body>
-      <div class='Page'>
-        Page1: {{myText}}
-      </div>
-
-      <div class='Page'>
-        Page2: Goodbye world!
-      </div>
-    </body>
-  </html>
-`;
-
-                    r.render({
-                        templateSource: htmlString,
-                        contentSource: {
-                            myText: "Hello world!"
-                        },
-                        outputName: 'example'
-                    });
-
-                    fetch('/checkout-success', {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({ orderInfo: state })
-                    })
-
-                    dispatch({ type: "STEP_CHANGE", step: 5 })
+                    document.querySelector("#receipt").click()
                 }
             })
     }
@@ -262,6 +226,7 @@ const CheckoutForm = () => {
             >
                 Pay
       </button>
+            <Receipt />
         </form>
     )
 }
@@ -356,5 +321,35 @@ const BillingDetails = ({ matchDetails, register, errors }) => {
             </label>
             {errors.bill_country && <p className="error mb-1">Country Required</p>}
         </div>
+    )
+}
+
+const Receipt = ({ style }) => {
+
+    const [state, dispatch] = useStateValue()
+
+    return (
+        <ReactToPdf
+            onComplete={pdf => {
+                fetch('/checkout-success', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ receipt: pdf })
+                }).then(res => dispatch({ type: "STEP_CHANGE", step: 5 }))
+            }}>
+            {({ toPdf, targetRef }) => (
+                <div>
+                    <div id="receipt" className="receipt"
+                        style={{ backgroundColor: "red" }}
+                        onClick={toPdf}
+                        ref={targetRef}
+                    >
+                        This is a receipt.
+                </div>
+                </div>
+            )}
+        </ReactToPdf >
     )
 }

@@ -1,5 +1,5 @@
 export const initialState = {
-    step: 1,
+    step: 4,
     teamDetails: [{
         id: Date.now(),
         name: '',
