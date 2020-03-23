@@ -16,6 +16,7 @@
     "client/node_modules"
   ],
   "dependencies": {
+    "dotenv": "^8.2.0",
     "@sendgrid/mail": "^6.5.4",
     "@stripe/react-stripe-js": "^1.0.3",
     "@stripe/stripe-js": "^1.1.0",
@@ -34,7 +35,6 @@
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
-    "dotenv": "^8.2.0",
     "nodemon": "^2.0.0"
   }
 }
