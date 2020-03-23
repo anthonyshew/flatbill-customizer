@@ -337,7 +337,13 @@ const Receipt = ({ style }) => {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({ receipt: pdf })
-                }).then(res => dispatch({ type: "STEP_CHANGE", step: 5 }))
+                })
+                    .then(res => res.json())
+                    .then(res => {
+                        console.log(res)
+                        dispatch({ type: "STEP_CHANGE", step: 5 })
+                    }
+                    )
             }}>
             {({ toPdf, targetRef }) => (
                 <div>

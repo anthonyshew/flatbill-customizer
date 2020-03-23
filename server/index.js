@@ -77,7 +77,6 @@ if (!isDev && cluster.isMaster) {
     let png = req.body.receipt.split(';base64,').pop()
     const crypto = require('crypto')
     const id = crypto.randomBytes(16).toString("hex")
-    let attachment
 
     const pathToAttachment = path.resolve(__dirname, `./tmp/images/${id}.png`)
 
@@ -85,7 +84,7 @@ if (!isDev && cluster.isMaster) {
       if (err) throw err
     })
 
-    fs.readFile(pathToAttachment, 'base64', (err, data) => {
+    fs.readFile(pathToAttachment, 'base64', (err, img) => {
       if (err) { throw err } else {
         const msg = {
           to: process.env.AGENCY_EMAIL,
@@ -96,7 +95,7 @@ if (!isDev && cluster.isMaster) {
       `,
           attachments: [
             {
-              content: data,
+              content: img,
               filename: "CustomJerseyOrderReceipt.png",
               type: "image/png",
               disposition: "attachment"
@@ -109,7 +108,7 @@ if (!isDev && cluster.isMaster) {
             statusCode: 200,
             success: true,
             errors: {},
-            data: {},
+            data: img,
           }))
           .catch(err => console.log(err.response.body.errors))
       }
