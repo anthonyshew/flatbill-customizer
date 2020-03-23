@@ -116,6 +116,10 @@ if (!isDev && cluster.isMaster) {
 
     })
 
+    fs.unlink(pathToAttachment, (err) => {
+      if (err) throw err
+    })
+
   })
 
   // All remaining requests return the React app, so it can handle routing.
