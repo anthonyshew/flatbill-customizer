@@ -74,46 +74,48 @@ if (!isDev && cluster.isMaster) {
   })
 
   app.post('/checkout-success', (req, res) => {
-    console.log(req.body)
-
+    let png = req.body.receipt.split(';base64,').pop()
     const crypto = require('crypto')
     const id = crypto.randomBytes(16).toString("hex")
     let attachment
 
-    const pathToAttachment = path.resolve(__dirname, `./tmp/images/${id}.pdf`)
-    fs.writeFile(pathToAttachment, req.body.receipt, 'pdf', (err) => {
+    const pathToAttachment = path.resolve(__dirname, `./tmp/images/${id}.png`)
+
+    fs.writeFileSync(pathToAttachment, png, 'base64', (err) => {
       if (err) throw err
-      return attachment = fs.readFile(pathToAttachment, (err) => {
-        if (err) throw err
-      })
     })
 
-    const msg = {
-      to: process.env.AGENCY_EMAIL,
-      from: "info@flatbillbaseball.com",
-      subject: 'Message from Website Contact Form!',
-      html: `<h1>It worked!</h1>
-  <p>It better be attached down there.</p>
-  `,
-      attachments: [
-        {
-          content: attachment,
-          filename: "CustomJerseyOrderReceipt",
-          type: "application/pdf",
-          disposition: "attachment"
+    fs.readFile(pathToAttachment, 'base64', (err, data) => {
+      if (err) { throw err } else {
+        const msg = {
+          to: process.env.AGENCY_EMAIL,
+          from: "info@flatbillbaseball.com",
+          subject: 'Message from Website Contact Form!',
+          html: `<h1>It worked!</h1>
+      <p>It better be attached down there.</p>
+      `,
+          attachments: [
+            {
+              content: data,
+              filename: "CustomJerseyOrderReceipt.png",
+              type: "image/png",
+              disposition: "attachment"
+            }
+          ]
         }
-      ]
-    }
 
-    sendGrid.send(msg)
-      .then(success => res.send({
-        statusCode: 200,
-        success: true,
-        errors: {},
-        data: {},
-      })
-      )
-      .catch(err => console.log(err))
+        sendGrid.send(msg)
+          .then(success => res.send({
+            statusCode: 200,
+            success: true,
+            errors: {},
+            data: {},
+          }))
+          .catch(err => console.log(err.response.body.errors))
+      }
+
+    })
+
   })
 
   // All remaining requests return the React app, so it can handle routing.

@@ -326,7 +326,7 @@ const BillingDetails = ({ matchDetails, register, errors }) => {
 
 const Receipt = ({ style }) => {
 
-    const [state, dispatch] = useStateValue()
+    const [, dispatch] = useStateValue()
 
     return (
         <ReactToPdf
