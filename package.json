@@ -7,8 +7,8 @@
     "npm": "6.x"
   },
   "scripts": {
-    "server": "node server",
-    "start": "concurrently --kill-others-on-fail \" cd server && nodemon index.js \" \" cd client && npm run start \"",
+    "start": "node server",
+    "dev": "concurrently --kill-others-on-fail \" cd server && nodemon index.js \" \" cd client && npm run start \"",
     "build": "cd client && npm install && npm run build"
   },
   "cacheDirectories": [
