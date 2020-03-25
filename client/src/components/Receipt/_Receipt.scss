@@ -1,0 +1,68 @@
+@import '../../styles/_variables.scss';
+
+.receipt {
+    padding: 1rem;
+
+    h1 {
+        padding-bottom: 1rem;
+        font-size: 36px;
+        font-weight: 900;
+    }
+
+    h2 {
+        padding-bottom: 2rem;
+        font-size: 24px;
+    }
+
+    h3 {
+        padding: 1.5rem 0;
+        font-size: 24px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .product-display-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .product-display {
+            width: 500px;
+            height: 350px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .space-between {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .gray-text {
+            padding-left: .4rem;
+            color: #666666;
+        }
+    }
+
+    .align-right {
+        text-align: right;
+
+        .padding {
+            padding: .5rem 0;
+        }
+    }
+
+    .fixed-width {
+        display: inline-block;
+        width: 75px;
+    }
+}
+
+.receipt {
+    .container-roster-summary {
+        max-width: 325px;
+        margin-left: 2rem;
+    }
+}

@@ -6,7 +6,7 @@ export const initialState = {
         number: '',
         size: 'M',
     }],
-    price: 300,
+    price: 49,
     view: 'front',
     model: 'solid',
     primaryColor: '#960001',
