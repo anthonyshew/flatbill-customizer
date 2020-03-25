@@ -32,6 +32,24 @@ const Summary = ({ ...props }) => {
                 </div>
             </div>
             <h2>Your Roster</h2>
+            <Roster teamDetails={teamDetails} />
+            <button
+                className="confirm-button"
+                onClick={() => dispatch({ type: "STEP_CHANGE", step: 4 })}
+            >
+                Checkout
+            </button>
+        </div>
+    )
+}
+
+export default Summary
+
+export const Roster = ({ ...props }) => {
+
+    const [{ teamDetails }] = useStateValue()
+    return (
+        <>
             <table className="container-roster-summary">
                 <thead className="table-headers">
                     <tr className="headers-row">
@@ -51,16 +69,7 @@ const Summary = ({ ...props }) => {
                         })
                     }
                 </tbody>
-
             </table>
-            <button
-                className="confirm-button"
-                onClick={() => dispatch({ type: "STEP_CHANGE", step: 4 })}
-            >
-                Checkout
-            </button>
-        </div>
+        </>
     )
 }
-
-export default Summary

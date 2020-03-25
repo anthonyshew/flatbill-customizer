@@ -9,7 +9,6 @@ import {
     useElements,
 } from '@stripe/react-stripe-js'
 import { useForm } from 'react-hook-form'
-import ReactToPdf from 'react-to-pdf'
 
 import useStateValue from '../../lib/hooks/useStateValue'
 import SVG from '../SVG/SVG'
@@ -73,7 +72,14 @@ const CheckoutForm = () => {
                     setStripeError({ bool: true, message: error.message })
                     setIsSubmitting(false)
                 } else {
-                    document.querySelector("#receipt").click()
+                    fetch('/checkout-success', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ customer_email: formData.email })
+                    }).then(res => dispatch({ type: "STEP_CHANGE", step: 5 }))
+
                 }
             })
     }
@@ -226,7 +232,6 @@ const CheckoutForm = () => {
             >
                 Pay
       </button>
-            <Receipt />
         </form>
     )
 }
@@ -321,41 +326,5 @@ const BillingDetails = ({ matchDetails, register, errors }) => {
             </label>
             {errors.bill_country && <p className="error mb-1">Country Required</p>}
         </div>
-    )
-}
-
-const Receipt = ({ style }) => {
-
-    const [, dispatch] = useStateValue()
-
-    return (
-        <ReactToPdf
-            onComplete={pdf => {
-                fetch('/checkout-success', {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({ receipt: pdf })
-                })
-                    .then(res => res.json())
-                    .then(res => {
-                        console.log(res)
-                        dispatch({ type: "STEP_CHANGE", step: 5 })
-                    }
-                    )
-            }}>
-            {({ toPdf, targetRef }) => (
-                <div>
-                    <div id="receipt" className="receipt"
-                        style={{ backgroundColor: "red" }}
-                        onClick={toPdf}
-                        ref={targetRef}
-                    >
-                        This is a receipt.
-                </div>
-                </div>
-            )}
-        </ReactToPdf >
     )
 }

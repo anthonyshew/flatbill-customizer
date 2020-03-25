@@ -66,36 +66,6 @@
         }
     }
 
-    .container-roster-summary {
-        margin: 1rem auto;
-        padding-top: .5rem;
-        padding: .5rem;
-
-        .table-headers {
-            font-weight: 900;
-        }
-
-        .headers-row {
-            height: 1.5rem;
-        }
-
-        .w-80 {
-            width: 80%;
-        }
-
-        .w-10 {
-            width: 10%;
-        }
-
-        .align-left {
-            text-align: left;
-        }
-
-        .player {
-            height: 1.5rem;
-        }
-    }
-
     .confirm-button {
         display: block;
         margin: 0 auto;
@@ -107,5 +77,35 @@
         font-size: 20px;
         font-weight: 900;
         cursor: pointer;
+    }
+}
+
+.container-roster-summary {
+    margin: 1rem auto;
+    padding-top: .5rem;
+    padding: .5rem;
+
+    .table-headers {
+        font-weight: 900;
+    }
+
+    .headers-row {
+        height: 1.5rem;
+    }
+
+    .w-80 {
+        width: 80%;
+    }
+
+    .w-10 {
+        width: 10%;
+    }
+
+    .align-left {
+        text-align: left;
+    }
+
+    .player {
+        height: 1.5rem;
     }
 }

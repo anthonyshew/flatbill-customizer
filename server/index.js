@@ -66,59 +66,31 @@ if (!isDev && cluster.isMaster) {
 
   app.post('/checkout', async (req, res) => {
     const clientSecret = await stripe.paymentIntents.create({
-      amount: req.body.amount * 100,
+      amount: (req.body.amount + 25) * 100,
       currency: 'usd',
-    })
+    }).catch(err => console.log(err))
 
     res.send(clientSecret)
   })
 
   app.post('/checkout-success', (req, res) => {
-    let png = req.body.receipt.split(';base64,').pop()
-    const crypto = require('crypto')
-    const id = crypto.randomBytes(16).toString("hex")
+    const msg = {
+      to: [process.env.AGENCY_EMAIL, req.body.customer_email],
+      from: "info@flatbillbaseball.com",
+      subject: 'Message from Website Contact Form!',
+      html: `<h1>It worked!</h1>
+      <p>I'm going to put a link here.</p>
+      `
+    }
 
-    const pathToAttachment = path.resolve(__dirname, `./tmp/images/${id}.png`)
-
-    fs.writeFileSync(pathToAttachment, png, 'base64', (err) => {
-      if (err) throw err
-    })
-
-    fs.readFile(pathToAttachment, 'base64', (err, img) => {
-      if (err) { throw err } else {
-        const msg = {
-          to: process.env.AGENCY_EMAIL,
-          from: "info@flatbillbaseball.com",
-          subject: 'Message from Website Contact Form!',
-          html: `<h1>It worked!</h1>
-      <p>It better be attached down there.</p>
-      `,
-          attachments: [
-            {
-              content: img,
-              filename: "CustomJerseyOrderReceipt.png",
-              type: "image/png",
-              disposition: "attachment"
-            }
-          ]
-        }
-
-        sendGrid.send(msg)
-          .then(success => res.send({
-            statusCode: 200,
-            success: true,
-            errors: {},
-            data: img,
-          }))
-          .catch(err => console.log(err.response.body.errors))
-      }
-
-    })
-
-    fs.unlink(pathToAttachment, (err) => {
-      if (err) throw err
-    })
-
+    sendGrid.send(msg)
+      .then(success => res.send({
+        statusCode: 200,
+        success: true,
+        errors: {},
+        data: {},
+      }))
+      .catch(err => console.log(err.response.body.errors))
   })
 
   // All remaining requests return the React app, so it can handle routing.
