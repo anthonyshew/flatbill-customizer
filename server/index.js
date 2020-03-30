@@ -78,7 +78,7 @@ if (!isDev && cluster.isMaster) {
     const token = jwt.sign(req.body, process.env.JWT_SECRET)
 
     const msg = {
-      to: [process.env.AGENCY_EMAIL, req.body.customer_email],
+      to: [process.env.EMAIL_TO, req.body.customer_email],
       from: "info@flatbillbaseball.com",
       subject: 'Custom Jersey Receipt - Flatbil Baseball',
       html: `<h1>Thank you for your order!</h1>
