@@ -10,24 +10,24 @@ const ArmLogoSlider = ({ side }) => {
 
     const [, dispatch] = useStateValue()
 
-    const handleUpload = (e) => {
-        let input = e.target
-        let reader = new FileReader()
+    // const handleUpload = (e) => {
+    //     let input = e.target
+    //     let reader = new FileReader()
 
-        reader.onload = () => {
-            if (side === 'left') {
-                dispatch({ type: "LEFT_SLEEVE_LOGO", url: reader.result })
-            }
-            if (side === 'right') {
-                dispatch({ type: "RIGHT_SLEEVE_LOGO", url: reader.result })
-            }
-        }
-        reader.readAsDataURL(input.files[0])
-    }
+    //     reader.onload = () => {
+    //         if (side === 'left') {
+    //             dispatch({ type: "LEFT_SLEEVE_LOGO", url: reader.result })
+    //         }
+    //         if (side === 'right') {
+    //             dispatch({ type: "RIGHT_SLEEVE_LOGO", url: reader.result })
+    //         }
+    //     }
+    //     reader.readAsDataURL(input.files[0])
+    // }
 
     return (
         <>
-            <input className="file-uploader" type="file" onChange={handleUpload} />
+            {/* <input className="file-uploader" type="file" onChange={handleUpload} /> */}
             <SliderItem
                 image={<SVG name="red-x" className="avatar" />}
                 text="Remove Logo"

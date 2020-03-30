@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 const chalk = require('chalk')
 const stripe = require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
 const sendGrid = require('@sendgrid/mail')
+const jwt = require('jsonwebtoken')
 
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
@@ -74,12 +75,16 @@ if (!isDev && cluster.isMaster) {
   })
 
   app.post('/checkout-success', (req, res) => {
+    const token = jwt.sign(req.body, process.env.JWT_SECRET)
+
     const msg = {
       to: [process.env.AGENCY_EMAIL, req.body.customer_email],
       from: "info@flatbillbaseball.com",
-      subject: 'Message from Website Contact Form!',
-      html: `<h1>It worked!</h1>
-      <p>I'm going to put a link here.</p>
+      subject: 'Custom Jersey Receipt - Flatbil Baseball',
+      html: `<h1>Thank you for your order!</h1>
+      <h2>We're getting started on your jersey right now.</h2>
+      <h3>To see a copy of your receipt, visit the link below:
+      <a href="${process.env.DOMAIN_ROOT}/receipt/${token}">Visit your receipt.</a>
       `
     }
 
@@ -88,9 +93,22 @@ if (!isDev && cluster.isMaster) {
         statusCode: 200,
         success: true,
         errors: {},
-        data: {},
+        data: token,
       }))
       .catch(err => console.log(err.response.body.errors))
+  })
+
+  app.post('/decode-receipt', (req, res) => {
+    const decoded = jwt.verify(req.body.jwt, process.env.JWT_SECRET)
+
+    console.log(decoded)
+
+    res.send({
+      statusCode: 200,
+      success: true,
+      errors: {},
+      data: decoded,
+    })
   })
 
   // All remaining requests return the React app, so it can handle routing.

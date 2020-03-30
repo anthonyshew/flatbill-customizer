@@ -1,9 +1,17 @@
 import React from 'react'
 import useStateValue from '../../../lib/hooks/useStateValue'
 
-const NumberDisplay = ({ className, avatarImage, fontSize, display, ...props }) => {
+const NumberDisplay = ({ className, avatarImage, fontSize, display, receiptProduct, ...props }) => {
 
-    const [{ number, secondaryColor, tertiaryColor }] = useStateValue()
+    const [{ number: stateNumber, secondaryColor: stateSecondaryColor, tertiaryColor: stateTertiaryColor }] = useStateValue()
+
+    const receiptSecondaryColor = receiptProduct ? receiptProduct.secondaryColor : null
+    const receiptTertiaryColor = receiptProduct ? receiptProduct.tertiaryColor : null
+    const receiptNumber = receiptProduct ? receiptProduct.number : null
+
+    const secondaryColor = receiptSecondaryColor ?? stateSecondaryColor
+    const tertiaryColor = receiptTertiaryColor ?? stateTertiaryColor
+    const number = receiptNumber ?? stateNumber
 
     return (
         <>

@@ -1386,9 +1386,13 @@ const getPath = (name,
     }
 }
 
-const SVG = ({ name, className, style, handleClick, title, desc, alt }) => {
+const SVG = ({ name, className, style, handleClick, title, desc, alt, receiptPrimaryColor, receiptSecondaryColor, receiptTertiaryColor }) => {
 
-    const [{ leftArmLogo, rightArmLogo, primaryColor, secondaryColor, tertiaryColor }] = useStateValue()
+    const [{ leftArmLogo, rightArmLogo, primaryColor: statePrimaryColor, secondaryColor: stateSecondaryColor, tertiaryColor: stateTertiaryColor }] = useStateValue()
+
+    const primaryColor = receiptPrimaryColor ?? statePrimaryColor
+    const secondaryColor = receiptSecondaryColor ?? stateSecondaryColor
+    const tertiaryColor = receiptTertiaryColor ?? stateTertiaryColor
 
     return (
         getPath(

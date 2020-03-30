@@ -35,18 +35,32 @@
         }
     }
 
+    .attribute {
+        line-height: 150%;
+        font-size: 20px;
+    }
+
+    .shipping-details {
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+    }
+
     .space-between {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        font-size: 20px;
 
         .gray-text {
+            font-size: 16px;
             padding-left: .4rem;
             color: #666666;
         }
     }
 
     .align-right {
+        font-size: 24px;
         text-align: right;
 
         .padding {
@@ -57,6 +71,11 @@
     .fixed-width {
         display: inline-block;
         width: 75px;
+    }
+
+    .cc-disclaimer {
+        margin-top: 2rem;
+        font-family: "Courier"
     }
 }
 

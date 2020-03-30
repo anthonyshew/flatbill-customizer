@@ -30,7 +30,7 @@ const CheckoutForm = () => {
     const { register, handleSubmit, errors } = useForm()
     const stripe = useStripe()
     const elements = useElements()
-    const [{ price, teamDetails }, dispatch] = useStateValue()
+    const [{ price, teamDetails, model, primaryColor, secondaryColor, tertiaryColor, chestLogo, number, leftArmLogo, rightArmLogo }, dispatch] = useStateValue()
 
     const [matchDetails, setMatchDetails] = useState(true)
     const [stripeError, setStripeError] = useState({
@@ -77,7 +77,30 @@ const CheckoutForm = () => {
                         headers: {
                             'Content-Type': 'application/json'
                         },
-                        body: JSON.stringify({ customer_email: formData.email })
+                        body: JSON.stringify({
+                            orderId: Date.now().toString(36) + Math.random().toString(36).substr(2),
+                            purchaseDate: new Date().toLocaleString(),
+                            shipping_details: {
+                                address: {
+                                    city: formData.ship_city,
+                                    country: formData.ship_country,
+                                    line1: formData.ship_line1,
+                                    line2: formData.ship_line2 ?? "",
+                                    postal_code: formData.ship_postal_code,
+                                    state: formData.ship_state,
+                                }
+                            },
+                            price: price,
+                            teamDetails: teamDetails,
+                            model: model,
+                            primaryColor: primaryColor,
+                            secondaryColor: secondaryColor,
+                            tertiaryColor: tertiaryColor,
+                            chestLogo: chestLogo,
+                            number: number,
+                            leftArmLogo: leftArmLogo,
+                            rightArmLogo: rightArmLogo
+                        })
                     }).then(res => dispatch({ type: "STEP_CHANGE", step: 5 }))
 
                 }
@@ -198,8 +221,8 @@ const CheckoutForm = () => {
             <h4>Order Summary</h4>
             <div className="container-order-summary">
                 <p>Custom Baseball Jersey x {teamDetails.length}</p>
-                <p className="p-margin">Shipping: FREE!</p>
-                <h5>Total: ${price * teamDetails.length}</h5>
+                <p className="p-margin">Shipping: $25</p>
+                <h5>Total: ${price * teamDetails.length + 25}</h5>
             </div>
             <h4>Card Info</h4>
             <label>

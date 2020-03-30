@@ -45,9 +45,9 @@ const Summary = ({ ...props }) => {
 
 export default Summary
 
-export const Roster = ({ ...props }) => {
-
+export const Roster = ({ receiptTeam, ...props }) => {
     const [{ teamDetails }] = useStateValue()
+
     return (
         <>
             <table className="container-roster-summary">
@@ -59,7 +59,13 @@ export const Roster = ({ ...props }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {
+                    {receiptTeam ? receiptTeam.map(elem => {
+                        return <tr key={elem.id} className="player">
+                            <td className="w-80 align-left">{elem.name}</td>
+                            <td className="w-10 align-left">{elem.number}</td>
+                            <td className="w-10 align-left">{elem.size}</td>
+                        </tr>
+                    }) :
                         teamDetails.map(elem => {
                             return <tr key={elem.id} className="player">
                                 <td className="w-80 align-left">{elem.name}</td>

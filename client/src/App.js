@@ -16,7 +16,7 @@ const App = () => {
         {/* <LocalStorageManager /> */}
         <Switch>
           <Route exact path="/" component={AppWrapper} />
-          <Route path="/receipt/" component={Receipt} />
+          <Route path="/receipt/:jwt" component={Receipt} />
           <Route render={() => <p>404</p>} />
         </Switch>
       </StateProvider>

@@ -1,9 +1,18 @@
 import React from 'react'
 import useStateValue from '../../../lib/hooks/useStateValue'
 
-const LastNameExample = ({ className, avatarImage, fontSize, shadow, ...props }) => {
+const LastNameExample = ({ className, avatarImage, fontSize, shadow, receiptProduct, ...props }) => {
 
-    const [{ chestLogo, secondaryColor, tertiaryColor }] = useStateValue()
+    const [{ chestLogo: stateChestLogo, secondaryColor: stateSecondaryColor, tertiaryColor: stateTertiaryColor }] = useStateValue()
+
+    const receiptSecondaryColor = receiptProduct ? receiptProduct.secondaryColor : null
+    const receiptTertiaryColor = receiptProduct ? receiptProduct.tertiaryColor : null
+    const receiptChestLogo = receiptProduct ? receiptProduct.chestLogo : null
+
+
+    const secondaryColor = receiptSecondaryColor ?? stateSecondaryColor
+    const tertiaryColor = receiptTertiaryColor ?? stateTertiaryColor
+    const chestLogo = receiptChestLogo ?? stateChestLogo
 
     return (
         <>
