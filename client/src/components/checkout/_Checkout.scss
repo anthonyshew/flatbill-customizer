@@ -13,6 +13,7 @@
     padding-bottom: 2rem;
     background-image: radial-gradient(circle at 50%, #ffffff 1%, #999999 100%);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     .button-back {
         position: absolute;
@@ -194,6 +195,7 @@
     }
 
     .submit {
+        min-height: 60px;
         padding: 1rem 1rem;
         border: none;
         border-radius: 1rem;
