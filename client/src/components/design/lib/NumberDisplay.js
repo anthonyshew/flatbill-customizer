@@ -1,7 +1,7 @@
 import React from 'react'
 import useStateValue from '../../../lib/hooks/useStateValue'
 
-const NumberDisplay = ({ className, avatarImage, fontSize, display, receiptProduct, ...props }) => {
+const Numberback = ({ className, avatarImage, fontSize, back, receiptProduct, ...props }) => {
 
     const [{ number: stateNumber, secondaryColor: stateSecondaryColor, tertiaryColor: stateTertiaryColor }] = useStateValue()
 
@@ -16,7 +16,7 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, receiptProdu
     return (
         <>
             <svg className={className} style={{ width: avatarImage ? "100%" : "" }} viewBox={avatarImage ? "0 0 75 75" : "0 0 250 250"} fill="none" role="img" >
-                <text x={display ? "50%" : avatarImage ? "50%" : "33%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={back ? "50%" : avatarImage ? "50%" : "33%"} y={back ? "42%" : avatarImage ? "50%" : "50%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: "black",
@@ -28,7 +28,7 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, receiptProdu
                     }}>
                     {number.digit}
                 </text>
-                <text x={display ? "50%" : avatarImage ? "50%" : "33%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={back ? "50%" : avatarImage ? "50%" : "33%"} y={back ? "42%" : avatarImage ? "50%" : "50%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: tertiaryColor,
@@ -40,7 +40,7 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, receiptProdu
                     }}>
                     {number.digit}
                 </text>
-                <text x={display ? "50%" : avatarImage ? "50%" : "33%"} y={display ? "45%" : avatarImage ? "50%" : "60%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={back ? "50%" : avatarImage ? "50%" : "33%"} y={back ? "42%" : avatarImage ? "50%" : "50%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         fontFamily: number.fontFamily,
@@ -55,4 +55,4 @@ const NumberDisplay = ({ className, avatarImage, fontSize, display, receiptProdu
     )
 }
 
-export default NumberDisplay
+export default Numberback

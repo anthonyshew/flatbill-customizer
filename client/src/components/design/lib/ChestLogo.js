@@ -17,7 +17,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, receiptProduct, .
     return (
         <>
             <svg className={className} style={{ width: avatarImage ? "100%" : "" }} viewBox={avatarImage ? "0 0 75 75" : "0 0 250 250"} fill="none" role="img" >
-                <text x="50%" y={avatarImage ? "50%" : "37%"} dominantBaseline="middle" textAnchor="middle"
+                <text x="50%" y={avatarImage ? "50%" : "30%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: "black",
@@ -29,7 +29,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, receiptProduct, .
                     }}>
                     {chestLogo.text}
                 </text>
-                <text x="50%" y={avatarImage ? "50%" : "37%"} dominantBaseline="middle" textAnchor="middle"
+                <text x="50%" y={avatarImage ? "50%" : "30%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: tertiaryColor,
@@ -41,7 +41,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, receiptProduct, .
                     }}>
                     {chestLogo.text}
                 </text>
-                <text x="50%" y={avatarImage ? "50%" : "37%"} dominantBaseline="middle" textAnchor="middle"
+                <text x="50%" y={avatarImage ? "50%" : "30%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         fontFamily: chestLogo.fontFamily,

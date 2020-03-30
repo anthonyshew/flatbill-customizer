@@ -2,7 +2,6 @@ if (process.env.NODE_ENV !== 'PRODUCTION') {
   require('dotenv').config()
 }
 
-const fs = require('fs')
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
@@ -80,9 +79,9 @@ if (!isDev && cluster.isMaster) {
     const msg = {
       to: [process.env.EMAIL_TO, req.body.customer_email],
       from: "info@flatbillbaseball.com",
-      subject: 'Custom Jersey Receipt - Flatbil Baseball',
+      subject: 'Custom Jersey Receipt - Flatbill Baseball',
       html: `<h1>Thank you for your order!</h1>
-      <h2>We're getting started on your jersey right now.</h2>
+      <h2>We're reviewing your order and getting started on your jersey right now.</h2>
       <h3>To see a copy of your receipt, visit the link below:
       <a href="${process.env.DOMAIN_ROOT}/receipt/${token}">Visit your receipt.</a>
       `
@@ -100,8 +99,6 @@ if (!isDev && cluster.isMaster) {
 
   app.post('/decode-receipt', (req, res) => {
     const decoded = jwt.verify(req.body.jwt, process.env.JWT_SECRET)
-
-    console.log(decoded)
 
     res.send({
       statusCode: 200,

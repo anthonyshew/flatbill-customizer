@@ -21,10 +21,10 @@ const ModelSlider = ({ ...props }) => {
         modelId: "striper",
         modelDisplayName: "Striper"
     },
-    {
-        modelId: "blockhead",
-        modelDisplayName: "Blockhead"
-    },
+    // {
+    //     modelId: "blockhead",
+    //     modelDisplayName: "Blockhead"
+    // },
     {
         modelId: "piper",
         modelDisplayName: "Piper"
@@ -41,10 +41,10 @@ const ModelSlider = ({ ...props }) => {
         modelId: "sideswipe",
         modelDisplayName: "Sideswipe"
     },
-    {
-        modelId: "stripehead",
-        modelDisplayName: "Stripehead"
-    },
+    // {
+    //     modelId: "stripehead",
+    //     modelDisplayName: "Stripehead"
+    // },
     {
         modelId: "5-star",
         modelDisplayName: "5 Star"

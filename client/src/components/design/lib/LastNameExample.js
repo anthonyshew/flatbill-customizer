@@ -17,7 +17,7 @@ const LastNameExample = ({ className, avatarImage, fontSize, shadow, receiptProd
     return (
         <>
             <svg className={className} style={{ width: avatarImage ? "100%" : "" }} viewBox="0 0 200 200" fill="none" role="img" >
-                <text x="50%" y="18%" dominantBaseline="middle" textAnchor="middle"
+                <text x="50%" y="16%" dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: "black",
@@ -29,7 +29,7 @@ const LastNameExample = ({ className, avatarImage, fontSize, shadow, receiptProd
                     }}>
                     Jones
                 </text>
-                <text x="50%" y="18%" dominantBaseline="middle" textAnchor="middle"
+                <text x="50%" y="16%" dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: tertiaryColor,
@@ -41,7 +41,7 @@ const LastNameExample = ({ className, avatarImage, fontSize, shadow, receiptProd
                     }}>
                     Jones
                 </text>
-                <text x="50%" y="18%" dominantBaseline="middle" textAnchor="middle"
+                <text x="50%" y="16%" dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         fontFamily: chestLogo.fontFamily,

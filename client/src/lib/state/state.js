@@ -7,7 +7,7 @@ export const initialState = {
         size: 'M',
     }],
     price: 49,
-    view: 'front',
+    view: 'back',
     model: 'solid',
     primaryColor: '#960001',
     secondaryColor: '#8abade',
@@ -27,6 +27,7 @@ export const initialState = {
         outline: true,
         shadow: true
     },
+    lastName: true,
     leftArmLogo: '/media/platypus.png',
     rightArmLogo: '/media/star.png',
     editorCurrentlyOpen: 'defaultMenu'
