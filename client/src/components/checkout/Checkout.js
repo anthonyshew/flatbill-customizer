@@ -30,7 +30,7 @@ const CheckoutForm = () => {
     const { register, handleSubmit, errors } = useForm()
     const stripe = useStripe()
     const elements = useElements()
-    const [{ price, teamDetails, model, primaryColor, secondaryColor, tertiaryColor, chestLogo, number, leftArmLogo, rightArmLogo }, dispatch] = useStateValue()
+    const [{ price, teamDetails, model, primaryColor, secondaryColor, tertiaryColor, chestLogo, number, lastName, leftArmLogo, rightArmLogo }, dispatch] = useStateValue()
 
     const [matchDetails, setMatchDetails] = useState(true)
     const [stripeError, setStripeError] = useState({
@@ -98,6 +98,7 @@ const CheckoutForm = () => {
                             tertiaryColor: tertiaryColor,
                             chestLogo: chestLogo,
                             number: number,
+                            lastName: lastName,
                             leftArmLogo: leftArmLogo,
                             rightArmLogo: rightArmLogo
                         })

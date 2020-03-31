@@ -3,7 +3,7 @@ import useStateValue from '../../../lib/hooks/useStateValue'
 
 const Numberback = ({ className, avatarImage, fontSize, back, receiptProduct, ...props }) => {
 
-    const [{ number: stateNumber, secondaryColor: stateSecondaryColor, tertiaryColor: stateTertiaryColor }] = useStateValue()
+    const [{ number: stateNumber, secondaryColor: stateSecondaryColor, tertiaryColor: stateTertiaryColor, lastName }] = useStateValue()
 
     const receiptSecondaryColor = receiptProduct ? receiptProduct.secondaryColor : null
     const receiptTertiaryColor = receiptProduct ? receiptProduct.tertiaryColor : null
@@ -16,7 +16,7 @@ const Numberback = ({ className, avatarImage, fontSize, back, receiptProduct, ..
     return (
         <>
             <svg className={className} style={{ width: avatarImage ? "100%" : "" }} viewBox={avatarImage ? "0 0 75 75" : "0 0 250 250"} fill="none" role="img" >
-                <text x={back ? "50%" : avatarImage ? "50%" : "33%"} y={back ? "42%" : avatarImage ? "50%" : "50%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={back ? "50%" : avatarImage ? "50%" : "33%"} y={lastName && back ? "42%" : back ? "33%" : avatarImage ? "50%" : "50%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: "black",
@@ -28,7 +28,7 @@ const Numberback = ({ className, avatarImage, fontSize, back, receiptProduct, ..
                     }}>
                     {number.digit}
                 </text>
-                <text x={back ? "50%" : avatarImage ? "50%" : "33%"} y={back ? "42%" : avatarImage ? "50%" : "50%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={back ? "50%" : avatarImage ? "50%" : "33%"} y={lastName && back ? "42%" : back ? "33%" : avatarImage ? "50%" : "50%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         stroke: tertiaryColor,
@@ -40,7 +40,7 @@ const Numberback = ({ className, avatarImage, fontSize, back, receiptProduct, ..
                     }}>
                     {number.digit}
                 </text>
-                <text x={back ? "50%" : avatarImage ? "50%" : "33%"} y={back ? "42%" : avatarImage ? "50%" : "50%"} dominantBaseline="middle" textAnchor="middle"
+                <text x={back ? "50%" : avatarImage ? "50%" : "33%"} y={lastName && back ? "42%" : back ? "33%" : avatarImage ? "50%" : "50%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
                         fontFamily: number.fontFamily,

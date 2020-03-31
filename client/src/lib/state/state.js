@@ -7,7 +7,7 @@ export const initialState = {
         size: 'M',
     }],
     price: 49,
-    view: 'back',
+    view: 'front',
     model: 'solid',
     primaryColor: '#960001',
     secondaryColor: '#8abade',
@@ -187,6 +187,11 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 rightArmLogo: action.url
+            }
+        case 'TOGGLE_LAST_NAME':
+            return {
+                ...state,
+                lastName: !state.lastName
             }
         default:
             return state

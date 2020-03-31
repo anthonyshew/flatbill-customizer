@@ -58,6 +58,7 @@ const Receipt = ({ ...props }) => {
                 <div className="attribute"><span className="bold">Primary Color: </span><span>{colorOptions.filter(elem => Object.values(elem).includes(data.primaryColor))[0].colorName}</span></div>
                 <div className="attribute"><span className="bold">Secondary Color: </span><span>{colorOptions.filter(elem => Object.values(elem).includes(data.secondaryColor))[0].colorName}</span></div>
                 <div className="attribute"><span className="bold">Tertiary Color: </span><span>{colorOptions.filter(elem => Object.values(elem).includes(data.tertiaryColor))[0].colorName}</span></div>
+                <div className="attribute"><span className="bold">Last Name On Back? </span><span>{data.lastName ? "Yes" : "No"}</span></div>
                 <div className="attribute"><span className="bold">Chest Logo Text: </span><span>{data.chestLogo.text}</span></div>
                 <div className="attribute"><span className="bold">Chest Logo Font: </span><span>{data.chestLogo.fontFamily}</span></div>
                 <div className="attribute"><span className="bold">Chest Logo Outline? </span><span>{data.chestLogo.outline ? "Yes" : "No"}</span></div>
@@ -68,7 +69,6 @@ const Receipt = ({ ...props }) => {
                 <div className="attribute"><span className="bold">Number Shadow? </span><span>{data.chestLogo.shadow ? "Yes" : "No"}</span></div>
                 <div className="attribute"><span className="bold">Left Arm Logo? </span><span>{data.leftArmLogo === "/media/platypus.png" ? "Platypus" : "None"}</span></div>
                 <div className="attribute"><span className="bold">Right Arm Logo? </span><span>{data.leftArmLogo === "/media/platypus.png" ? "Star" : "None"}</span></div>
-
             </div>
             <div className="shipping-details">
                 <h3>Shipping Address</h3>
