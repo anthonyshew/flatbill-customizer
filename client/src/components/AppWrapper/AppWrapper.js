@@ -78,7 +78,9 @@ const StepFour = (props) => {
 const StepFive = (props) => {
     return (
         <div className="container-thank-you">
-            Thanks!
+            <h2>Thank you for your order!</h2>
+            <img className="logo" src="/media/logo.png" alt="Flatbill Baseball Logo." title="Flatbill Baseball Logo" />
+            <a href="https://flatbillbaseball.com" rel="noopener noreferrer">Looking for more? Visit the main Flatbill Baseball shop!</a>
         </div>
     )
 }
