@@ -80,6 +80,7 @@ const CheckoutForm = () => {
                         body: JSON.stringify({
                             orderId: Date.now().toString(36) + Math.random().toString(36).substr(2),
                             purchaseDate: new Date().toLocaleString(),
+                            customer_email: formData.email,
                             shipping_details: {
                                 address: {
                                     city: formData.ship_city,

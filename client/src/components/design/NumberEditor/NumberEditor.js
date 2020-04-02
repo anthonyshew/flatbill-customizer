@@ -62,6 +62,11 @@ const NumberEditor = ({ logoLocation, ...props }) => {
                 text="Toggle Shadow"
                 handleClick={() => dispatch({ type: "TOGGLE_NUMBER_SHADOW" })}
             />
+            <SliderItem
+                image={number.shadowBlack ? <SVG name="check-mark" className="avatar" /> : <SVG name="prohibit" className="avatar" />}
+                text="Use Black Shadow"
+                handleClick={() => dispatch({ type: "TOGGLE_NUMBER_SHADOW_BLACK" })}
+            />
         </>
     )
 }

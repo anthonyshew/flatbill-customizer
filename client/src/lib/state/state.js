@@ -17,7 +17,8 @@ export const initialState = {
         fontFamily: "Galada",
         fontSize: 32,
         outline: true,
-        shadow: true
+        shadow: true,
+        shadowBlack: true,
     },
     number: {
         digit: 31,
@@ -25,7 +26,8 @@ export const initialState = {
         fontFamily: "Galada",
         fontSize: 32,
         outline: true,
-        shadow: true
+        shadow: true,
+        shadowBlack: true,
     },
     lastName: true,
     leftArmLogo: '/media/platypus.png',
@@ -146,6 +148,14 @@ export const reducer = (state, action) => {
                     shadow: !state.chestLogo.shadow
                 }
             }
+        case 'TOGGLE_CHEST_SHADOW_BLACK':
+            return {
+                ...state,
+                chestLogo: {
+                    ...state.chestLogo,
+                    shadowBlack: !state.chestLogo.shadowBlack
+                }
+            }
         case 'TOGGLE_NUMBER_OUTLINE':
             return {
                 ...state,
@@ -160,6 +170,14 @@ export const reducer = (state, action) => {
                 number: {
                     ...state.number,
                     shadow: !state.number.shadow
+                }
+            }
+        case 'TOGGLE_NUMBER_SHADOW_BLACK':
+            return {
+                ...state,
+                number: {
+                    ...state.number,
+                    shadowBlack: !state.number.shadowBlack
                 }
             }
         case 'LOGO_FONT_CHANGE':

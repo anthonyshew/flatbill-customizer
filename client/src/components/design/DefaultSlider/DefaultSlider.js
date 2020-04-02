@@ -48,6 +48,11 @@ const DefaultSlider = ({ ...props }) => {
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'numberEditor' })
     },
     {
+        image: lastName ? <LastNameExample avatarImage className="avatar" fontSize="32px" /> : <SVG name="red-x" className="avatar" />,
+        text: 'Last Name on Back?',
+        clickHandler: () => dispatch({ type: "TOGGLE_LAST_NAME" })
+    },
+    {
         image: <img className="avatar" src={leftArmLogo} alt="Left arm sleeve logo." />,
         text: 'Left Arm Logo',
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'leftArmLogo' })
@@ -56,11 +61,6 @@ const DefaultSlider = ({ ...props }) => {
         image: <img className="avatar" src={rightArmLogo} alt="right arm sleeve logo." />,
         text: 'Right Arm Logo',
         clickHandler: () => dispatch({ type: "EDITOR_CHANGE", menu: 'rightArmLogo' })
-    },
-    {
-        image: lastName ? <LastNameExample avatarImage className="avatar" fontSize="32px" /> : <SVG name="red-x" className="avatar" />,
-        text: 'Last Name?',
-        clickHandler: () => dispatch({ type: "TOGGLE_LAST_NAME" })
     }
     ]
 

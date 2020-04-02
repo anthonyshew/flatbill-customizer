@@ -3,13 +3,14 @@ import useStateValue from '../../../lib/hooks/useStateValue'
 
 const ChestLogo = ({ className, avatarImage, fontSize, shadow, receiptProduct, ...props }) => {
 
-    const [{ chestLogo: stateChestLogo, secondaryColor: stateSecondaryColor, tertiaryColor: stateTertiaryColor }] = useStateValue()
+    const [{ chestLogo: stateChestLogo, primaryColor: statePrimaryColor, secondaryColor: stateSecondaryColor, tertiaryColor: stateTertiaryColor }] = useStateValue()
 
+    const receiptPrimaryColor = receiptProduct ? receiptProduct.primaryColor : null
     const receiptSecondaryColor = receiptProduct ? receiptProduct.secondaryColor : null
     const receiptTertiaryColor = receiptProduct ? receiptProduct.tertiaryColor : null
     const receiptChestLogo = receiptProduct ? receiptProduct.chestLogo : null
 
-
+    const primaryColor = receiptPrimaryColor ?? statePrimaryColor
     const secondaryColor = receiptSecondaryColor ?? stateSecondaryColor
     const tertiaryColor = receiptTertiaryColor ?? stateTertiaryColor
     const chestLogo = receiptChestLogo ?? stateChestLogo
@@ -20,7 +21,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, receiptProduct, .
                 <text x="50%" y={avatarImage ? "50%" : "30%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
-                        stroke: "black",
+                        stroke: chestLogo.shadowBlack ? "black" : tertiaryColor,
                         strokeWidth: chestLogo.shadow ? "6px" : 0,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
@@ -32,7 +33,7 @@ const ChestLogo = ({ className, avatarImage, fontSize, shadow, receiptProduct, .
                 <text x="50%" y={avatarImage ? "50%" : "30%"} dominantBaseline="middle" textAnchor="middle"
                     style={{
                         fill: secondaryColor,
-                        stroke: tertiaryColor,
+                        stroke: shadow && chestLogo.shadowBlack ? tertiaryColor : shadow ? primaryColor : tertiaryColor,
                         strokeWidth: chestLogo.outline ? "2px" : 0,
                         fontFamily: chestLogo.fontFamily,
                         fontSize: fontSize || chestLogo.fontSize,
