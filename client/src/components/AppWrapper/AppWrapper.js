@@ -14,6 +14,13 @@ import RosterWrapper from '../roster/RosterWrapper/RosterWrapper'
 import Summary from '../summary'
 import CheckoutForm from '../checkout/Checkout'
 
+let stripeKey
+
+fetch('/stripe-key')
+    .then(res => res.json())
+    .then(res => stripeKey = res.key)
+
+
 const AppWrapper = ({ children }) => {
     usePreventMobileZoom()
 
@@ -65,8 +72,9 @@ const StepThree = (props) => {
 }
 
 const StepFour = (props) => {
+    console.log(stripeKey)
 
-    const stripePromise = loadStripe('pk_test_yA60f4O7QuqY0FSlR4lNg8Q0');
+    const stripePromise = loadStripe(stripeKey)
 
     return (
         <Elements stripe={stripePromise}>

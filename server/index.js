@@ -6,7 +6,7 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const chalk = require('chalk')
-const stripe = require('stripe')(process.env.STRIPE_PUBLISHABLE_KEY)
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const sendGrid = require('@sendgrid/mail')
 const jwt = require('jsonwebtoken')
 
@@ -63,6 +63,10 @@ if (!isDev && cluster.isMaster) {
     // Prevents router from using above line as index response
     index: false,
   }))
+
+  app.get('/stripe-key', (req, res) => {
+    res.send({ key: process.env.STRIPE_PUBLISHABLE_KEY })
+  })
 
   app.post('/checkout', async (req, res) => {
     const clientSecret = await stripe.paymentIntents.create({
