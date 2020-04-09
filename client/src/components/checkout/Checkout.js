@@ -51,10 +51,6 @@ const CheckoutForm = () => {
             body: JSON.stringify({ amount: price * teamDetails.length })
         })
             .then(res => res.json())
-            .then(res => {
-                console.log(res)
-                return res
-            })
             .then(async (res) => {
                 const { error } = await stripe.confirmCardPayment(`${res.clientSecret.client_secret}`, {
                     payment_method: {

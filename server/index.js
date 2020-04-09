@@ -7,7 +7,6 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const chalk = require('chalk')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
-console.log('check 1', process.env.STRIPE_SECRET_KEY)
 const sendGrid = require('@sendgrid/mail')
 const jwt = require('jsonwebtoken')
 
@@ -70,13 +69,10 @@ if (!isDev && cluster.isMaster) {
   })
 
   app.post('/checkout', async (req, res) => {
-    console.log('WORKINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG')
     const clientSecret = await stripe.paymentIntents.create({
       amount: (req.body.amount + 25) * 100,
       currency: 'usd',
     }).catch(err => console.log(err))
-
-    console.log('check2', clientSecret.client_secret)
 
     res.send({ clientSecret: clientSecret })
   })
