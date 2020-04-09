@@ -68,7 +68,7 @@ if (!isDev && cluster.isMaster) {
     res.send({ key: process.env.STRIPE_PUBLISHABLE_KEY })
   })
 
-  app.post('/checkout', async (req, res) => {
+  app.get('/checkout', async (req, res) => {
     const clientSecret = await stripe.paymentIntents.create({
       amount: (req.body.amount + 25) * 100,
       currency: 'usd',
