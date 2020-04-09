@@ -70,6 +70,7 @@ if (!isDev && cluster.isMaster) {
   })
 
   app.post('/checkout', async (req, res) => {
+    console.log('WORKINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG')
     const clientSecret = await stripe.paymentIntents.create({
       amount: (req.body.amount + 25) * 100,
       currency: 'usd',
