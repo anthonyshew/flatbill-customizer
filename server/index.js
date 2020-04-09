@@ -7,6 +7,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const chalk = require('chalk')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
+console.log('check 1', process.env.STRIPE_SECRET_KEY)
 const sendGrid = require('@sendgrid/mail')
 const jwt = require('jsonwebtoken')
 
@@ -74,31 +75,33 @@ if (!isDev && cluster.isMaster) {
       currency: 'usd',
     }).catch(err => console.log(err))
 
+    console.log('check2', clientSecret.client_secret)
+
     res.send({ clientSecret: clientSecret })
   })
 
   app.post('/checkout-success', (req, res) => {
     const token = jwt.sign(req.body, process.env.JWT_SECRET)
 
-    const msg = {
-      to: [process.env.EMAIL_TO, req.body.customer_email],
-      from: "info@flatbillbaseball.com",
-      subject: 'Custom Jersey Receipt - Flatbill Baseball',
-      html: `<h1>Thank you for your order!</h1>
-      <h2>We're reviewing your order and getting started on your jersey right now.</h2>
-      <h3>To see a copy of your receipt, visit the link below:
-      <a href="${process.env.DOMAIN_ROOT}/receipt/${token}">Visit your receipt.</a>
-      `
-    }
+    // const msg = {
+    //   to: [process.env.EMAIL_TO, req.body.customer_email],
+    //   from: "info@flatbillbaseball.com",
+    //   subject: 'Custom Jersey Receipt - Flatbill Baseball',
+    //   html: `<h1>Thank you for your order!</h1>
+    //   <h2>We're reviewing your order and getting started on your jersey right now.</h2>
+    //   <h3>To see a copy of your receipt, visit the link below:
+    //   <a href="${process.env.DOMAIN_ROOT}/receipt/${token}">Visit your receipt.</a>
+    //   `
+    // }
 
-    sendGrid.send(msg)
-      .then(success => res.send({
-        statusCode: 200,
-        success: true,
-        errors: {},
-        data: token,
-      }))
-      .catch(err => console.log(err.response.body.errors))
+    // sendGrid.send(msg)
+    //   .then(success => res.send({
+    //     statusCode: 200,
+    //     success: true,
+    //     errors: {},
+    //     data: token,
+    //   }))
+    //   .catch(err => console.log(err.response.body.errors))
   })
 
   app.post('/decode-receipt', (req, res) => {
