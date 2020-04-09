@@ -1,6 +1,4 @@
-if (process.env.NODE_ENV !== 'PRODUCTION') {
-  require('dotenv').config()
-}
+require('dotenv').config()
 
 const express = require('express')
 const path = require('path')
