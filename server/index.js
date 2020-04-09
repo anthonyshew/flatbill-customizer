@@ -74,7 +74,8 @@ if (!isDev && cluster.isMaster) {
       currency: 'usd',
     }).catch(err => console.log(err))
 
-    res.send(clientSecret)
+    console.log(clientSecret)
+    res.send({ clientSecret: clientSecret })
   })
 
   app.post('/checkout-success', (req, res) => {
