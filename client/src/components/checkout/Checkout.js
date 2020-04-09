@@ -44,7 +44,7 @@ const CheckoutForm = () => {
         setIsSubmitting(true)
 
         fetch('/checkout', {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 "Content-Type": "application/json"
             },
