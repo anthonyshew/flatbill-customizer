@@ -1,10 +1,12 @@
-require('dotenv').config()
+if (process.env.NODE_ENV !== 'PRODUCTION') {
+  require('dotenv').config()
+}
 
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const chalk = require('chalk')
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
+const stripe = require('stripe')(process.env.DOMAIN_ROOT === "https://customizer.flatbillbaseball.com" ? "sk_live_Lt1sqZN1ZJAPW8VTD5pRA8su" ? "sk_test_5hBKc1mNOMS49LzUtX28EKqI" )
 const sendGrid = require('@sendgrid/mail')
 const jwt = require('jsonwebtoken')
 
