@@ -6,7 +6,7 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const chalk = require('chalk')
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
+const stripe = require('stripe')("sk_test_5hBKc1mNOMS49LzUtX28EKqI")
 const sendGrid = require('@sendgrid/mail')
 const jwt = require('jsonwebtoken')
 
@@ -74,7 +74,6 @@ if (!isDev && cluster.isMaster) {
       currency: 'usd',
     }).catch(err => console.log(err))
 
-    console.log(clientSecret)
     res.send({ clientSecret: clientSecret })
   })
 

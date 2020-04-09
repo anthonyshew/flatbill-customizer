@@ -46,13 +46,12 @@ const CheckoutForm = () => {
         fetch('/checkout', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             },
-            body: JSON.stringify({ amount: price })
+            body: JSON.stringify({ amount: price * teamDetails.length })
         })
             .then(res => res.json())
             .then(async (res) => {
-                console.log(res.clientSecret)
                 const { error } = await stripe.confirmCardPayment(`${res.clientSecret.client_secret}`, {
                     payment_method: {
                         card: elements.getElement(CardNumberElement),

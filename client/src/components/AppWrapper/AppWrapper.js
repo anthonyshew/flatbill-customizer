@@ -72,7 +72,6 @@ const StepThree = (props) => {
 }
 
 const StepFour = (props) => {
-    console.log(stripeKey)
 
     const stripePromise = loadStripe(stripeKey)
 

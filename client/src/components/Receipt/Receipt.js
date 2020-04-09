@@ -72,7 +72,6 @@ const Receipt = ({ ...props }) => {
             </div>
             <div className="shipping-details">
                 <h3>Shipping Address</h3>
-                {console.log(data)}
                 <p>{data.shipping_details.address.line1}</p>
                 {data.shipping_details.address.line2 && <p>{data.shipping_details.address.line2}</p>}
                 <p>{data.shipping_details.address.city}, {data.shipping_details.address.state} {data.shipping_details.address.postal_code} {data.shipping_details.address.country}</p>
