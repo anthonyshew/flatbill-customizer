@@ -52,7 +52,7 @@ const CheckoutForm = () => {
         })
             .then(res => res.json())
             .then(async (res) => {
-                const { error } = await stripe.confirmCardPayment(`${res.clientSecret.client_secret}`, {
+                const { error } = await stripe.confirmCardPayment(`${res.client_secret}`, {
                     payment_method: {
                         card: elements.getElement(CardNumberElement),
                         billing_details: {
